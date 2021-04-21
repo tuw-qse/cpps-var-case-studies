@@ -1,0 +1,532 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<featureModel>
+	<struct>
+		<or abstract="true" hidden="true" mandatory="true" name="VIRTUAL_ROOT">
+			<and abstract="true" name="Fork">
+				<property data-type="string" key="attribute_default_value_length" value="1.0"/>
+				<property data-type="int" key="children_products_list_size" value="0"/>
+				<property data-type="string" key="attribute_type_length" value="Number"/>
+				<property data-type="string" key="attribute_description_length" value="Length of an object in mm"/>
+				<property data-type="string" key="attribute_id_length" value="length"/>
+				<property data-type="string" key="attribute_unit_length" value="mm"/>
+				<property data-type="string" key="attribute_value_length" value="1.0"/>
+				<property data-type="int" key="implemented_products_list_size" value="0"/>
+				<property data-type="string" key="attribute_name" value="Fork"/>
+				<feature name="Fork4">
+					<property data-type="string" key="attribute_default_value_length" value="1.0"/>
+					<property data-type="int" key="children_products_list_size" value="0"/>
+					<property data-type="string" key="attribute_type_length" value="Number"/>
+					<property data-type="string" key="attribute_description_length" value="Length of an object in mm"/>
+					<property data-type="string" key="attribute_id_length" value="length"/>
+					<property data-type="string" key="implemented_products_list_nr_0" value="Fork"/>
+					<property data-type="string" key="attribute_unit_length" value="mm"/>
+					<property data-type="string" key="attribute_value_length" value="30.0"/>
+					<property data-type="int" key="implemented_products_list_size" value="1"/>
+					<property data-type="string" key="attribute_name" value="Fork 4"/>
+				</feature>
+				<feature name="Fork5">
+					<property data-type="string" key="attribute_default_value_length" value="1.0"/>
+					<property data-type="int" key="children_products_list_size" value="0"/>
+					<property data-type="string" key="attribute_type_length" value="Number"/>
+					<property data-type="string" key="attribute_description_length" value="Length of an object in mm"/>
+					<property data-type="string" key="attribute_id_length" value="length"/>
+					<property data-type="string" key="implemented_products_list_nr_0" value="Fork"/>
+					<property data-type="string" key="attribute_unit_length" value="mm"/>
+					<property data-type="string" key="attribute_value_length" value="50.0"/>
+					<property data-type="int" key="implemented_products_list_size" value="1"/>
+					<property data-type="string" key="attribute_name" value="Fork 5"/>
+				</feature>
+				<feature name="Fork3">
+					<property data-type="string" key="attribute_default_value_length" value="1.0"/>
+					<property data-type="int" key="children_products_list_size" value="0"/>
+					<property data-type="string" key="attribute_type_length" value="Number"/>
+					<property data-type="string" key="attribute_description_length" value="Length of an object in mm"/>
+					<property data-type="string" key="attribute_id_length" value="length"/>
+					<property data-type="string" key="implemented_products_list_nr_0" value="Fork"/>
+					<property data-type="string" key="attribute_unit_length" value="mm"/>
+					<property data-type="string" key="attribute_value_length" value="30.0"/>
+					<property data-type="int" key="implemented_products_list_size" value="1"/>
+					<property data-type="string" key="attribute_name" value="Fork 3"/>
+				</feature>
+			</and>
+			<feature name="Jack1">
+				<property data-type="string" key="attribute_default_value_length" value="1.0"/>
+				<property data-type="int" key="children_products_list_size" value="0"/>
+				<property data-type="string" key="attribute_type_length" value="Number"/>
+				<property data-type="string" key="attribute_description_length" value="Length of an object in mm"/>
+				<property data-type="string" key="attribute_id_length" value="length"/>
+				<property data-type="string" key="attribute_unit_length" value="mm"/>
+				<property data-type="string" key="attribute_value_length" value="1.0"/>
+				<property data-type="int" key="implemented_products_list_size" value="0"/>
+				<property data-type="string" key="attribute_name" value="Jack 1"/>
+			</feature>
+			<and abstract="true" name="ForkProduct">
+				<property data-type="int" key="children_products_list_size" value="8"/>
+				<property data-type="string" key="children_products_list_nr_4" value="Fork3"/>
+				<property data-type="string" key="children_products_list_nr_5" value="Fork4"/>
+				<property data-type="string" key="attribute_id_length" value="length"/>
+				<property data-type="string" key="children_products_list_nr_6" value="Fork5"/>
+				<property data-type="string" key="children_products_list_nr_7" value="Lock"/>
+				<property data-type="string" key="children_products_list_nr_0" value="Barrel1"/>
+				<property data-type="string" key="attribute_unit_length" value="mm"/>
+				<property data-type="string" key="attribute_value_length" value="1.0"/>
+				<property data-type="string" key="children_products_list_nr_1" value="Jack1"/>
+				<property data-type="string" key="children_products_list_nr_2" value="Ring1"/>
+				<property data-type="string" key="children_products_list_nr_3" value="O-Ring"/>
+				<property data-type="string" key="attribute_default_value_length" value="1.0"/>
+				<property data-type="string" key="attribute_type_length" value="Number"/>
+				<property data-type="string" key="attribute_description_length" value="Length of an object in mm"/>
+				<property data-type="int" key="implemented_products_list_size" value="0"/>
+				<property data-type="string" key="attribute_name" value="ForkProduct"/>
+				<feature name="Fork-13">
+					<property data-type="string" key="attribute_default_value_length" value="1.0"/>
+					<property data-type="int" key="children_products_list_size" value="0"/>
+					<property data-type="string" key="attribute_type_length" value="Number"/>
+					<property data-type="string" key="attribute_description_length" value="Length of an object in mm"/>
+					<property data-type="string" key="attribute_id_length" value="length"/>
+					<property data-type="string" key="implemented_products_list_nr_0" value="ForkProduct"/>
+					<property data-type="string" key="attribute_unit_length" value="mm"/>
+					<property data-type="string" key="attribute_value_length" value="1.0"/>
+					<property data-type="int" key="implemented_products_list_size" value="1"/>
+					<property data-type="string" key="attribute_name" value="Fork 13"/>
+				</feature>
+				<feature name="Fork-46">
+					<property data-type="string" key="attribute_default_value_length" value="1.0"/>
+					<property data-type="int" key="children_products_list_size" value="0"/>
+					<property data-type="string" key="attribute_type_length" value="Number"/>
+					<property data-type="string" key="attribute_description_length" value="Length of an object in mm"/>
+					<property data-type="string" key="attribute_id_length" value="length"/>
+					<property data-type="string" key="implemented_products_list_nr_0" value="ForkProduct"/>
+					<property data-type="string" key="attribute_unit_length" value="mm"/>
+					<property data-type="string" key="attribute_value_length" value="1.0"/>
+					<property data-type="int" key="implemented_products_list_size" value="1"/>
+					<property data-type="string" key="attribute_name" value="Fork 46"/>
+				</feature>
+				<feature name="Fork-57">
+					<property data-type="string" key="attribute_default_value_length" value="1.0"/>
+					<property data-type="int" key="children_products_list_size" value="0"/>
+					<property data-type="string" key="attribute_type_length" value="Number"/>
+					<property data-type="string" key="attribute_description_length" value="Length of an object in mm"/>
+					<property data-type="string" key="attribute_id_length" value="length"/>
+					<property data-type="string" key="implemented_products_list_nr_0" value="ForkProduct"/>
+					<property data-type="string" key="attribute_unit_length" value="mm"/>
+					<property data-type="string" key="attribute_value_length" value="1.0"/>
+					<property data-type="int" key="implemented_products_list_size" value="1"/>
+					<property data-type="string" key="attribute_name" value="Fork 57"/>
+				</feature>
+				<feature name="Fork-2R">
+					<property data-type="string" key="attribute_default_value_length" value="1.0"/>
+					<property data-type="int" key="children_products_list_size" value="0"/>
+					<property data-type="string" key="attribute_type_length" value="Number"/>
+					<property data-type="string" key="attribute_description_length" value="Length of an object in mm"/>
+					<property data-type="string" key="attribute_id_length" value="length"/>
+					<property data-type="string" key="implemented_products_list_nr_0" value="ForkProduct"/>
+					<property data-type="string" key="attribute_unit_length" value="mm"/>
+					<property data-type="string" key="attribute_value_length" value="1.0"/>
+					<property data-type="int" key="implemented_products_list_size" value="1"/>
+					<property data-type="string" key="attribute_name" value="Fork 2R"/>
+				</feature>
+			</and>
+			<feature name="Ring1">
+				<property data-type="string" key="attribute_default_value_length" value="1.0"/>
+				<property data-type="int" key="children_products_list_size" value="0"/>
+				<property data-type="string" key="attribute_type_length" value="Number"/>
+				<property data-type="string" key="attribute_description_length" value="Length of an object in mm"/>
+				<property data-type="string" key="attribute_id_length" value="length"/>
+				<property data-type="string" key="attribute_unit_length" value="mm"/>
+				<property data-type="string" key="attribute_value_length" value="1.0"/>
+				<property data-type="int" key="implemented_products_list_size" value="0"/>
+				<property data-type="string" key="attribute_name" value="Ring 1"/>
+			</feature>
+			<feature name="O-Ring">
+				<property data-type="string" key="attribute_default_value_length" value="1.0"/>
+				<property data-type="int" key="children_products_list_size" value="0"/>
+				<property data-type="string" key="attribute_type_length" value="Number"/>
+				<property data-type="string" key="attribute_description_length" value="Length of an object in mm"/>
+				<property data-type="string" key="attribute_id_length" value="length"/>
+				<property data-type="string" key="attribute_unit_length" value="mm"/>
+				<property data-type="string" key="attribute_value_length" value="1.0"/>
+				<property data-type="int" key="implemented_products_list_size" value="0"/>
+				<property data-type="string" key="attribute_name" value="O-Ring"/>
+			</feature>
+			<and abstract="true" name="Pipe">
+				<property data-type="string" key="attribute_default_value_length" value="1.0"/>
+				<property data-type="int" key="children_products_list_size" value="0"/>
+				<property data-type="string" key="attribute_type_length" value="Number"/>
+				<property data-type="string" key="attribute_description_length" value="Length of an object in mm"/>
+				<property data-type="string" key="attribute_id_length" value="length"/>
+				<property data-type="string" key="attribute_unit_length" value="mm"/>
+				<property data-type="string" key="attribute_value_length" value="1.0"/>
+				<property data-type="int" key="implemented_products_list_size" value="0"/>
+				<property data-type="string" key="attribute_name" value="Abstract Pipe"/>
+				<feature name="Pipe8">
+					<property data-type="string" key="attribute_default_value_length" value="1.0"/>
+					<property data-type="int" key="children_products_list_size" value="0"/>
+					<property data-type="string" key="attribute_type_length" value="Number"/>
+					<property data-type="string" key="attribute_description_length" value="Length of an object in mm"/>
+					<property data-type="string" key="attribute_id_length" value="length"/>
+					<property data-type="string" key="implemented_products_list_nr_0" value="Pipe"/>
+					<property data-type="string" key="attribute_unit_length" value="mm"/>
+					<property data-type="string" key="attribute_value_length" value="30.0"/>
+					<property data-type="int" key="implemented_products_list_size" value="1"/>
+					<property data-type="string" key="attribute_name" value="Pipe 8"/>
+				</feature>
+				<feature name="Pipe2">
+					<property data-type="string" key="attribute_default_value_length" value="1.0"/>
+					<property data-type="int" key="children_products_list_size" value="0"/>
+					<property data-type="string" key="attribute_type_length" value="Number"/>
+					<property data-type="string" key="attribute_description_length" value="Length of an object in mm"/>
+					<property data-type="string" key="attribute_id_length" value="length"/>
+					<property data-type="string" key="implemented_products_list_nr_0" value="Pipe"/>
+					<property data-type="string" key="attribute_unit_length" value="mm"/>
+					<property data-type="string" key="attribute_value_length" value="20.0"/>
+					<property data-type="int" key="implemented_products_list_size" value="1"/>
+					<property data-type="string" key="attribute_name" value="Pipe 2"/>
+				</feature>
+				<feature name="Pipe3">
+					<property data-type="string" key="attribute_default_value_length" value="1.0"/>
+					<property data-type="int" key="children_products_list_size" value="0"/>
+					<property data-type="string" key="attribute_type_length" value="Number"/>
+					<property data-type="string" key="attribute_description_length" value="Length of an object in mm"/>
+					<property data-type="string" key="attribute_id_length" value="length"/>
+					<property data-type="string" key="implemented_products_list_nr_0" value="Pipe"/>
+					<property data-type="string" key="attribute_unit_length" value="mm"/>
+					<property data-type="string" key="attribute_value_length" value="30.0"/>
+					<property data-type="int" key="implemented_products_list_size" value="1"/>
+					<property data-type="string" key="attribute_name" value="Pipe 3"/>
+				</feature>
+			</and>
+			<and abstract="true" name="Lock">
+				<property data-type="string" key="attribute_default_value_length" value="1.0"/>
+				<property data-type="int" key="children_products_list_size" value="0"/>
+				<property data-type="string" key="attribute_type_length" value="Number"/>
+				<property data-type="string" key="attribute_description_length" value="Length of an object in mm"/>
+				<property data-type="string" key="attribute_id_length" value="length"/>
+				<property data-type="string" key="attribute_unit_length" value="mm"/>
+				<property data-type="string" key="attribute_value_length" value="1.0"/>
+				<property data-type="int" key="implemented_products_list_size" value="0"/>
+				<property data-type="string" key="attribute_name" value="Abstract Lock"/>
+				<feature name="Lock1">
+					<property data-type="string" key="attribute_default_value_length" value="1.0"/>
+					<property data-type="int" key="children_products_list_size" value="0"/>
+					<property data-type="string" key="attribute_type_length" value="Number"/>
+					<property data-type="string" key="attribute_description_length" value="Length of an object in mm"/>
+					<property data-type="string" key="attribute_id_length" value="length"/>
+					<property data-type="string" key="implemented_products_list_nr_0" value="Lock"/>
+					<property data-type="string" key="attribute_unit_length" value="mm"/>
+					<property data-type="string" key="attribute_value_length" value="30.0"/>
+					<property data-type="int" key="implemented_products_list_size" value="1"/>
+					<property data-type="string" key="attribute_name" value="Lock 1"/>
+				</feature>
+				<feature name="Lock2">
+					<property data-type="string" key="attribute_default_value_length" value="1.0"/>
+					<property data-type="int" key="children_products_list_size" value="0"/>
+					<property data-type="string" key="attribute_type_length" value="Number"/>
+					<property data-type="string" key="attribute_description_length" value="Length of an object in mm"/>
+					<property data-type="string" key="attribute_id_length" value="length"/>
+					<property data-type="string" key="implemented_products_list_nr_0" value="Lock"/>
+					<property data-type="string" key="attribute_unit_length" value="mm"/>
+					<property data-type="string" key="attribute_value_length" value="20.0"/>
+					<property data-type="int" key="implemented_products_list_size" value="1"/>
+					<property data-type="string" key="attribute_name" value="Lock 2"/>
+				</feature>
+				<feature name="Lock3">
+					<property data-type="string" key="attribute_default_value_length" value="1.0"/>
+					<property data-type="int" key="children_products_list_size" value="0"/>
+					<property data-type="string" key="attribute_type_length" value="Number"/>
+					<property data-type="string" key="attribute_description_length" value="Length of an object in mm"/>
+					<property data-type="string" key="attribute_id_length" value="length"/>
+					<property data-type="string" key="implemented_products_list_nr_0" value="Lock"/>
+					<property data-type="string" key="attribute_unit_length" value="mm"/>
+					<property data-type="string" key="attribute_value_length" value="30.0"/>
+					<property data-type="int" key="implemented_products_list_size" value="1"/>
+					<property data-type="string" key="attribute_name" value="Lock 3"/>
+				</feature>
+			</and>
+			<feature name="Screw">
+				<property data-type="string" key="attribute_default_value_length" value="1.0"/>
+				<property data-type="int" key="children_products_list_size" value="0"/>
+				<property data-type="string" key="attribute_type_length" value="Number"/>
+				<property data-type="string" key="attribute_description_length" value="Length of an object in mm"/>
+				<property data-type="string" key="attribute_id_length" value="length"/>
+				<property data-type="string" key="attribute_unit_length" value="mm"/>
+				<property data-type="string" key="attribute_value_length" value="1.0"/>
+				<property data-type="int" key="implemented_products_list_size" value="0"/>
+				<property data-type="string" key="attribute_name" value="Screw"/>
+			</feature>
+			<feature name="Barrel1">
+				<property data-type="string" key="attribute_default_value_length" value="1.0"/>
+				<property data-type="int" key="children_products_list_size" value="0"/>
+				<property data-type="string" key="attribute_type_length" value="Number"/>
+				<property data-type="string" key="attribute_description_length" value="Length of an object in mm"/>
+				<property data-type="string" key="attribute_id_length" value="length"/>
+				<property data-type="string" key="attribute_unit_length" value="mm"/>
+				<property data-type="string" key="attribute_value_length" value="50.0"/>
+				<property data-type="int" key="implemented_products_list_size" value="0"/>
+				<property data-type="string" key="attribute_name" value="Barrel 1"/>
+			</feature>
+			<feature name=" Pipe2">
+				<property data-type="int" key="children_products_list_size" value="0"/>
+				<property data-type="int" key="implemented_products_list_size" value="0"/>
+			</feature>
+			<feature name=" Pipe8">
+				<property data-type="int" key="children_products_list_size" value="0"/>
+				<property data-type="int" key="implemented_products_list_size" value="0"/>
+			</feature>
+		</or>
+	</struct>
+	<constraints>
+		<rule>
+			<imp>
+				<var>O-Ring</var>
+				<var>Ring1</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>O-Ring</var>
+				<var>Jack1</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Lock1</var>
+				<not>
+					<var>Lock2</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Lock1</var>
+				<not>
+					<var>Lock3</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Lock2</var>
+				<not>
+					<var>Lock1</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Lock2</var>
+				<not>
+					<var>Lock3</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Lock3</var>
+				<not>
+					<var>Lock1</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Lock3</var>
+				<not>
+					<var>Lock2</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Lock</var>
+				<var>Pipe</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Pipe8</var>
+				<not>
+					<var>Pipe3</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Pipe8</var>
+				<not>
+					<var> Pipe2</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Jack1</var>
+				<var>Pipe</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>ForkProduct</var>
+				<var>Barrel1</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>ForkProduct</var>
+				<var>Jack1</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>ForkProduct</var>
+				<var>Ring1</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>ForkProduct</var>
+				<var>O-Ring</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>ForkProduct</var>
+				<var>Fork3</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>ForkProduct</var>
+				<var>Fork4</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>ForkProduct</var>
+				<var>Fork5</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>ForkProduct</var>
+				<var>Lock</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Screw</var>
+				<var>Ring1</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Screw</var>
+				<var>Jack1</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Ring1</var>
+				<var>Pipe</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Barrel1</var>
+				<var>Pipe</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Fork-13</var>
+				<var>Pipe8</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Fork-13</var>
+				<var>Lock3</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Fork-46</var>
+				<var>Pipe3</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Fork-46</var>
+				<var>Lock1</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Fork-57</var>
+				<var>Pipe2</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Fork-57</var>
+				<var>Lock1</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Fork4</var>
+				<var>Fork5</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Pipe2</var>
+				<not>
+					<var>Pipe3</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Pipe2</var>
+				<not>
+					<var> Pipe8</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Pipe3</var>
+				<not>
+					<var>Pipe2</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Pipe3</var>
+				<not>
+					<var> Pipe8</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Fork-2R</var>
+				<var>Pipe3</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Fork-2R</var>
+				<var>Lock2</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Fork3</var>
+				<var>Fork5</var>
+			</imp>
+		</rule>
+	</constraints>
+</featureModel>

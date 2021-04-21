@@ -1,0 +1,1949 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<featureModel>
+	<struct>
+		<or abstract="true" hidden="true" mandatory="true" name="VIRTUAL_ROOT">
+			<and abstract="true" name="Neutral">
+				<property data-type="int" key="children_products_list_size" value="0"/>
+				<property data-type="int" key="implemented_products_list_size" value="0"/>
+				<property data-type="string" key="attribute_name" value="Neutral"/>
+				<feature name="Neutral1-2">
+					<property data-type="int" key="children_products_list_size" value="0"/>
+					<property data-type="string" key="implemented_products_list_nr_0" value="Neutral"/>
+					<property data-type="int" key="implemented_products_list_size" value="1"/>
+					<property data-type="string" key="attribute_name" value="Neutral 1-2"/>
+				</feature>
+				<feature name="Neutral1-1">
+					<property data-type="int" key="children_products_list_size" value="0"/>
+					<property data-type="string" key="implemented_products_list_nr_0" value="Neutral"/>
+					<property data-type="int" key="implemented_products_list_size" value="1"/>
+					<property data-type="string" key="attribute_name" value="Neutral 1-1"/>
+				</feature>
+			</and>
+			<feature name="Crossover">
+				<property data-type="int" key="children_products_list_size" value="0"/>
+				<property data-type="int" key="implemented_products_list_size" value="0"/>
+				<property data-type="string" key="attribute_name" value="Crossover"/>
+			</feature>
+			<feature abstract="true" name="Contacts-B">
+				<property data-type="int" key="children_products_list_size" value="3"/>
+				<property data-type="string" key="children_products_list_nr_0" value="Socket"/>
+				<property data-type="int" key="implemented_products_list_size" value="0"/>
+				<property data-type="string" key="attribute_name" value="Contacts-B"/>
+				<property data-type="string" key="children_products_list_nr_1" value="Pole1-1"/>
+				<property data-type="string" key="children_products_list_nr_2" value="Pole1-2"/>
+			</feature>
+			<feature abstract="true" name="Contacts-C">
+				<property data-type="int" key="children_products_list_size" value="3"/>
+				<property data-type="string" key="children_products_list_nr_0" value="Socket"/>
+				<property data-type="int" key="implemented_products_list_size" value="0"/>
+				<property data-type="string" key="attribute_name" value="Contacts-C"/>
+				<property data-type="string" key="children_products_list_nr_1" value="Pole2-1"/>
+				<property data-type="string" key="children_products_list_nr_2" value="Pole2-2"/>
+			</feature>
+			<feature name="Pole1-2">
+				<property data-type="int" key="children_products_list_size" value="0"/>
+				<property data-type="int" key="implemented_products_list_size" value="0"/>
+				<property data-type="string" key="attribute_name" value="Pole 1-2"/>
+			</feature>
+			<feature abstract="true" name="Rockers-B">
+				<property data-type="int" key="children_products_list_size" value="3"/>
+				<property data-type="string" key="children_products_list_nr_0" value="Rocker1-1"/>
+				<property data-type="int" key="implemented_products_list_size" value="0"/>
+				<property data-type="string" key="attribute_name" value="Rockers-B"/>
+				<property data-type="string" key="children_products_list_nr_1" value="Rocker1-2"/>
+				<property data-type="string" key="children_products_list_nr_2" value="Off1-1"/>
+			</feature>
+			<feature abstract="true" name="Rockers-A">
+				<property data-type="int" key="children_products_list_size" value="2"/>
+				<property data-type="string" key="children_products_list_nr_0" value="Rocker1-1"/>
+				<property data-type="int" key="implemented_products_list_size" value="0"/>
+				<property data-type="string" key="attribute_name" value="Rockers-A"/>
+				<property data-type="string" key="children_products_list_nr_1" value="Off1-1"/>
+			</feature>
+			<and abstract="true" name="Rocker">
+				<property data-type="int" key="children_products_list_size" value="0"/>
+				<property data-type="int" key="implemented_products_list_size" value="0"/>
+				<property data-type="string" key="attribute_name" value="Rocker"/>
+				<feature name="Rocker1-1">
+					<property data-type="int" key="children_products_list_size" value="0"/>
+					<property data-type="string" key="implemented_products_list_nr_0" value="Rocker"/>
+					<property data-type="int" key="implemented_products_list_size" value="1"/>
+					<property data-type="string" key="attribute_name" value="Rocker 1-1"/>
+				</feature>
+				<feature name="Rocker1-2">
+					<property data-type="int" key="children_products_list_size" value="0"/>
+					<property data-type="string" key="implemented_products_list_nr_0" value="Rocker"/>
+					<property data-type="int" key="implemented_products_list_size" value="1"/>
+					<property data-type="string" key="attribute_name" value="Rocker 1-2"/>
+				</feature>
+				<feature name="Rocker2-2">
+					<property data-type="int" key="children_products_list_size" value="0"/>
+					<property data-type="string" key="implemented_products_list_nr_0" value="Rocker"/>
+					<property data-type="int" key="implemented_products_list_size" value="1"/>
+					<property data-type="string" key="attribute_name" value="Rocker 2-2"/>
+				</feature>
+				<feature name="Rocker2-1">
+					<property data-type="int" key="children_products_list_size" value="0"/>
+					<property data-type="string" key="implemented_products_list_nr_0" value="Rocker"/>
+					<property data-type="int" key="implemented_products_list_size" value="1"/>
+					<property data-type="string" key="attribute_name" value="Rocker 2-1"/>
+				</feature>
+			</and>
+			<and abstract="true" name="Rockerswitch">
+				<property data-type="int" key="children_products_list_size" value="2"/>
+				<property data-type="string" key="children_products_list_nr_0" value="Screwcompond1-1"/>
+				<property data-type="int" key="implemented_products_list_size" value="0"/>
+				<property data-type="string" key="attribute_name" value="Rockerswitch"/>
+				<property data-type="string" key="children_products_list_nr_1" value="Screwcompond1-2"/>
+				<feature name="Rockerswitch-K">
+					<property data-type="int" key="children_products_list_size" value="8"/>
+					<property data-type="string" key="children_products_list_nr_4" value="Off1-1"/>
+					<property data-type="string" key="children_products_list_nr_5" value="Off1-2"/>
+					<property data-type="string" key="children_products_list_nr_6" value="Off1-3"/>
+					<property data-type="string" key="children_products_list_nr_7" value="Off1-4"/>
+					<property data-type="string" key="implemented_products_list_nr_0" value="Rockerswitch"/>
+					<property data-type="string" key="children_products_list_nr_0" value="Pole2-1"/>
+					<property data-type="int" key="implemented_products_list_size" value="1"/>
+					<property data-type="string" key="attribute_name" value="Rockerswitch-K"/>
+					<property data-type="string" key="children_products_list_nr_1" value="Pole2-2"/>
+					<property data-type="string" key="children_products_list_nr_2" value="Rocker2-1"/>
+					<property data-type="string" key="children_products_list_nr_3" value="Rocker2-2"/>
+				</feature>
+			</and>
+			<and abstract="true" name="Off">
+				<property data-type="int" key="children_products_list_size" value="0"/>
+				<property data-type="int" key="implemented_products_list_size" value="0"/>
+				<property data-type="string" key="attribute_name" value="Off"/>
+				<feature name="Off1-4">
+					<property data-type="int" key="children_products_list_size" value="0"/>
+					<property data-type="string" key="implemented_products_list_nr_0" value="Off"/>
+					<property data-type="int" key="implemented_products_list_size" value="1"/>
+					<property data-type="string" key="attribute_name" value="Off 1-4"/>
+				</feature>
+				<feature name="Off1-3">
+					<property data-type="int" key="children_products_list_size" value="0"/>
+					<property data-type="string" key="implemented_products_list_nr_0" value="Off"/>
+					<property data-type="int" key="implemented_products_list_size" value="1"/>
+					<property data-type="string" key="attribute_name" value="Off 1-3"/>
+				</feature>
+				<feature name="Off1-2">
+					<property data-type="int" key="children_products_list_size" value="0"/>
+					<property data-type="string" key="implemented_products_list_nr_0" value="Off"/>
+					<property data-type="int" key="implemented_products_list_size" value="1"/>
+					<property data-type="string" key="attribute_name" value="Off 1-2"/>
+				</feature>
+				<feature name="Off1-1">
+					<property data-type="int" key="children_products_list_size" value="0"/>
+					<property data-type="string" key="implemented_products_list_nr_0" value="Off"/>
+					<property data-type="int" key="implemented_products_list_size" value="1"/>
+					<property data-type="string" key="attribute_name" value="Off 1-1"/>
+				</feature>
+			</and>
+			<feature abstract="true" name="Contacts-A">
+				<property data-type="int" key="children_products_list_size" value="2"/>
+				<property data-type="string" key="children_products_list_nr_0" value="Socket"/>
+				<property data-type="int" key="implemented_products_list_size" value="0"/>
+				<property data-type="string" key="attribute_name" value="Contacts-A"/>
+				<property data-type="string" key="children_products_list_nr_1" value="Pole1-1"/>
+			</feature>
+			<and abstract="true" name="Screwcompond">
+				<property data-type="int" key="children_products_list_size" value="3"/>
+				<property data-type="string" key="children_products_list_nr_0" value="Screw"/>
+				<property data-type="int" key="implemented_products_list_size" value="0"/>
+				<property data-type="string" key="attribute_name" value="Screwcompond"/>
+				<property data-type="string" key="children_products_list_nr_1" value="O-Ring"/>
+				<property data-type="string" key="children_products_list_nr_2" value="Claw"/>
+				<feature name="Screwcompond1-1">
+					<property data-type="int" key="children_products_list_size" value="0"/>
+					<property data-type="string" key="implemented_products_list_nr_0" value="Screwcompond"/>
+					<property data-type="int" key="implemented_products_list_size" value="1"/>
+					<property data-type="string" key="attribute_name" value="Screwcompond 1-1"/>
+				</feature>
+				<feature name="Screwcompond1-2">
+					<property data-type="int" key="children_products_list_size" value="0"/>
+					<property data-type="string" key="implemented_products_list_nr_0" value="Screwcompond"/>
+					<property data-type="int" key="implemented_products_list_size" value="1"/>
+					<property data-type="string" key="attribute_name" value="Screwcompond 1-2"/>
+				</feature>
+			</and>
+			<feature name="Rockerswitch-B">
+				<property data-type="int" key="children_products_list_size" value="2"/>
+				<property data-type="string" key="implemented_products_list_nr_1" value="Contacts-A"/>
+				<property data-type="string" key="implemented_products_list_nr_2" value="Rockers-A"/>
+				<property data-type="string" key="implemented_products_list_nr_0" value="Rockerswitch"/>
+				<property data-type="string" key="children_products_list_nr_0" value="Neutral1-1"/>
+				<property data-type="int" key="implemented_products_list_size" value="3"/>
+				<property data-type="string" key="attribute_name" value="Rockerswitch-B"/>
+				<property data-type="string" key="children_products_list_nr_1" value="Changeover1"/>
+			</feature>
+			<feature name="Rockerswitch-A">
+				<property data-type="int" key="children_products_list_size" value="1"/>
+				<property data-type="string" key="implemented_products_list_nr_1" value="Contacts-A"/>
+				<property data-type="string" key="implemented_products_list_nr_2" value="Rockers-A"/>
+				<property data-type="string" key="implemented_products_list_nr_0" value="Rockerswitch"/>
+				<property data-type="string" key="children_products_list_nr_0" value="Changeover1"/>
+				<property data-type="int" key="implemented_products_list_size" value="3"/>
+				<property data-type="string" key="attribute_name" value="Rockerswitch-A"/>
+			</feature>
+			<feature name="Rockerswitch-D">
+				<property data-type="int" key="children_products_list_size" value="1"/>
+				<property data-type="string" key="implemented_products_list_nr_1" value="Contacts-A"/>
+				<property data-type="string" key="implemented_products_list_nr_2" value="Rockers-A"/>
+				<property data-type="string" key="implemented_products_list_nr_0" value="Rockerswitch"/>
+				<property data-type="string" key="children_products_list_nr_0" value="Neutral1-1"/>
+				<property data-type="int" key="implemented_products_list_size" value="3"/>
+				<property data-type="string" key="attribute_name" value="Rockerswitch-D"/>
+			</feature>
+			<feature name="Rockerswitch-C">
+				<property data-type="int" key="children_products_list_size" value="0"/>
+				<property data-type="string" key="implemented_products_list_nr_1" value="Contacts-A"/>
+				<property data-type="string" key="implemented_products_list_nr_2" value="Rockers-A"/>
+				<property data-type="string" key="implemented_products_list_nr_0" value="Rockerswitch"/>
+				<property data-type="int" key="implemented_products_list_size" value="3"/>
+				<property data-type="string" key="attribute_name" value="Rockerswitch-C"/>
+			</feature>
+			<feature name="Rockerswitch-F">
+				<property data-type="int" key="children_products_list_size" value="1"/>
+				<property data-type="string" key="implemented_products_list_nr_1" value="Contacts-B"/>
+				<property data-type="string" key="implemented_products_list_nr_2" value="Rockers-B"/>
+				<property data-type="string" key="implemented_products_list_nr_0" value="Rockerswitch"/>
+				<property data-type="string" key="children_products_list_nr_0" value="Changeover1"/>
+				<property data-type="int" key="implemented_products_list_size" value="3"/>
+				<property data-type="string" key="attribute_name" value="Rockerswitch-F"/>
+			</feature>
+			<and abstract="true" name="Claw">
+				<property data-type="int" key="children_products_list_size" value="0"/>
+				<property data-type="int" key="implemented_products_list_size" value="0"/>
+				<property data-type="string" key="attribute_name" value="Claw"/>
+				<feature name="Claw1-1">
+					<property data-type="int" key="children_products_list_size" value="0"/>
+					<property data-type="string" key="implemented_products_list_nr_0" value="Claw"/>
+					<property data-type="int" key="implemented_products_list_size" value="1"/>
+					<property data-type="string" key="attribute_name" value="Claw 1-1"/>
+				</feature>
+				<feature name="Claw1-2">
+					<property data-type="int" key="children_products_list_size" value="0"/>
+					<property data-type="string" key="implemented_products_list_nr_0" value="Claw"/>
+					<property data-type="int" key="implemented_products_list_size" value="1"/>
+					<property data-type="string" key="attribute_name" value="Claw 1-2"/>
+				</feature>
+			</and>
+			<feature name="Rockerswitch-E">
+				<property data-type="int" key="children_products_list_size" value="2"/>
+				<property data-type="string" key="implemented_products_list_nr_1" value="Contacts-A"/>
+				<property data-type="string" key="implemented_products_list_nr_2" value="Rockers-A"/>
+				<property data-type="string" key="implemented_products_list_nr_0" value="Rockerswitch"/>
+				<property data-type="string" key="children_products_list_nr_0" value="Neutral1-1"/>
+				<property data-type="int" key="implemented_products_list_size" value="3"/>
+				<property data-type="string" key="attribute_name" value="Rockerswitch-E"/>
+				<property data-type="string" key="children_products_list_nr_1" value="Neutral1-2"/>
+			</feature>
+			<feature name="Rockerswitch-H">
+				<property data-type="int" key="children_products_list_size" value="0"/>
+				<property data-type="string" key="implemented_products_list_nr_1" value="Contacts-B"/>
+				<property data-type="string" key="implemented_products_list_nr_0" value="Rockerswitch"/>
+				<property data-type="int" key="implemented_products_list_size" value="2"/>
+				<property data-type="string" key="attribute_name" value="Rockerswitch-H"/>
+			</feature>
+			<and abstract="true" name="O-Ring">
+				<property data-type="int" key="children_products_list_size" value="0"/>
+				<property data-type="int" key="implemented_products_list_size" value="0"/>
+				<property data-type="string" key="attribute_name" value="O-Ring"/>
+				<feature name="O-Ring1-2">
+					<property data-type="int" key="children_products_list_size" value="0"/>
+					<property data-type="string" key="implemented_products_list_nr_0" value="O-Ring"/>
+					<property data-type="int" key="implemented_products_list_size" value="1"/>
+					<property data-type="string" key="attribute_name" value="O-Ring 1-2"/>
+				</feature>
+				<feature name="O-Ring1-1">
+					<property data-type="int" key="children_products_list_size" value="0"/>
+					<property data-type="string" key="implemented_products_list_nr_0" value="O-Ring"/>
+					<property data-type="int" key="implemented_products_list_size" value="1"/>
+					<property data-type="string" key="attribute_name" value="O-Ring 1-1"/>
+				</feature>
+			</and>
+			<feature name="Rockerswitch-G">
+				<property data-type="int" key="children_products_list_size" value="1"/>
+				<property data-type="string" key="implemented_products_list_nr_1" value="Contacts-B"/>
+				<property data-type="string" key="implemented_products_list_nr_2" value="Rockers-B"/>
+				<property data-type="string" key="implemented_products_list_nr_0" value="Rockerswitch"/>
+				<property data-type="string" key="children_products_list_nr_0" value="Off1-2"/>
+				<property data-type="int" key="implemented_products_list_size" value="3"/>
+				<property data-type="string" key="attribute_name" value="Rockerswitch-G"/>
+			</feature>
+			<feature name="Rockerswitch-J">
+				<property data-type="int" key="children_products_list_size" value="2"/>
+				<property data-type="string" key="implemented_products_list_nr_1" value="Contacts-B"/>
+				<property data-type="string" key="implemented_products_list_nr_2" value="Rockers-B"/>
+				<property data-type="string" key="implemented_products_list_nr_0" value="Rockerswitch"/>
+				<property data-type="string" key="children_products_list_nr_0" value="Crossover"/>
+				<property data-type="int" key="implemented_products_list_size" value="3"/>
+				<property data-type="string" key="attribute_name" value="Rockerswitch-J"/>
+				<property data-type="string" key="children_products_list_nr_1" value="Neutral1-1"/>
+			</feature>
+			<feature name="Rockerswitch-I">
+				<property data-type="int" key="children_products_list_size" value="1"/>
+				<property data-type="string" key="implemented_products_list_nr_1" value="Contacts-B"/>
+				<property data-type="string" key="implemented_products_list_nr_2" value="Rockers-B"/>
+				<property data-type="string" key="implemented_products_list_nr_0" value="Rockerswitch"/>
+				<property data-type="string" key="children_products_list_nr_0" value="Crossover"/>
+				<property data-type="int" key="implemented_products_list_size" value="3"/>
+				<property data-type="string" key="attribute_name" value="Rockerswitch-I"/>
+			</feature>
+			<feature name="Rockerswitch-L">
+				<property data-type="int" key="children_products_list_size" value="1"/>
+				<property data-type="string" key="implemented_products_list_nr_1" value="Contacts-B"/>
+				<property data-type="string" key="implemented_products_list_nr_2" value="Rockers-B"/>
+				<property data-type="string" key="implemented_products_list_nr_0" value="Rockerswitch"/>
+				<property data-type="string" key="children_products_list_nr_0" value="Changeover2"/>
+				<property data-type="int" key="implemented_products_list_size" value="3"/>
+				<property data-type="string" key="attribute_name" value="Rockerswitch-L"/>
+			</feature>
+			<and abstract="true" name="Changeover">
+				<property data-type="int" key="children_products_list_size" value="0"/>
+				<property data-type="int" key="implemented_products_list_size" value="0"/>
+				<property data-type="string" key="attribute_name" value="Changeover"/>
+				<feature name="Changeover2">
+					<property data-type="int" key="children_products_list_size" value="0"/>
+					<property data-type="string" key="implemented_products_list_nr_0" value="Changeover"/>
+					<property data-type="int" key="implemented_products_list_size" value="1"/>
+					<property data-type="string" key="attribute_name" value="Changeover 2"/>
+				</feature>
+				<feature name="Changeover1">
+					<property data-type="int" key="children_products_list_size" value="0"/>
+					<property data-type="string" key="implemented_products_list_nr_0" value="Changeover"/>
+					<property data-type="int" key="implemented_products_list_size" value="1"/>
+					<property data-type="string" key="attribute_name" value="Changeover 1"/>
+				</feature>
+			</and>
+			<feature name="Series">
+				<property data-type="int" key="children_products_list_size" value="0"/>
+				<property data-type="int" key="implemented_products_list_size" value="0"/>
+				<property data-type="string" key="attribute_name" value="Series"/>
+			</feature>
+			<and abstract="true" name="Screw">
+				<property data-type="int" key="children_products_list_size" value="0"/>
+				<property data-type="int" key="implemented_products_list_size" value="0"/>
+				<property data-type="string" key="attribute_name" value="Screw"/>
+				<feature name="Screw1-1">
+					<property data-type="int" key="children_products_list_size" value="0"/>
+					<property data-type="string" key="implemented_products_list_nr_0" value="Screw"/>
+					<property data-type="int" key="implemented_products_list_size" value="1"/>
+					<property data-type="string" key="attribute_name" value="Screw 1-1"/>
+				</feature>
+				<feature name="Screw1-2">
+					<property data-type="int" key="children_products_list_size" value="0"/>
+					<property data-type="string" key="implemented_products_list_nr_0" value="Screw"/>
+					<property data-type="int" key="implemented_products_list_size" value="1"/>
+					<property data-type="string" key="attribute_name" value="Screw 1-2"/>
+				</feature>
+			</and>
+			<feature name="Socket">
+				<property data-type="int" key="children_products_list_size" value="0"/>
+				<property data-type="int" key="implemented_products_list_size" value="0"/>
+				<property data-type="string" key="attribute_name" value="Socket"/>
+			</feature>
+			<and abstract="true" name="Pole">
+				<property data-type="int" key="children_products_list_size" value="0"/>
+				<property data-type="int" key="implemented_products_list_size" value="0"/>
+				<property data-type="string" key="attribute_name" value="Pole"/>
+				<feature name="Pole2-2">
+					<property data-type="int" key="children_products_list_size" value="0"/>
+					<property data-type="string" key="implemented_products_list_nr_0" value="Pole"/>
+					<property data-type="int" key="implemented_products_list_size" value="1"/>
+					<property data-type="string" key="attribute_name" value="Pole 2-2"/>
+				</feature>
+				<feature name="Pole2-1">
+					<property data-type="int" key="children_products_list_size" value="0"/>
+					<property data-type="string" key="implemented_products_list_nr_0" value="Pole"/>
+					<property data-type="int" key="implemented_products_list_size" value="1"/>
+					<property data-type="string" key="attribute_name" value="Pole 2-1"/>
+				</feature>
+				<feature name="Pole1-1">
+					<property data-type="int" key="children_products_list_size" value="0"/>
+					<property data-type="string" key="implemented_products_list_nr_0" value="Pole"/>
+					<property data-type="int" key="implemented_products_list_size" value="1"/>
+					<property data-type="string" key="attribute_name" value="Pole 1-1"/>
+				</feature>
+			</and>
+		</or>
+	</struct>
+	<constraints>
+		<rule>
+			<imp>
+				<var>Rockerswitch-B</var>
+				<var>Rockerswitch</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-B</var>
+				<var>Contacts-A</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-B</var>
+				<var>Rockers-A</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-A</var>
+				<var>Rockerswitch</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-A</var>
+				<var>Contacts-A</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-A</var>
+				<var>Rockers-A</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-D</var>
+				<var>Rockerswitch</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-D</var>
+				<var>Contacts-A</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-D</var>
+				<var>Rockers-A</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-C</var>
+				<var>Rockerswitch</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-C</var>
+				<var>Contacts-A</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-C</var>
+				<var>Rockers-A</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-F</var>
+				<var>Rockerswitch</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-F</var>
+				<var>Contacts-B</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-F</var>
+				<var>Rockers-B</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-E</var>
+				<var>Rockerswitch</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-E</var>
+				<var>Contacts-A</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-E</var>
+				<var>Rockers-A</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-H</var>
+				<var>Rockerswitch</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-H</var>
+				<var>Contacts-B</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-G</var>
+				<var>Rockerswitch</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-G</var>
+				<var>Contacts-B</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-G</var>
+				<var>Rockers-B</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-J</var>
+				<var>Rockerswitch</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-J</var>
+				<var>Contacts-B</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-J</var>
+				<var>Rockers-B</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-I</var>
+				<var>Rockerswitch</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-I</var>
+				<var>Contacts-B</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-I</var>
+				<var>Rockers-B</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-L</var>
+				<var>Rockerswitch</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-L</var>
+				<var>Contacts-B</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-L</var>
+				<var>Rockers-B</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Contacts-B</var>
+				<var>Socket</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Contacts-B</var>
+				<var>Pole1-1</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Contacts-B</var>
+				<var>Pole1-2</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Contacts-B</var>
+				<not>
+					<var>Contacts-A</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Contacts-B</var>
+				<not>
+					<var>Contacts-C</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Contacts-C</var>
+				<var>Socket</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Contacts-C</var>
+				<var>Pole2-1</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Contacts-C</var>
+				<var>Pole2-2</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Contacts-C</var>
+				<not>
+					<var>Contacts-A</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Contacts-C</var>
+				<not>
+					<var>Contacts-B</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockers-B</var>
+				<var>Rocker1-1</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockers-B</var>
+				<var>Rocker1-2</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockers-B</var>
+				<var>Off1-1</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockers-B</var>
+				<not>
+					<var>Rockers-A</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockers-A</var>
+				<var>Rocker1-1</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockers-A</var>
+				<var>Off1-1</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockers-A</var>
+				<not>
+					<var>Rockers-B</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch</var>
+				<var>Screwcompond1-1</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch</var>
+				<var>Screwcompond1-2</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Contacts-A</var>
+				<var>Socket</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Contacts-A</var>
+				<var>Pole1-1</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Contacts-A</var>
+				<not>
+					<var>Contacts-B</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Contacts-A</var>
+				<not>
+					<var>Contacts-C</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Screwcompond</var>
+				<var>Screw</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Screwcompond</var>
+				<var>O-Ring</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Screwcompond</var>
+				<var>Claw</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-B</var>
+				<var>Neutral1-1</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-B</var>
+				<var>Changeover1</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-B</var>
+				<not>
+					<var>Rockerswitch-A</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-B</var>
+				<not>
+					<var>Rockerswitch-C</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-B</var>
+				<not>
+					<var>Rockerswitch-D</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-B</var>
+				<not>
+					<var>Rockerswitch-E</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-B</var>
+				<not>
+					<var>Rockerswitch-F</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-B</var>
+				<not>
+					<var>Rockerswitch-G</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-B</var>
+				<not>
+					<var>Rockerswitch-H</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-B</var>
+				<not>
+					<var>Rockerswitch-I</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-B</var>
+				<not>
+					<var>Rockerswitch-J</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-B</var>
+				<not>
+					<var>Rockerswitch-K</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-B</var>
+				<not>
+					<var>Rockerswitch-L</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-A</var>
+				<var>Changeover1</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-A</var>
+				<not>
+					<var>Rockerswitch-B</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-A</var>
+				<not>
+					<var>Rockerswitch-C</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-A</var>
+				<not>
+					<var>Rockerswitch-D</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-A</var>
+				<not>
+					<var>Rockerswitch-E</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-A</var>
+				<not>
+					<var>Rockerswitch-F</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-A</var>
+				<not>
+					<var>Rockerswitch-G</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-A</var>
+				<not>
+					<var>Rockerswitch-H</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-A</var>
+				<not>
+					<var>Rockerswitch-I</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-A</var>
+				<not>
+					<var>Rockerswitch-J</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-A</var>
+				<not>
+					<var>Rockerswitch-K</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-A</var>
+				<not>
+					<var>Rockerswitch-L</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-D</var>
+				<var>Neutral1-1</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-D</var>
+				<not>
+					<var>Rockerswitch-B</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-D</var>
+				<not>
+					<var>Rockerswitch-C</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-D</var>
+				<not>
+					<var>Rockerswitch-A</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-D</var>
+				<not>
+					<var>Rockerswitch-E</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-D</var>
+				<not>
+					<var>Rockerswitch-F</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-D</var>
+				<not>
+					<var>Rockerswitch-G</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-D</var>
+				<not>
+					<var>Rockerswitch-H</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-D</var>
+				<not>
+					<var>Rockerswitch-I</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-D</var>
+				<not>
+					<var>Rockerswitch-J</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-D</var>
+				<not>
+					<var>Rockerswitch-K</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-D</var>
+				<not>
+					<var>Rockerswitch-L</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-C</var>
+				<not>
+					<var>Rockerswitch-B</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-C</var>
+				<not>
+					<var>Rockerswitch-A</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-C</var>
+				<not>
+					<var>Rockerswitch-D</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-C</var>
+				<not>
+					<var>Rockerswitch-E</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-C</var>
+				<not>
+					<var>Rockerswitch-F</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-C</var>
+				<not>
+					<var>Rockerswitch-G</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-C</var>
+				<not>
+					<var>Rockerswitch-H</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-C</var>
+				<not>
+					<var>Rockerswitch-I</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-C</var>
+				<not>
+					<var>Rockerswitch-J</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-C</var>
+				<not>
+					<var>Rockerswitch-K</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-C</var>
+				<not>
+					<var>Rockerswitch-L</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-F</var>
+				<var>Changeover1</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-F</var>
+				<not>
+					<var>Rockerswitch-B</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-F</var>
+				<not>
+					<var>Rockerswitch-C</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-F</var>
+				<not>
+					<var>Rockerswitch-D</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-F</var>
+				<not>
+					<var>Rockerswitch-E</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-F</var>
+				<not>
+					<var>Rockerswitch-A</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-F</var>
+				<not>
+					<var>Rockerswitch-G</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-F</var>
+				<not>
+					<var>Rockerswitch-H</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-F</var>
+				<not>
+					<var>Rockerswitch-I</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-F</var>
+				<not>
+					<var>Rockerswitch-J</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-F</var>
+				<not>
+					<var>Rockerswitch-K</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-F</var>
+				<not>
+					<var>Rockerswitch-L</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-E</var>
+				<var>Neutral1-1</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-E</var>
+				<var>Neutral1-2</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-E</var>
+				<not>
+					<var>Rockerswitch-B</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-E</var>
+				<not>
+					<var>Rockerswitch-C</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-E</var>
+				<not>
+					<var>Rockerswitch-D</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-E</var>
+				<not>
+					<var>Rockerswitch-A</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-E</var>
+				<not>
+					<var>Rockerswitch-F</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-E</var>
+				<not>
+					<var>Rockerswitch-G</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-E</var>
+				<not>
+					<var>Rockerswitch-H</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-E</var>
+				<not>
+					<var>Rockerswitch-I</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-E</var>
+				<not>
+					<var>Rockerswitch-J</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-E</var>
+				<not>
+					<var>Rockerswitch-K</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-E</var>
+				<not>
+					<var>Rockerswitch-L</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-H</var>
+				<not>
+					<var>Rockerswitch-B</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-H</var>
+				<not>
+					<var>Rockerswitch-C</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-H</var>
+				<not>
+					<var>Rockerswitch-D</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-H</var>
+				<not>
+					<var>Rockerswitch-E</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-H</var>
+				<not>
+					<var>Rockerswitch-F</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-H</var>
+				<not>
+					<var>Rockerswitch-G</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-H</var>
+				<not>
+					<var>Rockerswitch-A</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-H</var>
+				<not>
+					<var>Rockerswitch-I</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-H</var>
+				<not>
+					<var>Rockerswitch-J</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-H</var>
+				<not>
+					<var>Rockerswitch-K</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-H</var>
+				<not>
+					<var>Rockerswitch-L</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-G</var>
+				<var>Off1-2</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-G</var>
+				<not>
+					<var>Rockerswitch-B</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-G</var>
+				<not>
+					<var>Rockerswitch-C</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-G</var>
+				<not>
+					<var>Rockerswitch-D</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-G</var>
+				<not>
+					<var>Rockerswitch-E</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-G</var>
+				<not>
+					<var>Rockerswitch-F</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-G</var>
+				<not>
+					<var>Rockerswitch-A</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-G</var>
+				<not>
+					<var>Rockerswitch-H</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-G</var>
+				<not>
+					<var>Rockerswitch-I</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-G</var>
+				<not>
+					<var>Rockerswitch-J</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-G</var>
+				<not>
+					<var>Rockerswitch-K</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-G</var>
+				<not>
+					<var>Rockerswitch-L</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-J</var>
+				<var>Crossover</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-J</var>
+				<var>Neutral1-1</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-J</var>
+				<not>
+					<var>Rockerswitch-B</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-J</var>
+				<not>
+					<var>Rockerswitch-C</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-J</var>
+				<not>
+					<var>Rockerswitch-D</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-J</var>
+				<not>
+					<var>Rockerswitch-E</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-J</var>
+				<not>
+					<var>Rockerswitch-F</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-J</var>
+				<not>
+					<var>Rockerswitch-G</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-J</var>
+				<not>
+					<var>Rockerswitch-H</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-J</var>
+				<not>
+					<var>Rockerswitch-I</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-J</var>
+				<not>
+					<var>Rockerswitch-A</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-J</var>
+				<not>
+					<var>Rockerswitch-K</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-J</var>
+				<not>
+					<var>Rockerswitch-L</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-I</var>
+				<var>Crossover</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-I</var>
+				<not>
+					<var>Rockerswitch-B</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-I</var>
+				<not>
+					<var>Rockerswitch-C</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-I</var>
+				<not>
+					<var>Rockerswitch-D</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-I</var>
+				<not>
+					<var>Rockerswitch-E</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-I</var>
+				<not>
+					<var>Rockerswitch-F</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-I</var>
+				<not>
+					<var>Rockerswitch-G</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-I</var>
+				<not>
+					<var>Rockerswitch-H</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-I</var>
+				<not>
+					<var>Rockerswitch-A</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-I</var>
+				<not>
+					<var>Rockerswitch-J</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-I</var>
+				<not>
+					<var>Rockerswitch-K</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-I</var>
+				<not>
+					<var>Rockerswitch-L</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-L</var>
+				<var>Changeover2</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-L</var>
+				<not>
+					<var>Rockerswitch-B</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-L</var>
+				<not>
+					<var>Rockerswitch-C</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-L</var>
+				<not>
+					<var>Rockerswitch-D</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-L</var>
+				<not>
+					<var>Rockerswitch-E</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-L</var>
+				<not>
+					<var>Rockerswitch-F</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-L</var>
+				<not>
+					<var>Rockerswitch-G</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-L</var>
+				<not>
+					<var>Rockerswitch-H</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-L</var>
+				<not>
+					<var>Rockerswitch-I</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-L</var>
+				<not>
+					<var>Rockerswitch-J</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-L</var>
+				<not>
+					<var>Rockerswitch-K</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-L</var>
+				<not>
+					<var>Rockerswitch-A</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-K</var>
+				<var>Pole2-1</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-K</var>
+				<var>Pole2-2</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-K</var>
+				<var>Rocker2-1</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-K</var>
+				<var>Rocker2-2</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-K</var>
+				<var>Off1-1</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-K</var>
+				<var>Off1-2</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-K</var>
+				<var>Off1-3</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-K</var>
+				<var>Off1-4</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-K</var>
+				<not>
+					<var>Rockerswitch-B</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-K</var>
+				<not>
+					<var>Rockerswitch-C</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-K</var>
+				<not>
+					<var>Rockerswitch-D</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-K</var>
+				<not>
+					<var>Rockerswitch-E</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-K</var>
+				<not>
+					<var>Rockerswitch-F</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-K</var>
+				<not>
+					<var>Rockerswitch-G</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-K</var>
+				<not>
+					<var>Rockerswitch-H</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-K</var>
+				<not>
+					<var>Rockerswitch-I</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-K</var>
+				<not>
+					<var>Rockerswitch-J</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-K</var>
+				<not>
+					<var>Rockerswitch-A</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Rockerswitch-K</var>
+				<not>
+					<var>Rockerswitch-L</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Screwcompond1-1</var>
+				<var>Screw1-1</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Screwcompond1-1</var>
+				<var>O-Ring1-1</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Screwcompond1-1</var>
+				<var>Claw1-1</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Screwcompond1-2</var>
+				<var>Screw1-2</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Screwcompond1-2</var>
+				<var>O-Ring1-2</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Screwcompond1-2</var>
+				<var>Claw1-2</var>
+			</imp>
+		</rule>
+	</constraints>
+</featureModel>

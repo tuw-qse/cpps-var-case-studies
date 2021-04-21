@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<featureModel>
+	<struct>
+		<or abstract="true" hidden="true" mandatory="true" name="VIRTUAL_ROOT">
+			<feature name="Chassis">
+				<property data-type="int" key="children_products_list_size" value="0"/>
+				<property data-type="int" key="implemented_products_list_size" value="0"/>
+				<property data-type="string" key="attribute_name" value="Chassis"/>
+			</feature>
+			<and abstract="true" name="Truck">
+				<property data-type="int" key="children_products_list_size" value="3"/>
+				<property data-type="string" key="children_products_list_nr_0" value="Chassis"/>
+				<property data-type="int" key="implemented_products_list_size" value="0"/>
+				<property data-type="string" key="attribute_name" value="Truck"/>
+				<property data-type="string" key="children_products_list_nr_1" value="Cabin"/>
+				<property data-type="string" key="children_products_list_nr_2" value="Body"/>
+				<feature name="Truck3">
+					<property data-type="int" key="children_products_list_size" value="0"/>
+					<property data-type="string" key="implemented_products_list_nr_0" value="Truck"/>
+					<property data-type="int" key="implemented_products_list_size" value="1"/>
+					<property data-type="string" key="attribute_name" value="Truck3"/>
+				</feature>
+				<feature name="Truck4">
+					<property data-type="int" key="children_products_list_size" value="0"/>
+					<property data-type="string" key="implemented_products_list_nr_0" value="Truck"/>
+					<property data-type="int" key="implemented_products_list_size" value="1"/>
+					<property data-type="string" key="attribute_name" value="Truck4"/>
+				</feature>
+				<feature name="Truck1">
+					<property data-type="int" key="children_products_list_size" value="0"/>
+					<property data-type="string" key="implemented_products_list_nr_0" value="Truck"/>
+					<property data-type="int" key="implemented_products_list_size" value="1"/>
+					<property data-type="string" key="attribute_name" value="Truck1"/>
+				</feature>
+				<feature name="Truck2">
+					<property data-type="int" key="children_products_list_size" value="0"/>
+					<property data-type="string" key="implemented_products_list_nr_0" value="Truck"/>
+					<property data-type="int" key="implemented_products_list_size" value="1"/>
+					<property data-type="string" key="attribute_name" value="Truck2"/>
+				</feature>
+			</and>
+			<feature name="Cabin">
+				<property data-type="int" key="children_products_list_size" value="0"/>
+				<property data-type="int" key="implemented_products_list_size" value="0"/>
+				<property data-type="string" key="attribute_name" value="Cabin"/>
+			</feature>
+			<and abstract="true" name="Body">
+				<property data-type="int" key="children_products_list_size" value="0"/>
+				<property data-type="int" key="implemented_products_list_size" value="0"/>
+				<property data-type="string" key="attribute_name" value="Body"/>
+				<feature name="OpenTop">
+					<property data-type="int" key="children_products_list_size" value="0"/>
+					<property data-type="string" key="implemented_products_list_nr_0" value="Body"/>
+					<property data-type="int" key="implemented_products_list_size" value="1"/>
+					<property data-type="string" key="attribute_name" value="OpenTop"/>
+				</feature>
+				<feature name="StakeBed">
+					<property data-type="int" key="children_products_list_size" value="0"/>
+					<property data-type="string" key="implemented_products_list_nr_0" value="Body"/>
+					<property data-type="int" key="implemented_products_list_size" value="1"/>
+					<property data-type="string" key="attribute_name" value="StakeBed"/>
+				</feature>
+				<feature name="Dumper">
+					<property data-type="int" key="children_products_list_size" value="0"/>
+					<property data-type="string" key="implemented_products_list_nr_0" value="Body"/>
+					<property data-type="int" key="implemented_products_list_size" value="1"/>
+					<property data-type="string" key="attribute_name" value="Dumper"/>
+				</feature>
+				<feature name="Tank">
+					<property data-type="int" key="children_products_list_size" value="0"/>
+					<property data-type="string" key="implemented_products_list_nr_0" value="Body"/>
+					<property data-type="int" key="implemented_products_list_size" value="1"/>
+					<property data-type="string" key="attribute_name" value="Tank"/>
+				</feature>
+			</and>
+		</or>
+	</struct>
+	<constraints>
+		<rule>
+			<imp>
+				<var>Truck3</var>
+				<var>Dumper</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Truck3</var>
+				<not>
+					<var>OpenTop</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Truck3</var>
+				<not>
+					<var>Tank</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Truck3</var>
+				<not>
+					<var>StakeBed</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Truck4</var>
+				<var>StakeBed</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Truck4</var>
+				<not>
+					<var>OpenTop</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Truck4</var>
+				<not>
+					<var>Dumper</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Truck4</var>
+				<not>
+					<var>Tank</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>OpenTop</var>
+				<not>
+					<var>StakeBed</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>OpenTop</var>
+				<not>
+					<var>Dumper</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>OpenTop</var>
+				<not>
+					<var>Tank</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Truck1</var>
+				<var>Tank</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Truck1</var>
+				<not>
+					<var>OpenTop</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Truck1</var>
+				<not>
+					<var>Dumper</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Truck1</var>
+				<not>
+					<var>StakeBed</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Truck2</var>
+				<var>OpenTop</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Truck2</var>
+				<not>
+					<var>Tank</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Truck2</var>
+				<not>
+					<var>Dumper</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Truck2</var>
+				<not>
+					<var>StakeBed</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>StakeBed</var>
+				<not>
+					<var>Dumper</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>StakeBed</var>
+				<not>
+					<var>OpenTop</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>StakeBed</var>
+				<not>
+					<var>Tank</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Truck</var>
+				<var>Chassis</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Truck</var>
+				<var>Cabin</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Truck</var>
+				<var>Body</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Dumper</var>
+				<not>
+					<var>StakeBed</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Dumper</var>
+				<not>
+					<var>OpenTop</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Dumper</var>
+				<not>
+					<var>Tank</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Tank</var>
+				<not>
+					<var>StakeBed</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Tank</var>
+				<not>
+					<var>OpenTop</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Tank</var>
+				<not>
+					<var>Dumper</var>
+				</not>
+			</imp>
+		</rule>
+	</constraints>
+</featureModel>
