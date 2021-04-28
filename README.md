@@ -1,4 +1,14 @@
-# CPPS Variaility Case Studies
+# CPPS Variability Case Studies
+
+This is the repository of the CPPS Variability Case Studies.
+
+Each case study can be found in its own directory.
+Within the directory you find a case study description, the PPR DSL file with the representation of the product variants, the transformed FeatureIDE feature models and a image of the resulting feature model.
+
+- [Truck Case Study](/truck/)
+- [Shift Fork Case Study](/shiftfork/)
+- [Water Filter Case Study](/waterfilter/)
+- [Rocker Switch Case Study](/rockerswitch/)
 
 ## Transformation Operations
 
