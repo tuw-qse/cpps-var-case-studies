@@ -1,8 +1,8 @@
 Case Study Water Filter – NanoFilter
 ------------------------------------
 
-*Overview*. The *water filter* product line, the so-called *NanoFilter*, originates from a development project
-in Tanzania[^8]. In the project researchers investigated different
+*Overview*. The *water filter* product line, the so-called *NanoFilter*, originates from a [development project
+in Tanzania](https://gongalimodel.com/). In the project researchers investigated different
 filter materials and constructions. The water
 filter can filter impurities and, in contrary to most local solutions,
 selectively remove contaminants from unsafe water sources. Depending on
@@ -18,7 +18,7 @@ paper) collected the primary data for the case study by conducting a
 semi-structured online interview and email communication with the
 *Nanofilter*’s inventor. This data has been supported by secondary data
 from the manual of the filter, project documents submitted for
-funding[^9], and the company’s website. We iteratively elicited and
+[funding](www.globalgiving.com), and the company’s website. We iteratively elicited and
 reviewed the case study from the gathered data and the resulting
 knowledge from both data sources.
 
@@ -52,7 +52,3 @@ model. The water filter case consists
 of eight product types and with 165 dependencies between the parts of
 the product types (e.g., exclusion of bone and active charcoal).
 Therefore, we consider the case’s complexity to be at a medium level.
-
-[^8]: See project website <https://gongalimodel.com/>
-
-[^9]: [www.globalgiving.com](www.globalgiving.com)

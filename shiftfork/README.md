@@ -1,4 +1,4 @@
-Case Study Shift Fork {#sec:fork}
+Case Study Shift 
 ---------------------
 
 *Overview*. The *shift fork* product line is produced on an industrial production
@@ -28,7 +28,7 @@ product line* consists of four different shift fork variants that are
 manufactured on a timed conveyor-belt production system. A single shift
 fork consists of 14 parts, where the same 12 parts are used in all four
 shift fork variants and two parts differ between the variants. For
-instance, the shift fork variant *Fork-13*[^7] requires *Barrel 1*, a
+instance, the shift fork variant *Fork-13* requires *Barrel 1*, a
 commonality of all shift fork types, as well as *Pipe 8* and *Lock 3*,
 which differ among the shift fork variants. As there are, e.g.,
 different pipe types, but a shift fork requires exactly one pipe, the

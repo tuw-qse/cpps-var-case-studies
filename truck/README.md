@@ -1,9 +1,9 @@
-Case Study 3D-printed Truck {#sec:truck}
+Case Study 3D-printed Truck
 ---------------------------
 
 *Overview*. The real-world *3D-printed truck* product line is produced
 in an academic production system, the *Testbed for Industry 4.0 (I4.0)*
-at Czech Technical University in Prague[^5]. The I4.0 Testbed is used
+at [Czech Technical University in Prague](https://ciirc.cvut.cz/teams-labs/testbed/). The I4.0 Testbed is used
 for research and technology transfer on various topics of and
 collaborative robot-human production, like process scheduling and
 optimization and adaptive production. The I4.0 Testbed can manipulate
@@ -43,5 +43,3 @@ dependencies (e.g., exclusion criteria between the body parts) between
 the products is quite low. However, the case is a simple and
 straightforward example to learn about/teach the concepts of variability
 modeling.
-
-[^5]: Industry 4.0 Testbed: <https://ciirc.cvut.cz/teams-labs/testbed/>
