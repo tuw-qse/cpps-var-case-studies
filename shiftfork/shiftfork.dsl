@@ -107,8 +107,8 @@ Product "Jack1": {
 Product "ForkProduct": {
     name: "ForkProduct",
     isAbstract: true,
-    children: [ "Barrel1", "Jack1", "Ring1", "O-Ring", "Fork3", "Fork4", "Fork5", "Lock"],
-    requires: [ "Barrel1", "Jack1", "Ring1", "O-Ring", "Fork3", "Fork4", "Fork5", "Lock"],
+    children: [ "Barrel1", "Jack1", "Ring1", "O-Ring", "Fork3", "Fork4", "Fork5", "Pipe", "Lock"],
+    requires: [ "Barrel1", "Jack1", "Ring1", "O-Ring", "Fork3", "Fork4", "Fork5", "Pipe", "Lock"],
 }
 Product "Fork-13": {
     name: "Fork 13",
