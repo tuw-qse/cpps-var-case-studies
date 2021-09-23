@@ -10,6 +10,43 @@ Within the directory you find a case study description, the PPR DSL file with th
 - [Water Filter Case Study](/waterfilter/)
 - [Rocker Switch Case Study](/rockerswitch/)
 
+### Case Study reference
+
+[![DOI](https://img.shields.io/badge/DOI-10.1145/3461002.3473946-888888.svg)](https://doi.org/10.1145/3461002.3473946)
+
+```
+@inproceedings{Meixner2021CppsCaseStudies,
+author = {Meixner, Kristof and Feichtinger, Kevin and Rabiser, Rick and Biffl, Stefan},
+title = {A Reusable Set of Real-World Product Line Case Studies for Comparing Variability Models in Research and Practice},
+year = {2021},
+isbn = {9781450384704},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3461002.3473946},
+doi = {10.1145/3461002.3473946},
+abstract = {Real-world cases describing (product) variability in production systems are rare and
+often not accessible. Thus, researchers often use toy examples or develop fictitious
+case studies. These are designed to demonstrate their approach but rarely to compare
+multiple approaches. In this paper, we aim at making variability modeling evaluations
+comparable. We present and provide a reusable set of four real-world case studies
+that are easy to access, with artifacts represented in a universal, variability-model-agnostic
+way, the industrial Product-Process-Resource Domain-Specific Language (PPR DSL). We
+report how researchers can use the case studies, automatically transforming the Domain-Specific
+Language (DSL) artifacts to well-known variability models, e.g., product feature models,
+using the Variability Evolution Roundtrip Transformation (VERT) process. We compare
+the expressiveness and complexity of the transformed feature models. We argue that
+the case studies with the DSL and the flexible transformation capabilities build a
+valuable contribution to making future research results more comparable and facilitating
+evaluations with real-world product lines.},
+booktitle = {Proceedings of the 25th ACM International Systems and Software Product Line Conference - Volume B},
+pages = {105–112},
+numpages = {8},
+keywords = {feature extraction, variability modeling, case studies, cyber-physical production system},
+location = {Leicester, United Kindom},
+series = {SPLC '21}
+}
+```
+
 ## Transformation Operations
 
 *From PPR DSL to feature models.* 
