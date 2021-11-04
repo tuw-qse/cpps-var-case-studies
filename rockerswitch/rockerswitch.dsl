@@ -325,35 +325,35 @@ Product "Rockerswitch-H": {
 Product "Rockerswitch-I": {
   name: "Rockerswitch-I",
   isAbstract: false,
-  implements: [ "Rockerswitch", "Contacts-B", "Rockers-B" ],
-  children: [ "Crossover" ],
-  requires: [ "Crossover" ],
+  implements: [ "Rockerswitch", "Contacts-B" ],
+  children: [ "Rocker1-1", "Rocker1-2", "Series" ],
+  requires: [ "Rocker1-1", "Rocker1-2", "Series" ],
   excludes: [ "Rockerswitch-B", "Rockerswitch-C", "Rockerswitch-D", "Rockerswitch-E", "Rockerswitch-F", "Rockerswitch-G", "Rockerswitch-H", "Rockerswitch-A", "Rockerswitch-J", "Rockerswitch-K", "Rockerswitch-L"]
 }
 
 Product "Rockerswitch-J": {
   name: "Rockerswitch-J",
   isAbstract: false,
-  implements: [ "Rockerswitch", "Contacts-B", "Rockers-B" ],
-  children: [ "Crossover", "Neutral1-1" ],
-  requires: [ "Crossover", "Neutral1-1" ],
+  implements: [ "Rockerswitch", "Contacts-B" ],
+  children: [ "Rocker1-1", "Rocker1-2", "Series", "Neutral1-1" ],
+  requires: [ "Rocker1-1", "Rocker1-2", "Series", "Neutral1-1" ],
   excludes: [ "Rockerswitch-B", "Rockerswitch-C", "Rockerswitch-D", "Rockerswitch-E", "Rockerswitch-F", "Rockerswitch-G", "Rockerswitch-H", "Rockerswitch-I", "Rockerswitch-A", "Rockerswitch-K", "Rockerswitch-L"]
 }
 
 Product "Rockerswitch-K": {
   name: "Rockerswitch-K",
   isAbstract: false,
-  implements: [ "Rockerswitch" ],
-  children: [ "Pole2-1", "Pole2-2", "Rocker2-1", "Rocker2-2", "Off1-1", "Off1-2", "Off1-3", "Off1-4" ],
-  requires: [ "Pole2-1", "Pole2-2", "Rocker2-1", "Rocker2-2", "Off1-1", "Off1-2", "Off1-3", "Off1-4" ],
+  implements: [ "Rockerswitch", "Contacts-C" ],
+  children: [ "Rocker2-1", "Rocker2-2", "Off1-1", "Off1-2", "Off1-3", "Off1-4" ],
+  requires: [ "Rocker2-1", "Rocker2-2", "Off1-1", "Off1-2", "Off1-3", "Off1-4" ],
   excludes: [ "Rockerswitch-B", "Rockerswitch-C", "Rockerswitch-D", "Rockerswitch-E", "Rockerswitch-F", "Rockerswitch-G", "Rockerswitch-H", "Rockerswitch-I", "Rockerswitch-J", "Rockerswitch-A", "Rockerswitch-L"]
 }
 
 Product "Rockerswitch-L": {
   name: "Rockerswitch-L",
   isAbstract: false,
-  implements: [ "Rockerswitch", "Contacts-B", "Rockers-B" ],
-  children: [ "Changeover2" ],
-  requires: [ "Changeover2" ],
+  implements: [ "Rockerswitch", "Contacts-B" ],
+  children: [ "Rocker1-1", "Rocker1-2", "Changeover2", "Crossover" ],
+  requires: [ "Rocker1-1", "Rocker1-2", "Changeover2", "Crossover" ],
   excludes: [ "Rockerswitch-B", "Rockerswitch-C", "Rockerswitch-D", "Rockerswitch-E", "Rockerswitch-F", "Rockerswitch-G", "Rockerswitch-H", "Rockerswitch-I", "Rockerswitch-J", "Rockerswitch-K", "Rockerswitch-A"]
 }
