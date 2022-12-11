@@ -418,24 +418,28 @@ Process "AssembleFiltertankXL": {
 
 Process "AssembleFiltertankSWithActive": {
   name: "AssembleFiltertankSWithActive",
+  requires: [ "AssembleFiltertankS" ],
   inputs: [ {productId: "FiltertankS"}, {productId: "CharcoalActive"}],
   outputs: [ {OP7: {productId: "CompletedFiltertankSWithActive", costWeight: 1.0}}]
 }
 
 Process "AssembleFiltertankXLWithActive": {
   name: "AssembleFiltertankXLWithActive",
+  requires: [ "AssembleFiltertankXL" ],
   inputs: [ {productId: "FiltertankXL"}, {productId: "CharcoalActive"}],
   outputs: [ {OP8: {productId: "CompletedFiltertankXLWithActive", costWeight: 1.0}}]
 }
 
-Process "AssembleFiltertankSWithABone": {
+Process "AssembleFiltertankSWithBone": {
   name: "AssembleFiltertankSWithBone",
+  requires: [ "AssembleFiltertankS" ],
   inputs: [ {productId: "FiltertankS"}, {productId: "CharcoalBone"}],
   outputs: [ {OP9: {productId: "CompletedFiltertankSWithBone", costWeight: 1.0}}]
 }
 
-Process "AssembleFiltertankXLWithABone": {
+Process "AssembleFiltertankXLWithBone": {
   name: "AssembleFiltertankXLWithBone",
+  requires: [ "AssembleFiltertankXL" ],
   inputs: [ {productId: "FiltertankXL"}, {productId: "CharcoalBone"}],
   outputs: [ {OP10: {productId: "CompletedFiltertankXLWithBone", costWeight: 1.0}}]
 }
@@ -448,102 +452,119 @@ Process "AssembleWastewaterTank": {
 
 Process "AssembleMountedTank1": {
   name: "AssembleMountedTank1",
+  requires: [ "AssembleFreshwaterTankS" ],
   inputs: [ {productId: "CompletedFreshwaterTankS"}, {productId: "IronFrame"}],
   outputs: [ {OP12: {productId: "MountedTanks1", costWeight: 1.0}}]
 }
 
 Process "AssembleMountedTank2": {
   name: "AssembleMountedTank2",
+  requires: [ "AssembleFreshwaterTankXL" ],
   inputs: [ {productId: "CompletedFreshwaterTankXL"}, {productId: "Rack1"}],
   outputs: [ {OP13: {productId: "MountedTanks2", costWeight: 1.0}}]
 }
 
 Process "AssembleMountedTank3": {
   name: "AssembleMountedTank3",
+  requires: [ "AssembleFreshwaterTankS", "AssembleWastewaterTank" ],
   inputs: [ {productId: "CompletedFreshwaterTankS"}, {productId: "Rack2"}, {productId: "CompletedWastewaterTank"}],
   outputs: [ {OP14: {productId: "MountedTanks3", costWeight: 1.0}}]
 }
 
 Process "AssembleMountWithTanksA": {
   name: "Assemble MountWithTanksA",
+  requires: [ "AssembleMountedTank1", "AssembleFiltertankSWithBone" ],
   inputs: [ {productId: "MountedTanks1"}, {productId: "CompletedFiltertankSWithBone"} ],
   outputs: [ {OP15: {productId: "MountWithTanks-TypeA", costWeight:  1.0}}]
 }
 
 Process "AssembleMountWithTanksB": {
   name: "Assemble MountWithTanksB",
-  inputs: [ {productId: "MountedTanks1"}, {productId: "CompletedFiltertankSWithBone"} ],
+  requires: [ "AssembleMountedTank1", "AssembleFiltertankSWithActive" ],
+  inputs: [ {productId: "MountedTanks1"}, {productId: "CompletedFiltertankSWithActive"} ],
   outputs: [ {OP16: {productId: "MountWithTanks-TypeB", costWeight:  1.0}}]
 }
 
 Process "AssembleMountWithTanksC": {
   name: "Assemble MountWithTansC",
+  requires: [ "AssembleMountedTank2", "AssembleFiltertankSWithBone" ],
   inputs: [ {productId: "MountedTanks2"}, {productId: "CompletedFiltertankSWithBone"} ],
   outputs: [ {OP17: {productId: "MountWithTanks-TypeC", costWeight:  1.0}}]
 }
 
 Process "AssembleMountWithTanksD": {
   name: "Assemble MountWithTansD",
+  requires: [ "AssembleMountedTank2", "AssembleFiltertankSWithActive"],
   inputs: [ {productId: "MountedTanks2"}, {productId: "CompletedFiltertankSWithActive"} ],
   outputs: [ {OP18: {productId: "MountWithTanks-TypeD", costWeight:  1.0}}]
 }
 
 Process "AssembleMountWithTanksE": {
   name: "Assemble MountWithTansE",
+  requires: [ "AssembleMountedTank3", "AssembleFiltertankXLWithBone"],
   inputs: [ {productId: "MountedTanks3"}, {productId: "CompletedFiltertankXLWithBone"} ],
   outputs: [ {OP19: {productId: "MountWithTanks-TypeE", costWeight:  1.0}}]
 }
 
 Process "AssembleMountWithTanksF": {
   name: "Assemble MountWithTansF",
+  requires: [ "AssembleMountedTank3", "AssembleFiltertankXLWithBone"],
   inputs: [ {productId: "MountedTanks3"}, {productId: "CompletedFiltertankXLWithActive"} ],
   outputs: [ {OP20: {productId: "MountWithTanks-TypeF", costWeight:  1.0}}]
 }
 
 Process "AssembleCompleteTank1": {
   name: "AssembleCompleteTank1",
+  requires: [ "AssembleMountWithTanksF"],
   inputs: [ {productId: "Tube1"}, {productId: "Tube2"}, {productId: "MountWithTanks-TypeA"}],
   outputs: [ {OP21: {productId: "CompletedTank-1", costWeight: 1.0}}]
 }
 
 Process "AssembleCompleteTank2": {
   name: "AssembleCompleteTank2",
+  requires: [ "AssembleMountWithTanksB"],
   inputs: [ {productId: "Tube1"}, {productId: "Tube2"}, {productId: "MountWithTanks-TypeB"}],
   outputs: [ {OP22: {productId: "CompletedTank-2", costWeight: 1.0}}]
 }
 
 Process "AssembleCompleteTank3": {
   name: "AssembleCompleteTank3",
+  requires: [ "AssembleMountWithTanksC"],
   inputs: [ {productId: "Tube1"}, {productId: "Tube2"}, {productId: "MountWithTanks-TypeC"}, {productId: "Nanofilter"}],
   outputs: [ {OP23: {productId: "CompletedTank-3", costWeight: 1.0}}]
 }
 
 Process "AssembleCompleteTank4": {
   name: "AssembleCompleteTank4",
+  requires: [ "AssembleMountWithTanksD"],
   inputs: [ {productId: "Tube1"}, {productId: "Tube2"}, {productId: "MountWithTanks-TypeD"}, {productId: "Nanofilter"}],
   outputs: [ {OP24: {productId: "CompletedTank-4", costWeight: 1.0}}]
 }
 
 Process "AssembleCompleteTank5": {
   name: "AssembleCompleteTank5",
+  requires: [ "AssembleMountWithTanksE"],
   inputs: [ {productId: "Tube1"}, {productId: "Tube2"}, {productId: "Tube3"}, {productId: "MountWithTanks-TypeE"}],
   outputs: [ {OP25: {productId: "CompletedTank-5", costWeight: 1.0}}]
 }
 
 Process "AssembleCompleteTank6": {
   name: "AssembleCompleteTank6",
+  requires: [ "AssembleMountWithTanksF"],
   inputs: [ {productId: "Tube1"}, {productId: "Tube2"}, {productId: "Tube3"}, {productId: "MountWithTanks-TypeF"}],
   outputs: [ {OP26: {productId: "CompletedTank-6", costWeight: 1.0}}]
 }
 
 Process "AssembleCompleteTank7": {
   name: "AssembleCompleteTank7",
+  requires: [ "AssembleMountWithTanksE"],
   inputs: [ {productId: "Tube1"}, {productId: "Tube2"}, {productId: "Tube3"}, {productId: "MountWithTanks-TypeE"}, {productId: "Nanofilter"}],
   outputs: [ {OP27: {productId: "CompletedTank-7", costWeight: 1.0}}]
 }
 
 Process "AssembleCompleteTank8": {
   name: "AssembleCompleteTank8",
+  requires: [ "AssembleMountWithTanksF"],
   inputs: [ {productId: "Tube1"}, {productId: "Tube2"}, {productId: "Tube3"}, {productId: "MountWithTanks-TypeF"}, {productId: "Nanofilter"}],
   outputs: [ {OP28: {productId: "CompletedTank-8", costWeight: 1.0}}]
 }
