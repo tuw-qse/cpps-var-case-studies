@@ -163,7 +163,6 @@ Process "InsertPipe": {
 
 Process "InsertPipe2": {
   name: "InsertPipe2",
-  isAbstract: false,
   implements: ["InsertPipe"],
   inputs: [ {productId: "Pipe2"} ],
   outputs: [ {OP2: {productId: "Pipe2", costWeight: 1.0}} ]
@@ -171,7 +170,6 @@ Process "InsertPipe2": {
 
 Process "InsertPipe3": {
   name: "InsertPipe3",
-  isAbstract: false,
   implements: ["InsertPipe"],
   inputs: [ {productId: "Pipe3"} ],
   outputs: [ {OP3: {productId: "Pipe3", costWeight: 1.0}} ]
@@ -179,7 +177,6 @@ Process "InsertPipe3": {
 
 Process "InsertPipe8": {
   name: "InsertPipe8",
-  isAbstract: false,
   implements: ["InsertPipe"],
   inputs: [ {productId: "Pipe8"} ],
   outputs: [ {OP4: {productId: "Pipe8", costWeight: 1.0}} ]
@@ -187,14 +184,12 @@ Process "InsertPipe8": {
 
 Process "InsertBarrel1": {
   name: "InsertBarrel1",
-  isAbstract: false,
   inputs: [ {productId: "Barrel1"} ],
   outputs: [ {OP5: {productId: "Barrel1", costWeight: 1.0}} ]
 }
 
 Process "PressBarrel1": {
   name: "PressBarrel1",
-  isAbstract: false,
   requires: [ "InsertBarrel1", "InsertPipe" ],
   inputs: [ {productId: "Barrel1"}, {productId: "Pipe"} ],
   outputs: [ {OP6: {productId: "ForkProduct", costWeight: 1.0}} ]
@@ -202,14 +197,12 @@ Process "PressBarrel1": {
 
 Process "InsertJack1": {
   name: "InsertJack1",
-  isAbstract: false,
   inputs: [ {productId: "Jack1"} ],
   outputs: [ {OP7: {productId: "Jack1", costWeight: 1.0}} ]
 }
 
 Process "PressJack1": {
   name: "PressJack1",
-  isAbstract: false,
   requires: [ "InsertJack1", "InsertPipe" ],
   inputs: [ {productId: "Jack1"}, {productId: "Pipe"} ],
   outputs: [ {OP8: {productId: "ForkProduct", costWeight: 1.0}} ]
@@ -217,14 +210,12 @@ Process "PressJack1": {
 
 Process "InsertRing1": {
   name: "InsertRing1",
-  isAbstract: false,
   inputs: [ {productId: "Ring1"} ],
   outputs: [ {OP9: {productId: "Ring1", costWeight: 1.0}}]
 }
 
 Process "PressRing1": {
   name: "PressRing1",
-  isAbstract: false,
   requires: [ "InsertRing1", "InsertPipe" ],
   inputs: [ {productId: "Ring1"}, {productId: "Pipe"} ],
   outputs: [ {OP10: {productId: "ForkProduct", costWeight: 1.0}}]
@@ -232,14 +223,12 @@ Process "PressRing1": {
 
 Process "InsertORing": {
   name: "InsertORing",
-  isAbstract: false,
   inputs: [ {productId: "O-Ring"} ],
   outputs: [ {OP11: {productId: "O-Ring", costWeight: 1.0}}]
 }
 
 Process "PressORing": {
   name: "InsertORing",
-  isAbstract: false,
   requires: [ "InsertORing", "PressJack1", "PressRing1" ],
   inputs: [ {productId: "O-Ring"}, {productId: "Pipe"}, {productId: "Jack1"}, {productId: "Ring1"} ],
   outputs: [ {OP12: {productId: "ForkProduct", costWeight: 1.0}}]
@@ -247,14 +236,12 @@ Process "PressORing": {
 
 Process "InsertScrew": {
   name: "InsertScrew",
-  isAbstract: false,
   inputs: [ {productId: "Screw"} ],
   outputs: [ {OP13: {productId: "Screw", costWeight: 1.0}}]
 }
 
 Process "ScrewScrew": {
   name: "ScrewScrew",
-  isAbstract: false,
   requires: [ "InsertScrew", "PressJack1", "PressRing1" ],
   inputs: [ {productId: "Screw"}, {productId: "Pipe"}, {productId: "Jack1"}, {productId: "Ring1"} ],
   outputs: [ {OP14: {productId: "ForkProduct", costWeight: 1.0}}]
@@ -262,14 +249,12 @@ Process "ScrewScrew": {
 
 Process "InsertFork5": {
   name: "InsertFork5",
-  isAbstract: false,
   inputs: [ {productId: "Fork5"} ],
   outputs: [ {OP15: {productId: "Fork5", costWeight: 1.0}}]
 }
 
 Process "WeldFork5": {
   name: "WeldFork5",
-  isAbstract: false,
   requires: [ "InsertFork5", "InsertPipe" ],
   inputs: [ {productId: "Fork5"}, {productId: "Pipe"} ],
   outputs: [ {OP16: {productId: "ForkProduct", costWeight: 1.0}}]
@@ -277,14 +262,12 @@ Process "WeldFork5": {
 
 Process "InsertFork3": {
   name: "InsertFork3",
-  isAbstract: false,
   inputs: [ {productId: "Fork3"}, {productId: "Pipe"} ],
   outputs: [ {OP17: {productId: "ForkProduct", costWeight: 1.0}}]
 }
 
 Process "WeldFork3": {
   name: "WeldFork3",
-  isAbstract: false,
   requires: [ "InsertFork3", "WeldFork5" ],
   inputs: [ {productId: "Fork3"}, {productId: "Pipe"}, {productId: "Fork5"} ],
   outputs: [ {OP18: {productId: "ForkProduct", costWeight: 1.0}}]
@@ -292,14 +275,12 @@ Process "WeldFork3": {
 
 Process "InsertFork4": {
   name: "InsertFork4",
-  isAbstract: false,
   inputs: [ {productId: "Fork4"} ],
   outputs: [ {OP19: {productId: "Fork4", costWeight: 1.0}}]
 }
 
 Process "WeldFork4": {
   name: "WeldFork4",
-  isAbstract: false,
   requires: [ "InsertFork4", "WeldFork5" ],
   inputs: [ {productId: "Fork4"}, {productId: "Pipe"}, {productId: "Fork5"} ],
   outputs: [ {OP20: {productId: "ForkProduct", costWeight: 1.0}}]
@@ -314,7 +295,6 @@ Process "InsertLock": {
 
 Process "InsertLock1": {
   name: "InsertLock1",
-  isAbstract: false,
   implements: [ "InsertLock" ],
   inputs: [ {productId: "Lock1"} ],
   outputs: [ {OP22: {productId: "Lock1", costWeight: 1.0}}]
@@ -322,7 +302,6 @@ Process "InsertLock1": {
 
 Process "InsertLock2": {
   name: "InsertLock2",
-  isAbstract: false,
   implements: [ "InsertLock" ],
   inputs: [ {productId: "Lock2"} ],
   outputs: [ {OP23: {productId: "Lock2", costWeight: 1.0}}]
@@ -330,7 +309,6 @@ Process "InsertLock2": {
 
 Process "InsertLock3": {
   name: "InsertLock3",
-  isAbstract: false,
   implements: [ "InsertLock" ],
   inputs: [ {productId: "Lock3"} ],
   outputs: [ {OP24: {productId: "Lock3", costWeight: 1.0}}]
@@ -346,7 +324,6 @@ Process "WeldLock": {
 
 Process "WeldLock1": {
   name: "WeldLock1",
-  isAbstract: false,
   implements: [ "WeldLock" ],
   requires: [ "InsertLock1", "WeldFork3", "WeldFork4" ],
   inputs: [ {productId: "Lock1"}, {productId: "Pipe"}, {productId: "Fork4"}, {productId: "Fork3"} ],
@@ -355,7 +332,6 @@ Process "WeldLock1": {
 
 Process "WeldLock2": {
   name: "WeldLock2",
-  isAbstract: false,
   implements: [ "WeldLock" ],
   requires: [ "InsertLock2", "WeldFork3", "WeldFork4" ],
   inputs: [ {productId: "Lock2"}, {productId: "Pipe"}, {productId: "Fork4"}, {productId: "Fork3"} ],
@@ -364,7 +340,6 @@ Process "WeldLock2": {
 
 Process "WeldLock3": {
   name: "WeldLock3",
-  isAbstract: false,
   implements: [ "WeldLock" ],
   requires: [ "InsertLock3", "WeldFork3", "WeldFork4" ],
   inputs: [ {productId: "Lock3"}, {productId: "Pipe"}, {productId: "Fork4"}, {productId: "Fork3"} ],
