@@ -57,40 +57,35 @@ Product "OpenTop": {
 Product "Truck": {
   name: "Truck",
   isAbstract: true,
-  requires: [ "Chassis", "Cabin", "Body"],
-  partialProduct: "true"
+  requires: [ "Chassis", "Cabin", "Body"]
 }
 
 Product "Truck1": {
   name: "Truck1",
   implements: [ "Truck" ],
   requires: [ "Tank" ],
-  excludes: [ "OpenTop", "Dumper", "StakeBed" ],
-  partialProduct: "true"
+  excludes: [ "OpenTop", "Dumper", "StakeBed" ]
 }
 
 Product "Truck2": {
   name: "Truck2",
   implements: [ "Truck" ],
   requires: [ "OpenTop" ],
-  excludes: [ "Tank", "Dumper", "StakeBed" ],
-  partialProduct: "true"
+  excludes: [ "Tank", "Dumper", "StakeBed" ]
 }
 
 Product "Truck3": {
   name: "Truck3",
   implements: [ "Truck" ],
   requires: [ "Dumper" ],
-  excludes: [ "OpenTop", "Tank", "StakeBed" ],
-  partialProduct: "true"
+  excludes: [ "OpenTop", "Tank", "StakeBed" ]
 }
 
 Product "Truck4": {
   name: "Truck4",
   implements: [ "Truck" ],
   requires: [ "StakeBed" ],
-  excludes: [ "OpenTop", "Dumper", "Tank" ],
-  partialProduct: "true"
+  excludes: [ "OpenTop", "Dumper", "Tank" ]
 }
 
 Resource "Robots": {
