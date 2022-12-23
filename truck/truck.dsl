@@ -252,5 +252,13 @@ Process "InstallTank": {
 }
 
 Constraint "C1": {
-  definition: "InstallStakeBed, KUKA_IIWA -> InsertStakeBed implies KUKA_IIWA"
+  definition: "InstallStakeBed, KUKA_IIWA -> InstallStakeBed implies KUKA_IIWA"
+}
+
+Constraint "C2": {
+  definition: "Truck, InstallBody, InstallCabin, InsertChassis -> Truck implies InstallBody and InstallCabin and InsertChassis"
+}
+
+Constraint "C3": {
+  definition: "Truck1, InstallTank -> Truck1 implies InstallTank"
 }
