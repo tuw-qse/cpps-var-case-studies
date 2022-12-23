@@ -141,7 +141,7 @@ Process "InsertBody": {
 Process "InsertOpenTop": {
   name: "InsertOpenTop",
   implements: [ "InsertBody" ],
-  excludes: [ InsertDumper", "InsertStakeBed", "InsertTank" ],
+  excludes: [ "InsertDumper", "InsertStakeBed", "InsertTank" ],
   inputs: [ {productId: "OpenTop"} ],
   outputs: [ {OP4: {productId: "OpenTop", costWeight: 1.0}} ],
   resources: [
