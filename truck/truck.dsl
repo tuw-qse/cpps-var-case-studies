@@ -141,6 +141,7 @@ Process "InsertBody": {
 Process "InsertOpenTop": {
   name: "InsertOpenTop",
   implements: [ "InsertBody" ],
+  excludes: [ InsertDumper", "InsertStakeBed", "InsertTank" ],
   inputs: [ {productId: "OpenTop"} ],
   outputs: [ {OP4: {productId: "OpenTop", costWeight: 1.0}} ],
   resources: [
@@ -151,6 +152,7 @@ Process "InsertOpenTop": {
 Process "InsertDumper": {
   name: "InsertDumper",
   implements: [ "InsertBody" ],
+  excludes: [ "InsertOpenTop", "InsertStakeBed", "InsertTank" ],
   inputs: [ {productId: "Dumper"} ],
   outputs: [ {OP5: {productId: "Dumper", costWeight: 1.0}} ],
   resources: [
@@ -161,6 +163,7 @@ Process "InsertDumper": {
 Process "InsertStakeBed": {
   name: "InsertStakeBed",
   implements: [ "InsertBody" ],
+  excludes: [ "InsertOpenTop", "InsertDumper", "InsertTank" ],
   inputs: [ {productId: "StakeBed"} ],
   outputs: [ {OP6: {productId: "StakeBed", costWeight: 1.0}} ],
   resources: [
@@ -171,6 +174,7 @@ Process "InsertStakeBed": {
 Process "InsertTank": {
   name: "InsertTank",
   implements: [ "InsertBody" ],
+  excludes: [ "InsertOpenTop", "InsertDumper", "InsertStakeBed" ],
   inputs: [ {productId: "Tank"} ],
   outputs: [ {OP7: {productId: "Tank", costWeight: 1.0}} ],
   resources: [
@@ -202,6 +206,7 @@ Process "InstallBody": {
 Process "InstallOpenTop": {
   name: "InstallOpenTop",
   implements: [ "InstallBody" ],
+  excludes: [ "InstallDumper", "InstallStakeBed", "InstallTank" ],
   requires: [ "InsertChassis", "InsertBody" ],
   inputs: [ {productId: "OpenTop"}, {productId: "Chassis"} ],
   outputs: [ {OP10: {productId: "Truck", costWeight: 1.0}} ],
@@ -213,6 +218,7 @@ Process "InstallOpenTop": {
 Process "InstallDumper": {
   name: "InstallDumper",
   implements: [ "InstallBody" ],
+  excludes: [ "InstallOpenTop", "InstallStakeBed", "InstallTank" ],
   requires: [ "InsertChassis", "InsertDumper", "InstallCabin" ],
   inputs: [ {productId: "Dumper"}, {productId: "Chassis"}, {productId: "Cabin"} ],
   outputs: [ {OP11: {productId: "Truck", costWeight: 1.0}} ],
@@ -224,6 +230,7 @@ Process "InstallDumper": {
 Process "InstallStakeBed": {
   name: "InstallStakeBed",
   implements: [ "InstallBody" ],
+  excludes: [ "InstallOpenTop", "InstallDumper", "InstallTank" ],
   requires: [ "InsertChassis", "InsertStakeBed" ],
   inputs: [ {productId: "StakeBed"}, {productId: "Chassis"} ],
   outputs: [ {OP12: {productId: "Truck", costWeight: 1.0}} ],
@@ -235,6 +242,7 @@ Process "InstallStakeBed": {
 Process "InstallTank": {
   name: "InstallTank",
   implements: [ "InstallBody" ],
+  excludes: [ "InstallOpenTop", "InstallDumper", "InstallStakeBed" ],
   requires: [ "InsertChassis", "InsertTank" ],
   inputs: [ {productId: "Tank"}, {productId: "Chassis"} ],
   outputs: [ {OP13: {productId: "Truck", costWeight: 1.0}} ],
