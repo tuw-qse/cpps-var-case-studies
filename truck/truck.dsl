@@ -91,6 +91,7 @@ Product "Truck4": {
 Resource "Robots": {
   name: "Robots",
   isAbstract: true,
+  deltaFile: ""
 }
 
 Resource "KUKA_KR_Agilus_I": {
