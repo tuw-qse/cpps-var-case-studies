@@ -163,7 +163,7 @@ Process "InsertDumper": {
 Process "InsertStakeBed": {
   name: "InsertStakeBed",
   implements: [ "InsertBody" ],
-  excludes: [ "InsertOpenTop", "InsertDumper", "InsertTank" ],
+  excludes: [ "InsertOpenTop", "InsertDumper", "InsertTank" ]
   inputs: [ {productId: "StakeBed"} ],
   outputs: [ {OP6: {productId: "StakeBed", costWeight: 1.0}} ],
   resources: [
@@ -207,46 +207,7 @@ Process "InstallOpenTop": {
   name: "InstallOpenTop",
   implements: [ "InstallBody" ],
   excludes: [ "InstallDumper", "InstallStakeBed", "InstallTank" ],
-  requires: [ "InsertChassis", "InsertBody" ],
-  inputs: [ {productId: "OpenTop"}, {productId: "Chassis"} ],
-  outputs: [ {OP10: {productId: "Truck", costWeight: 1.0}} ],
-  resources: [
-    {resourceId: "Robots", minCost: 50, maxCost: 100}
-  ]
-}
-
-Process "InstallDumper": {
-  name: "InstallDumper",
-  implements: [ "InstallBody" ],
-  excludes: [ "InstallOpenTop", "InstallStakeBed", "InstallTank" ],
-  requires: [ "InsertChassis", "InsertDumper", "InstallCabin" ],
-  inputs: [ {productId: "Dumper"}, {productId: "Chassis"}, {productId: "Cabin"} ],
-  outputs: [ {OP11: {productId: "Truck", costWeight: 1.0}} ],
-  resources: [
-    {resourceId: "Robots", minCost: 50, maxCost: 100}
-  inputs: [ {productId: "Chassis"}, {productId: "Cabin"} ],
-  outputs: [ {OP8: {productId: "Truck", costWeight: 1.0}} ],
-  resources: [
-    {resourceId: "Robots", minCost: 50, maxCost: 100}
-  ]
-}
-
-Process "InstallBody": {
-  name: "InstallBody",
-  isAbstract: true,
-  requires: [ "InsertChassis", "InsertBody" ],
-  inputs: [ {productId: "Body"}, {productId: "Chassis"} ],
-  outputs: [ {OP9: {productId: "Truck", costWeight: 1.0}} ],
-  resources: [
-    {resourceId: "Robots", minCost: 50, maxCost: 100}
-  ]
-}
-
-Process "InstallOpenTop": {
-  name: "InstallOpenTop",
-  implements: [ "InstallBody" ],
-  excludes: [ "InstallDumper", "InstallStakeBed", "InstallTank" ],
-  requires: [ "InsertChassis", "InsertBody" ],
+  requires: [ "InsertChassis", "InsertOpenTop" ],
   inputs: [ {productId: "OpenTop"}, {productId: "Chassis"} ],
   outputs: [ {OP10: {productId: "Truck", costWeight: 1.0}} ],
   resources: [
