@@ -163,7 +163,7 @@ Process "InsertDumper": {
 Process "InsertStakeBed": {
   name: "InsertStakeBed",
   implements: [ "InsertBody" ],
-  excludes: [ "InsertOpenTop", "InsertDumper", "InsertTank" ]
+  excludes: [ "InsertOpenTop", "InsertDumper", "InsertTank" ],
   inputs: [ {productId: "StakeBed"} ],
   outputs: [ {OP6: {productId: "StakeBed", costWeight: 1.0}} ],
   resources: [
