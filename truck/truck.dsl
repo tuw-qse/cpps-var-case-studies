@@ -144,6 +144,7 @@ Process "InsertOpenTop": {
   excludes: [ "InsertDumper", "InsertStakeBed", "InsertTank" ],
   inputs: [ {productId: "OpenTop"} ],
   outputs: [ {OP4: {productId: "OpenTop", costWeight: 1.0}} ],
+  deltaFile: "DInsertOpenTop",
   resources: [
     {resourceId: "Robots", minCost: 50, maxCost: 100}
   ]
@@ -155,6 +156,7 @@ Process "InsertDumper": {
   excludes: [ "InsertOpenTop", "InsertStakeBed", "InsertTank" ],
   inputs: [ {productId: "Dumper"} ],
   outputs: [ {OP5: {productId: "Dumper", costWeight: 1.0}} ],
+  deltaFile: "DInsertDumper",
   resources: [
     {resourceId: "Robots", minCost: 50, maxCost: 100}
   ]
@@ -166,6 +168,7 @@ Process "InsertStakeBed": {
   excludes: [ "InsertOpenTop", "InsertDumper", "InsertTank" ],
   inputs: [ {productId: "StakeBed"} ],
   outputs: [ {OP6: {productId: "StakeBed", costWeight: 1.0}} ],
+  deltaFile: "DInsertStakeBed",
   resources: [
     {resourceId: "Robots", minCost: 50, maxCost: 100}
   ]
@@ -177,6 +180,7 @@ Process "InsertTank": {
   excludes: [ "InsertOpenTop", "InsertDumper", "InsertStakeBed" ],
   inputs: [ {productId: "Tank"} ],
   outputs: [ {OP7: {productId: "Tank", costWeight: 1.0}} ],
+  deltaFile: "DInsertTank",
   resources: [
     {resourceId: "Robots", minCost: 50, maxCost: 100}
   ]
@@ -210,6 +214,7 @@ Process "InstallOpenTop": {
   requires: [ "InsertChassis", "InsertOpenTop" ],
   inputs: [ {productId: "OpenTop"}, {productId: "Chassis"} ],
   outputs: [ {OP10: {productId: "Truck", costWeight: 1.0}} ],
+  deltaFile: "DInstallOpenTop",
   resources: [
     {resourceId: "Robots", minCost: 50, maxCost: 100}
   ]
@@ -222,6 +227,7 @@ Process "InstallDumper": {
   requires: [ "InsertChassis", "InsertDumper", "InstallCabin" ],
   inputs: [ {productId: "Dumper"}, {productId: "Chassis"}, {productId: "Cabin"} ],
   outputs: [ {OP11: {productId: "Truck", costWeight: 1.0}} ],
+  deltaFile: "DInstallDumper",
   resources: [
     {resourceId: "Robots", minCost: 50, maxCost: 100}
   ]
@@ -234,6 +240,7 @@ Process "InstallStakeBed": {
   requires: [ "InsertChassis", "InsertStakeBed" ],
   inputs: [ {productId: "StakeBed"}, {productId: "Chassis"} ],
   outputs: [ {OP12: {productId: "Truck", costWeight: 1.0}} ],
+  deltaFile: "DInstallStakeBed",
   resources: [
     {resourceId: "KUKA_IIWA", minCost: 50, maxCost: 100}
   ]
@@ -246,6 +253,7 @@ Process "InstallTank": {
   requires: [ "InsertChassis", "InsertTank" ],
   inputs: [ {productId: "Tank"}, {productId: "Chassis"} ],
   outputs: [ {OP13: {productId: "Truck", costWeight: 1.0}} ],
+  deltaFile: "DInstallTank",
   resources: [
     {resourceId: "Robots", minCost: 50, maxCost: 100}
   ]
