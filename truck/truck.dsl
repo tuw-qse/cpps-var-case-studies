@@ -6,7 +6,7 @@ Attribute "partialProduct": {
 
 Attribute "deltaFile": {
   description: "Specifies the delta file for the V4rdiac configuration",
-  defaultValue: "false",
+  defaultValue: "",
   type: "String"
 }
 
@@ -90,26 +90,22 @@ Product "Truck4": {
 
 Resource "Robots": {
   name: "Robots",
-  isAbstract: true,
-  deltaFile: ""
+  isAbstract: true
 }
 
 Resource "KUKA_KR_Agilus_I": {
   name: "KUKA_KR_Agilus",
-  implements: [ "Robots" ],
-  deltaFile: ""
+  implements: [ "Robots" ]
 }
 
 Resource "KUKA_KR_Agilus_II": {
   name: "KUKA_KR_Agilus",
-  implements: [ "Robots" ],
-  deltaFile: ""
+  implements: [ "Robots" ]
 }
 
 Resource "KUKA_IIWA": {
   name: "KUKA_IIWA",
-  implements: [ "Robots" ],
-  deltaFile: ""
+  implements: [ "Robots" ]
 }
 
 Process "InsertChassis": {
