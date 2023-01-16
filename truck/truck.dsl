@@ -95,16 +95,19 @@ Resource "Robots": {
 
 Resource "KUKA_KR_Agilus_I": {
   name: "KUKA_KR_Agilus",
+  deltaFile: "DKukaAgilusI",
   implements: [ "Robots" ]
 }
 
 Resource "KUKA_KR_Agilus_II": {
   name: "KUKA_KR_Agilus",
+  deltaFile: "DKukaAgilusII",
   implements: [ "Robots" ]
 }
 
 Resource "KUKA_IIWA": {
   name: "KUKA_IIWA",
+  deltaFile: "DKukaIIWA",
   implements: [ "Robots" ]
 }
 
