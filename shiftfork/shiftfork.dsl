@@ -115,7 +115,7 @@ Product "Ring1": {
   partialProduct: "true"
 }
 
-Product "O-Ring": {
+Product "O_Ring": {
   name: "O-Ring",
   requires: ["Ring1", "Jack1"],
   partialProduct: "true"
@@ -130,8 +130,8 @@ Product "Jack1": {
 Product "ForkProduct": {
   name: "ForkProduct",
   isAbstract: true,
-  children: [ "Barrel1", "Screw", "Jack1", "Ring1", "O-Ring", "Fork3", "Fork4", "Fork5", "Pipe", "Lock"],
-  requires: [ "Barrel1", "Screw", "Jack1", "Ring1", "O-Ring", "Fork3", "Fork4", "Fork5", "Pipe", "Lock"],
+  children: [ "Barrel1", "Screw", "Jack1", "Ring1", "O_Ring", "Fork3", "Fork4", "Fork5", "Pipe", "Lock"],
+  requires: [ "Barrel1", "Screw", "Jack1", "Ring1", "O_Ring", "Fork3", "Fork4", "Fork5", "Pipe", "Lock"],
 }
 Product "Fork-13": {
   name: "Fork 13",
@@ -223,14 +223,14 @@ Process "PressRing1": {
 
 Process "InsertORing": {
   name: "InsertORing",
-  inputs: [ {productId: "O-Ring"} ],
-  outputs: [ {OP11: {productId: "O-Ring", costWeight: 1.0}}]
+  inputs: [ {productId: "O_Ring"} ],
+  outputs: [ {OP11: {productId: "O_Ring", costWeight: 1.0}}]
 }
 
 Process "PressORing": {
   name: "InsertORing",
   requires: [ "InsertORing", "PressJack1", "PressRing1" ],
-  inputs: [ {productId: "O-Ring"}, {productId: "Pipe"}, {productId: "Jack1"}, {productId: "Ring1"} ],
+  inputs: [ {productId: "O_Ring"}, {productId: "Pipe"}, {productId: "Jack1"}, {productId: "Ring1"} ],
   outputs: [ {OP12: {productId: "ForkProduct", costWeight: 1.0}}]
 }
 
