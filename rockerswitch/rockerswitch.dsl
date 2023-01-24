@@ -15,26 +15,26 @@ Product "Pole": {
   partialProduct: "true"
 }
 
-Product "Pole1-1": {
-  name: "Pole 1-1",
+Product "Pole1_1": {
+  name: "Pole 1_1",
   implements: [ "Pole" ],
   partialProduct: "true"
 }
 
-Product "Pole1-2": {
-  name: "Pole 1-2",
+Product "Pole1_2": {
+  name: "Pole 1_2",
   implements: [ "Pole" ],
   partialProduct: "true"
 }
 
-Product "Pole2-1": {
-  name: "Pole 2-1",
+Product "Pole2_1": {
+  name: "Pole 2_1",
   implements: [ "Pole" ],
   partialProduct: "true"
 }
 
-Product "Pole2-2": {
-  name: "Pole 2-2",
+Product "Pole2_2": {
+  name: "Pole 2_2",
   implements: [ "Pole" ],
   partialProduct: "true"
 }
@@ -45,14 +45,14 @@ Product "Neutral": {
   partialProduct: "true"
 }
 
-Product "Neutral1-1": {
-  name: "Neutral 1-1",
+Product "Neutral1_1": {
+  name: "Neutral 1_1",
   implements: [ "Neutral" ],
   partialProduct: "true"
 }
 
-Product "Neutral1-2": {
-  name: "Neutral 1-2",
+Product "Neutral1_2": {
+  name: "Neutral 1_2",
   implements: [ "Neutral" ],
   partialProduct: "true"
 }
@@ -82,35 +82,35 @@ Product "Rocker": {
   partialProduct: "true"
 }
 
-Product "Rocker1-1": {
-  name: "Rocker 1-1",
+Product "Rocker1_1": {
+  name: "Rocker 1_1",
   isAbstract: false, 
   implements: [ "Rocker" ],
-  requires: [ "Pole1-1" ],
+  requires: [ "Pole1_1" ],
   partialProduct: "true"
 }
 
-Product "Rocker1-2": {
-  name: "Rocker 1-2",
+Product "Rocker1_2": {
+  name: "Rocker 1_2",
   isAbstract: false, 
   implements: [ "Rocker" ],
-  requires: [ "Pole2-1" ],
+  requires: [ "Pole2_1" ],
   partialProduct: "true"
 }
 
-Product "Rocker2-1": {
-  name: "Rocker 2-1",
+Product "Rocker2_1": {
+  name: "Rocker 2_1",
   isAbstract: false, 
   implements: [ "Rocker" ],
-  requires: [ "Pole2-1" ],
+  requires: [ "Pole2_1" ],
   partialProduct: "true"
 }
 
-Product "Rocker2-2": {
-  name: "Rocker 2-2",
+Product "Rocker2_2": {
+  name: "Rocker 2_2",
   isAbstract: false, 
   implements: [ "Rocker" ],
-  requires: [ "Pole2-2" ],
+  requires: [ "Pole2_2" ],
   partialProduct: "true"
 }
 
@@ -121,29 +121,29 @@ Product "Off": {
   partialProduct: "true"
 }
 
-Product "Off1-1": {
-  name: "Off 1-1",
+Product "Off1_1": {
+  name: "Off 1_1",
   isAbstract: false, 
   implements: [ "Off" ],
   partialProduct: "true"
 }
 
-Product "Off1-2": {
-  name: "Off 1-2",
+Product "Off1_2": {
+  name: "Off 1_2",
   isAbstract: false, 
   implements: [ "Off" ],
   partialProduct: "true"
 }
 
-Product "Off1-3": {
-  name: "Off 1-3",
+Product "Off1_3": {
+  name: "Off 1_3",
   isAbstract: false, 
   implements: [ "Off" ],
   partialProduct: "true"
 }
 
-Product "Off1-4": {
-  name: "Off 1-4",
+Product "Off1_4": {
+  name: "Off 1_4",
   isAbstract: false, 
   implements: [ "Off" ],
   partialProduct: "true"
@@ -165,14 +165,14 @@ Product "Screw": {
   partialProduct: "true"
 }
 
-Product "Screw1-1": {
-  name: "Screw 1-1",
+Product "Screw1_1": {
+  name: "Screw 1_1",
   implements: [ "Screw" ],
   partialProduct: "true"
 }
 
-Product "Screw1-2": {
-  name: "Screw 1-2",
+Product "Screw1_2": {
+  name: "Screw 1_2",
   implements: [ "Screw" ],
   partialProduct: "true"
 }
@@ -183,14 +183,14 @@ Product "O_Ring": {
   partialProduct: "true"
 }
 
-Product "O_Ring1-1": {
-  name: "O_Ring 1-1",
+Product "O_Ring1_1": {
+  name: "O_Ring 1_1",
   implements: [ "O_Ring" ],
   partialProduct: "true"
 }
 
-Product "O_Ring1-2": {
-  name: "O_Ring 1-2",
+Product "O_Ring1_2": {
+  name: "O_Ring 1_2",
   implements: [ "O_Ring" ],
   partialProduct: "true"
 }
@@ -201,14 +201,14 @@ Product "Claw": {
   partialProduct: "true"
 }
 
-Product "Claw1-1": {
-  name: "Claw 1-1",
+Product "Claw1_1": {
+  name: "Claw 1_1",
   implements: [ "Claw" ],
   partialProduct: "true"
 }
 
-Product "Claw1-2": {
-  name: "Claw 1-2",
+Product "Claw1_2": {
+  name: "Claw 1_2",
   implements: [ "Claw" ],
   partialProduct: "true"
 }
@@ -216,95 +216,95 @@ Product "Claw1-2": {
 Product "Rockerswitch": {
   name: "Rockerswitch",
   isAbstract: true,
-  requires: [ "Socket", "Screw1-1", "O_Ring1-1", "Claw1-1", "Screw1-2", "O_Ring1-2", "Claw1-2" ],
+  requires: [ "Socket", "Screw1_1", "O_Ring1_1", "Claw1_1", "Screw1_2", "O_Ring1_2", "Claw1_2" ],
 }
 
-Product "Rockerswitch-A": {
-  name: "Rockerswitch-A",
+Product "Rockerswitch_A": {
+  name: "Rockerswitch_A",
   implements: [ "Rockerswitch"],
-  requires: [ "Changeover1", "Rocker1-1", "Off1-1", "Pole1-1" ],
-  excludes: [ "Rockerswitch-B", "Rockerswitch-C", "Rockerswitch-D", "Rockerswitch-E", "Rockerswitch-F", "Rockerswitch-G", "Rockerswitch-H", "Rockerswitch-I", "Rockerswitch-J", "Rockerswitch-K", "Rockerswitch-L"]
+  requires: [ "Changeover1", "Rocker1_1", "Off1_1", "Pole1_1" ],
+  excludes: [ "Rockerswitch_B", "Rockerswitch_C", "Rockerswitch_D", "Rockerswitch_E", "Rockerswitch_F", "Rockerswitch_G", "Rockerswitch_H", "Rockerswitch_I", "Rockerswitch_J", "Rockerswitch_K", "Rockerswitch_L"]
 }
 
-Product "Rockerswitch-B": {
-  name: "Rockerswitch-B",
+Product "Rockerswitch_B": {
+  name: "Rockerswitch_B",
   implements: [ "Rockerswitch" ],
-  requires: [ "Neutral1-1", "Changeover1", "Rocker1-1", "Off1-1", "Pole1-1" ],
-  excludes: [ "Rockerswitch-A", "Rockerswitch-C", "Rockerswitch-D", "Rockerswitch-E", "Rockerswitch-F", "Rockerswitch-G", "Rockerswitch-H", "Rockerswitch-I", "Rockerswitch-J", "Rockerswitch-K", "Rockerswitch-L"]
+  requires: [ "Neutral1_1", "Changeover1", "Rocker1_1", "Off1_1", "Pole1_1" ],
+  excludes: [ "Rockerswitch_A", "Rockerswitch_C", "Rockerswitch_D", "Rockerswitch_E", "Rockerswitch_F", "Rockerswitch_G", "Rockerswitch_H", "Rockerswitch_I", "Rockerswitch_J", "Rockerswitch_K", "Rockerswitch_L"]
 }
 
-Product "Rockerswitch-C": {
-  name: "Rockerswitch-C",
+Product "Rockerswitch_C": {
+  name: "Rockerswitch_C",
   implements: [ "Rockerswitch" ],
-  requires: [ "Rocker1-1", "Off1-1", "Pole1-1" ],
-  excludes: [ "Rockerswitch-B", "Rockerswitch-A", "Rockerswitch-D", "Rockerswitch-E", "Rockerswitch-F", "Rockerswitch-G", "Rockerswitch-H", "Rockerswitch-I", "Rockerswitch-J", "Rockerswitch-K", "Rockerswitch-L"]
+  requires: [ "Rocker1_1", "Off1_1", "Pole1_1" ],
+  excludes: [ "Rockerswitch_B", "Rockerswitch_A", "Rockerswitch_D", "Rockerswitch_E", "Rockerswitch_F", "Rockerswitch_G", "Rockerswitch_H", "Rockerswitch_I", "Rockerswitch_J", "Rockerswitch_K", "Rockerswitch_L"]
 }
 
-Product "Rockerswitch-D": {
-  name: "Rockerswitch-D",
+Product "Rockerswitch_D": {
+  name: "Rockerswitch_D",
   implements: [ "Rockerswitch" ],
-  requires: [ "Neutral1-1", "Rocker1-1", "Off1-1", "Pole1-1" ],
-  excludes: [ "Rockerswitch-B", "Rockerswitch-C", "Rockerswitch-A", "Rockerswitch-E", "Rockerswitch-F", "Rockerswitch-G", "Rockerswitch-H", "Rockerswitch-I", "Rockerswitch-J", "Rockerswitch-K", "Rockerswitch-L"]
+  requires: [ "Neutral1_1", "Rocker1_1", "Off1_1", "Pole1_1" ],
+  excludes: [ "Rockerswitch_B", "Rockerswitch_C", "Rockerswitch_A", "Rockerswitch_E", "Rockerswitch_F", "Rockerswitch_G", "Rockerswitch_H", "Rockerswitch_I", "Rockerswitch_J", "Rockerswitch_K", "Rockerswitch_L"]
 }
 
-Product "Rockerswitch-E": {
-  name: "Rockerswitch-E",
+Product "Rockerswitch_E": {
+  name: "Rockerswitch_E",
   implements: [ "Rockerswitch" ],
-  requires: [ "Neutral1-1", "Neutral1-2", "Rocker1-1", "Off1-1", "Pole1-1" ],
-  excludes: [ "Rockerswitch-B", "Rockerswitch-C", "Rockerswitch-D", "Rockerswitch-A", "Rockerswitch-F", "Rockerswitch-G", "Rockerswitch-H", "Rockerswitch-I", "Rockerswitch-J", "Rockerswitch-K", "Rockerswitch-L"]
+  requires: [ "Neutral1_1", "Neutral1_2", "Rocker1_1", "Off1_1", "Pole1_1" ],
+  excludes: [ "Rockerswitch_B", "Rockerswitch_C", "Rockerswitch_D", "Rockerswitch_A", "Rockerswitch_F", "Rockerswitch_G", "Rockerswitch_H", "Rockerswitch_I", "Rockerswitch_J", "Rockerswitch_K", "Rockerswitch_L"]
 }
 
-Product "Rockerswitch-F": {
-  name: "Rockerswitch-F",
+Product "Rockerswitch_F": {
+  name: "Rockerswitch_F",
   implements: [ "Rockerswitch" ],
-  requires: [ "Changeover1", "Rocker1-1", "Rocker1-2", "Off1-1", "Pole1-1", "Pole1-2" ],
-  excludes: [ "Rockerswitch-B", "Rockerswitch-C", "Rockerswitch-D", "Rockerswitch-E", "Rockerswitch-A", "Rockerswitch-G", "Rockerswitch-H", "Rockerswitch-I", "Rockerswitch-J", "Rockerswitch-K", "Rockerswitch-L"]
+  requires: [ "Changeover1", "Rocker1_1", "Rocker1_2", "Off1_1", "Pole1_1", "Pole1_2" ],
+  excludes: [ "Rockerswitch_B", "Rockerswitch_C", "Rockerswitch_D", "Rockerswitch_E", "Rockerswitch_A", "Rockerswitch_G", "Rockerswitch_H", "Rockerswitch_I", "Rockerswitch_J", "Rockerswitch_K", "Rockerswitch_L"]
 }
 
-Product "Rockerswitch-G": {
-  name: "Rockerswitch-G",
+Product "Rockerswitch_G": {
+  name: "Rockerswitch_G",
   implements: [ "Rockerswitch"],
-  requires: [ "Off1-2", "Rocker1-1", "Rocker1-2", "Off1-1", "Pole1-1", "Pole1-2" ],
-  excludes: [ "Rockerswitch-B", "Rockerswitch-C", "Rockerswitch-D", "Rockerswitch-E", "Rockerswitch-F", "Rockerswitch-A", "Rockerswitch-H", "Rockerswitch-I", "Rockerswitch-J", "Rockerswitch-K", "Rockerswitch-L"]
+  requires: [ "Off1_2", "Rocker1_1", "Rocker1_2", "Off1_1", "Pole1_1", "Pole1_2" ],
+  excludes: [ "Rockerswitch_B", "Rockerswitch_C", "Rockerswitch_D", "Rockerswitch_E", "Rockerswitch_F", "Rockerswitch_A", "Rockerswitch_H", "Rockerswitch_I", "Rockerswitch_J", "Rockerswitch_K", "Rockerswitch_L"]
 }
 
-Product "Rockerswitch-H": {
-  name: "Rockerswitch-H",
+Product "Rockerswitch_H": {
+  name: "Rockerswitch_H",
   implements: [ "Rockerswitch" ],
-  requires: [ "Pole1-1", "Pole1-2" ],
-  excludes: [ "Rockerswitch-B", "Rockerswitch-C", "Rockerswitch-D", "Rockerswitch-E", "Rockerswitch-F", "Rockerswitch-G", "Rockerswitch-A", "Rockerswitch-I", "Rockerswitch-J", "Rockerswitch-K", "Rockerswitch-L"]
+  requires: [ "Pole1_1", "Pole1_2" ],
+  excludes: [ "Rockerswitch_B", "Rockerswitch_C", "Rockerswitch_D", "Rockerswitch_E", "Rockerswitch_F", "Rockerswitch_G", "Rockerswitch_A", "Rockerswitch_I", "Rockerswitch_J", "Rockerswitch_K", "Rockerswitch_L"]
 }
 
-Product "Rockerswitch-I": {
-  name: "Rockerswitch-I",
+Product "Rockerswitch_I": {
+  name: "Rockerswitch_I",
   implements: [ "Rockerswitch" ],
-  children: [ "Rocker1-1", "Rocker1-2", "Series", "Pole1-1", "Pole1-2" ],
-  requires: [ "Rocker1-1", "Rocker1-2", "Series", "Pole1-1", "Pole1-2" ],
-  excludes: [ "Rockerswitch-B", "Rockerswitch-C", "Rockerswitch-D", "Rockerswitch-E", "Rockerswitch-F", "Rockerswitch-G", "Rockerswitch-H", "Rockerswitch-A", "Rockerswitch-J", "Rockerswitch-K", "Rockerswitch-L"]
+  children: [ "Rocker1_1", "Rocker1_2", "Series", "Pole1_1", "Pole1_2" ],
+  requires: [ "Rocker1_1", "Rocker1_2", "Series", "Pole1_1", "Pole1_2" ],
+  excludes: [ "Rockerswitch_B", "Rockerswitch_C", "Rockerswitch_D", "Rockerswitch_E", "Rockerswitch_F", "Rockerswitch_G", "Rockerswitch_H", "Rockerswitch_A", "Rockerswitch_J", "Rockerswitch_K", "Rockerswitch_L"]
 }
 
-Product "Rockerswitch-J": {
-  name: "Rockerswitch-J",
+Product "Rockerswitch_J": {
+  name: "Rockerswitch_J",
   implements: [ "Rockerswitch" ],
-  children: [ "Rocker1-1", "Rocker1-2", "Series", "Neutral1-1", "Pole1-1", "Pole1-2" ],
-  requires: [ "Rocker1-1", "Rocker1-2", "Series", "Neutral1-1", "Pole1-1", "Pole1-2" ],
-  excludes: [ "Rockerswitch-B", "Rockerswitch-C", "Rockerswitch-D", "Rockerswitch-E", "Rockerswitch-F", "Rockerswitch-G", "Rockerswitch-H", "Rockerswitch-I", "Rockerswitch-A", "Rockerswitch-K", "Rockerswitch-L"]
+  children: [ "Rocker1_1", "Rocker1_2", "Series", "Neutral1_1", "Pole1_1", "Pole1_2" ],
+  requires: [ "Rocker1_1", "Rocker1_2", "Series", "Neutral1_1", "Pole1_1", "Pole1_2" ],
+  excludes: [ "Rockerswitch_B", "Rockerswitch_C", "Rockerswitch_D", "Rockerswitch_E", "Rockerswitch_F", "Rockerswitch_G", "Rockerswitch_H", "Rockerswitch_I", "Rockerswitch_A", "Rockerswitch_K", "Rockerswitch_L"]
 }
 
-Product "Rockerswitch-K": {
-  name: "Rockerswitch-K",
+Product "Rockerswitch_K": {
+  name: "Rockerswitch_K",
   implements: [ "Rockerswitch" ],
-  children: [ "Rocker2-1", "Rocker2-2", "Off1-1", "Off1-2", "Off1-3", "Off1-4", "Pole2-1", "Pole2-2" ],
-  requires: [ "Rocker2-1", "Rocker2-2", "Off1-1", "Off1-2", "Off1-3", "Off1-4", "Pole2-1", "Pole2-2" ],
-  excludes: [ "Rockerswitch-B", "Rockerswitch-C", "Rockerswitch-D", "Rockerswitch-E", "Rockerswitch-F", "Rockerswitch-G", "Rockerswitch-H", "Rockerswitch-I", "Rockerswitch-J", "Rockerswitch-A", "Rockerswitch-L"]
+  children: [ "Rocker2_1", "Rocker2_2", "Off1_1", "Off1_2", "Off1_3", "Off1_4", "Pole2_1", "Pole2_2" ],
+  requires: [ "Rocker2_1", "Rocker2_2", "Off1_1", "Off1_2", "Off1_3", "Off1_4", "Pole2_1", "Pole2_2" ],
+  excludes: [ "Rockerswitch_B", "Rockerswitch_C", "Rockerswitch_D", "Rockerswitch_E", "Rockerswitch_F", "Rockerswitch_G", "Rockerswitch_H", "Rockerswitch_I", "Rockerswitch_J", "Rockerswitch_A", "Rockerswitch_L"]
 }
 
-Product "Rockerswitch-L": {
-  name: "Rockerswitch-L",
+Product "Rockerswitch_L": {
+  name: "Rockerswitch_L",
   implements: [ "Rockerswitch" ],
-  children: [ "Rocker1-1", "Rocker1-2", "Changeover2", "Crossover", "Pole1-1", "Pole1-2" ],
-  requires: [ "Rocker1-1", "Rocker1-2", "Changeover2", "Crossover", "Pole1-1", "Pole1-2" ],
-  excludes: [ "Rockerswitch-B", "Rockerswitch-C", "Rockerswitch-D", "Rockerswitch-E", "Rockerswitch-F", "Rockerswitch-G", "Rockerswitch-H", "Rockerswitch-I", "Rockerswitch-J", "Rockerswitch-K", "Rockerswitch-A"]
+  children: [ "Rocker1_1", "Rocker1_2", "Changeover2", "Crossover", "Pole1_1", "Pole1_2" ],
+  requires: [ "Rocker1_1", "Rocker1_2", "Changeover2", "Crossover", "Pole1_1", "Pole1_2" ],
+  excludes: [ "Rockerswitch_B", "Rockerswitch_C", "Rockerswitch_D", "Rockerswitch_E", "Rockerswitch_F", "Rockerswitch_G", "Rockerswitch_H", "Rockerswitch_I", "Rockerswitch_J", "Rockerswitch_K", "Rockerswitch_A"]
 }
 
 Resource "Linefeeds": {
@@ -312,18 +312,18 @@ Resource "Linefeeds": {
   isAbstract: true
 }
 
-Resource "LF-3": {
-  name: "LF-3",
+Resource "LF_3": {
+  name: "LF_3",
   implements: [ "Linefeeds" ] 
 }
 
-Resource "LF-4": {
-  name: "LF-4",
+Resource "LF_4": {
+  name: "LF_4",
   implements: [ "Linefeeds" ] 
 }
 
-Resource "LF-6": {
-  name: "LF-6",
+Resource "LF_6": {
+  name: "LF_6",
   implements: [ "Linefeeds" ] 
 }
 
@@ -387,35 +387,35 @@ Process "InsertPole": {
   resources: [ { resourceId: "Linefeeds", minCost: 50, maxCost: 100 } ]
 }
 
-Process "InsertPole1-1": {
-  name: "InsertPole1-1",
+Process "InsertPole1_1": {
+  name: "InsertPole1_1",
   implements: [ "InsertPole" ],
-  inputs: [ {productId: "Pole1-1"} ],
-  outputs: [ {OP3: {productId: "Pole1-1", costWeight: 1.0}}],
+  inputs: [ {productId: "Pole1_1"} ],
+  outputs: [ {OP3: {productId: "Pole1_1", costWeight: 1.0}}],
   resources: [ { resourceId: "Linefeeds", minCost: 50, maxCost: 100 } ]
 }
 
-Process "InsertPole1-2": {
-  name: "InsertPole1-2",
+Process "InsertPole1_2": {
+  name: "InsertPole1_2",
   implements: [ "InsertPole" ],
-  inputs: [ {productId: "Pole1-2"} ],
-  outputs: [ {OP4: {productId: "Pole1-2", costWeight: 1.0}}],
+  inputs: [ {productId: "Pole1_2"} ],
+  outputs: [ {OP4: {productId: "Pole1_2", costWeight: 1.0}}],
   resources: [ { resourceId: "Linefeeds", minCost: 50, maxCost: 100 } ]
 }
 
-Process "InsertPole2-1": {
-  name: "InsertPole2-1",
+Process "InsertPole2_1": {
+  name: "InsertPole2_1",
   implements: [ "InsertPole" ],
-  inputs: [ {productId: "Pole2-1"} ],
-  outputs: [ {OP5: {productId: "Pole2-1", costWeight: 1.0}}],
+  inputs: [ {productId: "Pole2_1"} ],
+  outputs: [ {OP5: {productId: "Pole2_1", costWeight: 1.0}}],
   resources: [ { resourceId: "Linefeeds", minCost: 50, maxCost: 100 } ]
 }
 
-Process "InsertPole2-2": {
-  name: "InsertPole2-2",
+Process "InsertPole2_2": {
+  name: "InsertPole2_2",
   implements: [ "InsertPole" ],
-  inputs: [ {productId: "Pole2-2"} ],
-  outputs: [ {OP6: {productId: "Pole2-2", costWeight: 1.0}}],
+  inputs: [ {productId: "Pole2_2"} ],
+  outputs: [ {OP6: {productId: "Pole2_2", costWeight: 1.0}}],
   resources: [ { resourceId: "Linefeeds", minCost: 50, maxCost: 100 } ]
 }
 
@@ -427,19 +427,19 @@ Process "InsertNeutral": {
   resources: [ { resourceId: "Linefeeds", minCost: 50, maxCost: 100 } ]
 }
 
-Process "InsertNeutral1-1": {
-  name: "InsertNeutral1-1",
+Process "InsertNeutral1_1": {
+  name: "InsertNeutral1_1",
   implements: [ "InsertNeutral" ],
-  inputs: [ {productId: "Neutral1-1"} ],
-  outputs: [ {OP8: {productId: "Neutral1-1", costWeight: 1.0}}],
+  inputs: [ {productId: "Neutral1_1"} ],
+  outputs: [ {OP8: {productId: "Neutral1_1", costWeight: 1.0}}],
   resources: [ { resourceId: "Linefeeds", minCost: 50, maxCost: 100 } ]
 }
 
-Process "InsertNeutral1-2": {
-  name: "InsertNeutral1-2",
+Process "InsertNeutral1_2": {
+  name: "InsertNeutral1_2",
   implements: [ "InsertNeutral" ],
-  inputs: [ {productId: "Neutral1-2"} ],
-  outputs: [ {OP9: {productId: "Neutral1-2", costWeight: 1.0}}],
+  inputs: [ {productId: "Neutral1_2"} ],
+  outputs: [ {OP9: {productId: "Neutral1_2", costWeight: 1.0}}],
   resources: [ { resourceId: "Linefeeds", minCost: 50, maxCost: 100 } ]
 }
 
@@ -475,34 +475,34 @@ Process "InsertRocker": {
   resources: [ { resourceId: "Linefeeds", minCost: 50, maxCost: 100 } ]
 }
 
-Process "InsertRocker1-1": {
-  name: "InsertRocker1-1",
-  inputs: [ {productId: "Rocker1-1"} ],
-  outputs: [ {OP14: {productId: "Rocker1-1", costWeight: 1.0}}],
+Process "InsertRocker1_1": {
+  name: "InsertRocker1_1",
+  inputs: [ {productId: "Rocker1_1"} ],
+  outputs: [ {OP14: {productId: "Rocker1_1", costWeight: 1.0}}],
   resources: [ { resourceId: "Linefeeds", minCost: 50, maxCost: 100 } ]
 }
 
-Process "InsertRocker1-2": {
-  name: "InsertRocker1-2",
+Process "InsertRocker1_2": {
+  name: "InsertRocker1_2",
   implements: [ "InsertRocker" ],
-  inputs: [ {productId: "Rocker1-2"} ],
-  outputs: [ {OP15: {productId: "Rocker1-2", costWeight: 1.0}}],
+  inputs: [ {productId: "Rocker1_2"} ],
+  outputs: [ {OP15: {productId: "Rocker1_2", costWeight: 1.0}}],
   resources: [ { resourceId: "Linefeeds", minCost: 50, maxCost: 100 } ]
 }
 
-Process "InsertRocker2-1": {
-  name: "InsertRocker2-1",
+Process "InsertRocker2_1": {
+  name: "InsertRocker2_1",
   implements: [ "InsertRocker" ],
-  inputs: [ {productId: "Rocker2-1"} ],
-  outputs: [ {OP16: {productId: "Rocker2-1", costWeight: 1.0}}],
+  inputs: [ {productId: "Rocker2_1"} ],
+  outputs: [ {OP16: {productId: "Rocker2_1", costWeight: 1.0}}],
   resources: [ { resourceId: "Linefeeds", minCost: 50, maxCost: 100 } ]
 }
 
-Process "InsertRocker2-2": {
-  name: "InsertRocker2-2",
+Process "InsertRocker2_2": {
+  name: "InsertRocker2_2",
   implements: [ "InsertRocker" ],
-  inputs: [ {productId: "Rocker2-2"} ],
-  outputs: [ {OP17: {productId: "Rocker2-2", costWeight: 1.0}}],
+  inputs: [ {productId: "Rocker2_2"} ],
+  outputs: [ {OP17: {productId: "Rocker2_2", costWeight: 1.0}}],
   resources: [ { resourceId: "Linefeeds", minCost: 50, maxCost: 100 } ]
 }
 
@@ -514,35 +514,35 @@ Process "InsertOff": {
   resources: [ { resourceId: "Linefeeds", minCost: 50, maxCost: 100 } ]
 }
 
-Process "InsertOff1-1": {
-  name: "InsertOff1-1",
+Process "InsertOff1_1": {
+  name: "InsertOff1_1",
   implements: [ "InsertOff" ],
-  inputs: [ {productId: "Off1-1"} ],
-  outputs: [ {OP20: {productId: "Off1-1", costWeight: 1.0}}],
+  inputs: [ {productId: "Off1_1"} ],
+  outputs: [ {OP20: {productId: "Off1_1", costWeight: 1.0}}],
   resources: [ { resourceId: "Linefeeds", minCost: 50, maxCost: 100 } ]
 }
 
-Process "InsertOff1-2": {
-  name: "InsertOff1-2",
+Process "InsertOff1_2": {
+  name: "InsertOff1_2",
   implements: [ "InsertOff" ],
-  inputs: [ {productId: "Off1-2"} ],
-  outputs: [ {OP21: {productId: "Off1-2", costWeight: 1.0}}],
+  inputs: [ {productId: "Off1_2"} ],
+  outputs: [ {OP21: {productId: "Off1_2", costWeight: 1.0}}],
   resources: [ { resourceId: "Linefeeds", minCost: 50, maxCost: 100 } ]
 }
 
-Process "InsertOff1-3": {
-  name: "InsertOff1-3",
+Process "InsertOff1_3": {
+  name: "InsertOff1_3",
   implements: [ "InsertOff" ],
-  inputs: [ {productId: "Off1-3"} ],
-  outputs: [ {OP22: {productId: "Off1-3", costWeight: 1.0}}],
+  inputs: [ {productId: "Off1_3"} ],
+  outputs: [ {OP22: {productId: "Off1_3", costWeight: 1.0}}],
   resources: [ { resourceId: "Linefeeds", minCost: 50, maxCost: 100 } ]
 }
 
-Process "InsertOff1-4": {
-  name: "InsertOff1-4",
+Process "InsertOff1_4": {
+  name: "InsertOff1_4",
   implements: [ "InsertOff" ],
-  inputs: [ {productId: "Off1-4"} ],
-  outputs: [ {OP23: {productId: "Off1-4", costWeight: 1.0}}],
+  inputs: [ {productId: "Off1_4"} ],
+  outputs: [ {OP23: {productId: "Off1_4", costWeight: 1.0}}],
   resources: [ { resourceId: "Linefeeds", minCost: 50, maxCost: 100 } ]
 }
 
@@ -568,19 +568,19 @@ Process "InsertScrew": {
   resources: [ { resourceId: "Linefeeds", minCost: 50, maxCost: 100 } ]
 }
 
-Process "InsertScrew1-1": {
-  name: "InsertScrew1-1",
+Process "InsertScrew1_1": {
+  name: "InsertScrew1_1",
   implements: [ "InsertScrew" ],
-  inputs: [ {productId: "Screw1-1"} ],
-  outputs: [ {OP27: {productId: "Screw1-1", costWeight: 1.0}}],
+  inputs: [ {productId: "Screw1_1"} ],
+  outputs: [ {OP27: {productId: "Screw1_1", costWeight: 1.0}}],
   resources: [ { resourceId: "Linefeeds", minCost: 50, maxCost: 100 } ]
 }
 
-Process "InsertScrew1-2": {
-  name: "InsertScrew1-2",
+Process "InsertScrew1_2": {
+  name: "InsertScrew1_2",
   implements: [ "InsertScrew" ],
-  inputs: [ {productId: "Screw1-2"} ],
-  outputs: [ {OP28: {productId: "Screw1-2", costWeight: 1.0}}],
+  inputs: [ {productId: "Screw1_2"} ],
+  outputs: [ {OP28: {productId: "Screw1_2", costWeight: 1.0}}],
   resources: [ { resourceId: "Linefeeds", minCost: 50, maxCost: 100 } ]
 }
 
@@ -592,19 +592,19 @@ Process "InsertO_Ring": {
   resources: [ { resourceId: "Linefeeds", minCost: 50, maxCost: 100 } ]
 }
 
-Process "InsertO_Ring1-1": {
-  name: "InsertO_Ring1-1",
+Process "InsertO_Ring1_1": {
+  name: "InsertO_Ring1_1",
   implements: [ "InsertO_Ring" ],
-  inputs: [ {productId: "O_Ring1-1"} ],
-  outputs: [ {OP30: {productId: "O_Ring1-1", costWeight: 1.0}}],
+  inputs: [ {productId: "O_Ring1_1"} ],
+  outputs: [ {OP30: {productId: "O_Ring1_1", costWeight: 1.0}}],
   resources: [ { resourceId: "Linefeeds", minCost: 50, maxCost: 100 } ]
 }
 
-Process "InsertO_Ring1-2": {
-  name: "InsertO_Ring1-2",
+Process "InsertO_Ring1_2": {
+  name: "InsertO_Ring1_2",
   implements: [ "InsertO_Ring" ],
-  inputs: [ {productId: "O_Ring1-2"} ],
-  outputs: [ {OP31: {productId: "O_Ring1-2", costWeight: 1.0}}],
+  inputs: [ {productId: "O_Ring1_2"} ],
+  outputs: [ {OP31: {productId: "O_Ring1_2", costWeight: 1.0}}],
   resources: [ { resourceId: "Linefeeds", minCost: 50, maxCost: 100 } ]
 }
 
@@ -617,20 +617,20 @@ Process "InsertClaw": {
   resources: [ { resourceId: "Linefeeds", minCost: 50, maxCost: 100 } ]
 }
 
-Process "InsertClaw1-1": {
-  name: "InsertClaw1-1",
+Process "InsertClaw1_1": {
+  name: "InsertClaw1_1",
   implements: [ "InsertClaw" ],
-  requires: [ "InsertO_Ring", "InsertO_Ring1-1" ],
-  inputs: [ {productId: "Claw1-1"} ],
-  outputs: [ {OP33: {productId: "Claw1-1", costWeight: 1.0}}],
+  requires: [ "InsertO_Ring", "InsertO_Ring1_1" ],
+  inputs: [ {productId: "Claw1_1"} ],
+  outputs: [ {OP33: {productId: "Claw1_1", costWeight: 1.0}}],
   resources: [ { resourceId: "Linefeeds", minCost: 50, maxCost: 100 } ]
 }
 
-Process "InsertClaw1-2": {
-  name: "InsertClaw1-2",
-  implements: [ "InsertClaw", "InsertO_Ring1-2" ],
-  inputs: [ {productId: "Claw1-2"} ],
-  outputs: [ {OP34: {productId: "Claw1-2", costWeight: 1.0}}],
+Process "InsertClaw1_2": {
+  name: "InsertClaw1_2",
+  implements: [ "InsertClaw", "InsertO_Ring1_2" ],
+  inputs: [ {productId: "Claw1_2"} ],
+  outputs: [ {OP34: {productId: "Claw1_2", costWeight: 1.0}}],
   resources: [ { resourceId: "Linefeeds", minCost: 50, maxCost: 100 } ]
 }
 
@@ -643,38 +643,38 @@ Process "PressPole": {
   resources: [ { resourceId: "SmallPartsPressinRobots", minCost: 50, maxCost: 100 } ]
 }
 
-Process "PressPole1-1": {
-  name: "PressPole1-1",
+Process "PressPole1_1": {
+  name: "PressPole1_1",
   implements: [ "PressPole" ],
-  requires: [ "InsertSocket", "InsertPole1-1" ],
-  inputs: [ {productId: "Pole1-1"} ],
+  requires: [ "InsertSocket", "InsertPole1_1" ],
+  inputs: [ {productId: "Pole1_1"} ],
   outputs: [ {OP36: {productId: "Rockerswitch", costWeight: 1.0}}],
   resources: [ { resourceId: "SmallPartsPressinRobots", minCost: 50, maxCost: 100 } ]
 }
 
-Process "PressPole1-2": {
-  name: "PressPole1-2",
+Process "PressPole1_2": {
+  name: "PressPole1_2",
   implements: [ "PressPole" ],
-  requires: [ "InsertSocket", "InsertPole1-2" ],
-  inputs: [ {productId: "Rockerswitch"}, {productId: "Pole1-2"} ],
+  requires: [ "InsertSocket", "InsertPole1_2" ],
+  inputs: [ {productId: "Rockerswitch"}, {productId: "Pole1_2"} ],
   outputs: [ {OP37: {productId: "Rockerswitch", costWeight: 1.0}}],
   resources: [ { resourceId: "SmallPartsPressinRobots", minCost: 50, maxCost: 100 } ]
 }
 
-Process "PressPole2-1": {
-  name: "PressPole2-1",
+Process "PressPole2_1": {
+  name: "PressPole2_1",
   implements: [ "PressPole" ],
-  requires: [ "InsertSocket", "InsertPole2-1" ],
-  inputs: [ {productId: "Rockerswitch"}, {productId: "Pole2-1"} ],
+  requires: [ "InsertSocket", "InsertPole2_1" ],
+  inputs: [ {productId: "Rockerswitch"}, {productId: "Pole2_1"} ],
   outputs: [ {OP38: {productId: "Rockerswitch", costWeight: 1.0}}],
   resources: [ { resourceId: "SmallPartsPressinRobots", minCost: 50, maxCost: 100 } ]
 }
 
-Process "PressPole2-2": {
-  name: "PressPole2-2",
+Process "PressPole2_2": {
+  name: "PressPole2_2",
   implements: [ "PressPole" ],
-  requires: [ "InsertSocket", "InsertPole2-2" ],
-  inputs: [ {productId: "Rockerswitch"}, {productId: "Pole2-2"} ],
+  requires: [ "InsertSocket", "InsertPole2_2" ],
+  inputs: [ {productId: "Rockerswitch"}, {productId: "Pole2_2"} ],
   outputs: [ {OP39: {productId: "Rockerswitch", costWeight: 1.0}}],
   resources: [ { resourceId: "SmallPartsPressinRobots", minCost: 50, maxCost: 100 } ]
 }
@@ -688,18 +688,18 @@ Process "PressNeutral": {
   resources: [ { resourceId: "SmallPartsPressinRobots", minCost: 50, maxCost: 100 } ]
 }
 
-Process "PressNeutral1-1": {
-  name: "PressNeutral1-1",
-  requires: [ "InsertSocket", "InsertNeutral1-1" ],
-  inputs: [ {productId: "Rockerswitch"}, {productId: "Neutral1-1"} ],
+Process "PressNeutral1_1": {
+  name: "PressNeutral1_1",
+  requires: [ "InsertSocket", "InsertNeutral1_1" ],
+  inputs: [ {productId: "Rockerswitch"}, {productId: "Neutral1_1"} ],
   outputs: [ {OP41: {productId: "Rockerswitch", costWeight: 1.0}}],
   resources: [ { resourceId: "SmallPartsPressinRobots", minCost: 50, maxCost: 100 } ]
 }
 
-Process "PressNeutral1-2": {
-  name: "PressNeutral1-2",
-  requires: [ "InsertSocket", "InsertNeutral1-2" ],
-  inputs: [ {productId: "Rockerswitch"}, {productId: "Neutral1-2"} ],
+Process "PressNeutral1_2": {
+  name: "PressNeutral1_2",
+  requires: [ "InsertSocket", "InsertNeutral1_2" ],
+  inputs: [ {productId: "Rockerswitch"}, {productId: "Neutral1_2"} ],
   outputs: [ {OP42: {productId: "Rockerswitch", costWeight: 1.0}}],
   resources: [ { resourceId: "SmallPartsPressinRobots", minCost: 50, maxCost: 100 } ]
 }
@@ -723,8 +723,8 @@ Process "PressChangeover1": {
 
 Process "PressChangeover2": {
   name: "PressChangeover2",
-  requires: [ "InsertSocket", "InsertChangeover2", "PressRocker1-2" ],
-  inputs: [ {productId: "Rockerswitch"}, {productId: "Changeover2"}, {productId: "Rocker1-2"} ],
+  requires: [ "InsertSocket", "InsertChangeover2", "PressRocker1_2" ],
+  inputs: [ {productId: "Rockerswitch"}, {productId: "Changeover2"}, {productId: "Rocker1_2"} ],
   outputs: [ {OP45: {productId: "Rockerswitch", costWeight: 1.0}}],
   resources: [ { resourceId: "SmallPartsPressinRobots", minCost: 50, maxCost: 100 } ]
 }
@@ -738,34 +738,34 @@ Process "PressRocker": {
   resources: [ { resourceId: "SmallPartsPressinRobots", minCost: 50, maxCost: 100 } ]
 }
 
-Process "PressRocker1-1": {
-  name: "PressRocker1-1",
-  requires: [ "InsertSocket", "InsertRocker1-1", "PressNeutral1-1" ],
-  inputs: [ {productId: "Rockerswitch"}, {productId: "Rocker1-1"}, {productId: "Neutral1-1"} ],
+Process "PressRocker1_1": {
+  name: "PressRocker1_1",
+  requires: [ "InsertSocket", "InsertRocker1_1", "PressNeutral1_1" ],
+  inputs: [ {productId: "Rockerswitch"}, {productId: "Rocker1_1"}, {productId: "Neutral1_1"} ],
   outputs: [ {OP47: {productId: "Rockerswitch", costWeight: 1.0}}],
   resources: [ { resourceId: "SmallPartsPressinRobots", minCost: 50, maxCost: 100 } ]
 }
 
-Process "PressRocker1-2": {
-  name: "PressRocker1-2",
-  requires: [ "InsertSocket", "InsertRocker1-2", "PressNeutral1-2" ],
-  inputs: [ {productId: "Rockerswitch"}, {productId: "Rocker1-2"}, {productId: "Neutral1-2"} ],
+Process "PressRocker1_2": {
+  name: "PressRocker1_2",
+  requires: [ "InsertSocket", "InsertRocker1_2", "PressNeutral1_2" ],
+  inputs: [ {productId: "Rockerswitch"}, {productId: "Rocker1_2"}, {productId: "Neutral1_2"} ],
   outputs: [ {OP48: {productId: "Rockerswitch", costWeight: 1.0}}],
   resources: [ { resourceId: "SmallPartsPressinRobots", minCost: 50, maxCost: 100 } ]
 }
 
-Process "PressRocker2-1": {
-  name: "PressRocker2-1",
-  requires: [ "InsertSocket", "InsertRocker2-1", "PressPole2-1" ],
-  inputs: [ {productId: "Rockerswitch"}, {productId: "Rocker2-1"}, {productId: "Pole2-1"} ],
+Process "PressRocker2_1": {
+  name: "PressRocker2_1",
+  requires: [ "InsertSocket", "InsertRocker2_1", "PressPole2_1" ],
+  inputs: [ {productId: "Rockerswitch"}, {productId: "Rocker2_1"}, {productId: "Pole2_1"} ],
   outputs: [ {OP49: {productId: "Rockerswitch", costWeight: 1.0}}],
   resources: [ { resourceId: "SmallPartsPressinRobots", minCost: 50, maxCost: 100 } ]
 }
 
-Process "PressRocker2-2": {
-  name: "PressRocker2-2",
-  requires: [ "InsertSocket", "InsertRocker2-2", "PressPole2-2" ],
-  inputs: [ {productId: "Rockerswitch"}, {productId: "Rocker2-2"}, {productId: "Pole2-2"} ],
+Process "PressRocker2_2": {
+  name: "PressRocker2_2",
+  requires: [ "InsertSocket", "InsertRocker2_2", "PressPole2_2" ],
+  inputs: [ {productId: "Rockerswitch"}, {productId: "Rocker2_2"}, {productId: "Pole2_2"} ],
   outputs: [ {OP50: {productId: "Rockerswitch", costWeight: 1.0}}],
   resources: [ { resourceId: "SmallPartsPressinRobots", minCost: 50, maxCost: 100 } ]
 }
@@ -779,50 +779,50 @@ Process "PressOff": {
   resources: [ { resourceId: "SmallPartsPressinRobots", minCost: 50, maxCost: 100 } ]
 }
 
-Process "PressOff1-1": {
-  name: "PressOff1-1",
-  requires: [ "InsertSocket", "InsertOff1-1" ],
-  inputs: [ {productId: "Rockerswitch"}, {productId: "Off1-1"} ],
+Process "PressOff1_1": {
+  name: "PressOff1_1",
+  requires: [ "InsertSocket", "InsertOff1_1" ],
+  inputs: [ {productId: "Rockerswitch"}, {productId: "Off1_1"} ],
   outputs: [ {OP61: {productId: "Rockerswitch", costWeight: 1.0}}],
   resources: [ { resourceId: "SmallPartsPressinRobots", minCost: 50, maxCost: 100 } ]
 }
 
-Process "PressOff1-2": {
-  name: "PressOff1-2",
-  requires: [ "InsertSocket", "InsertOff1-2" ],
-  inputs: [ {productId: "Rockerswitch"}, {productId: "Off1-2"} ],
+Process "PressOff1_2": {
+  name: "PressOff1_2",
+  requires: [ "InsertSocket", "InsertOff1_2" ],
+  inputs: [ {productId: "Rockerswitch"}, {productId: "Off1_2"} ],
   outputs: [ {OP62: {productId: "Rockerswitch", costWeight: 1.0}}],
   resources: [ { resourceId: "SmallPartsPressinRobots", minCost: 50, maxCost: 100 } ]
 }
 
-Process "PressOff1-3": {
-  name: "PressOff1-3",
-  requires: [ "InsertSocket", "InsertOff1-3" ],
-  inputs: [ {productId: "Rockerswitch"}, {productId: "Off1-3"} ],
+Process "PressOff1_3": {
+  name: "PressOff1_3",
+  requires: [ "InsertSocket", "InsertOff1_3" ],
+  inputs: [ {productId: "Rockerswitch"}, {productId: "Off1_3"} ],
   outputs: [ {OP63: {productId: "Rockerswitch", costWeight: 1.0}}],
   resources: [ { resourceId: "SmallPartsPressinRobots", minCost: 50, maxCost: 100 } ]
 }
 
-Process "PressOff1-4": {
-  name: "PressOff1-4",
-  requires: [ "InsertSocket", "InsertOff1-4" ],
-  inputs: [ {productId: "Rockerswitch"}, {productId: "Off1-4"} ],
+Process "PressOff1_4": {
+  name: "PressOff1_4",
+  requires: [ "InsertSocket", "InsertOff1_4" ],
+  inputs: [ {productId: "Rockerswitch"}, {productId: "Off1_4"} ],
   outputs: [ {OP64: {productId: "Rockerswitch", costWeight: 1.0}}],
   resources: [ { resourceId: "SmallPartsPressinRobots", minCost: 50, maxCost: 100 } ]
 }
 
 Process "PressCrossover": {
   name: "PressCrossover",
-  requires: [ "InsertSocket", "InsertCrossover", "PressRocker1-1", "PressChangeover2" ],
-  inputs: [ {productId: "Rockerswitch"}, {productId: "Crossover"}, {productId: "Rocker1-1"}, {productId: "Changeover2"} ],
+  requires: [ "InsertSocket", "InsertCrossover", "PressRocker1_1", "PressChangeover2" ],
+  inputs: [ {productId: "Rockerswitch"}, {productId: "Crossover"}, {productId: "Rocker1_1"}, {productId: "Changeover2"} ],
   outputs: [ {OP65: {productId: "Rockerswitch", costWeight: 1.0}}],
   resources: [ { resourceId: "SmallPartsPressinRobots", minCost: 50, maxCost: 100 } ]
 }
 
 Process "PressSeries": {
   name: "PressSeries",
-  requires: [ "InsertSocket", "InsertSeries", "PressRocker1-1", "PressRocker1-2" ],
-  inputs: [ {productId: "Rockerswitch"}, {productId: "Series"}, {productId: "Rocker1-1"}, {productId: "Rocker1-2"} ],
+  requires: [ "InsertSocket", "InsertSeries", "PressRocker1_1", "PressRocker1_2" ],
+  inputs: [ {productId: "Rockerswitch"}, {productId: "Series"}, {productId: "Rocker1_1"}, {productId: "Rocker1_2"} ],
   outputs: [ {OP66: {productId: "Rockerswitch", costWeight: 1.0}}],
   resources: [ { resourceId: "SmallPartsPressinRobots", minCost: 50, maxCost: 100 } ]
 }
@@ -836,34 +836,34 @@ Process "ScrewScrew": {
   resources: [ { resourceId: "ScrewingRobots", minCost: 50, maxCost: 100 } ]
 }
 
-Process "ScrewScrew1-1": {
-  name: "ScrewScrew1-1",
-  requires: [ "InsertSocket", "InsertScrew1-1", "InsertO_Ring1-1", "InsertClaw1-1" ],
-  inputs: [ {productId: "Rockerswitch"}, {productId: "Screw1-1"}, {productId: "O_Ring1-1"}, {productId: "Claw1-1"} ],
+Process "ScrewScrew1_1": {
+  name: "ScrewScrew1_1",
+  requires: [ "InsertSocket", "InsertScrew1_1", "InsertO_Ring1_1", "InsertClaw1_1" ],
+  inputs: [ {productId: "Rockerswitch"}, {productId: "Screw1_1"}, {productId: "O_Ring1_1"}, {productId: "Claw1_1"} ],
   outputs: [ {OP68: {productId: "Rockerswitch", costWeight: 1.0}}],
   resources: [ { resourceId: "ScrewingRobots", minCost: 50, maxCost: 100 } ]
 }
 
-Process "ScrewScrew1-2": {
-  name: "ScrewScrew1-2",
-  requires: [ "InsertSocket", "InsertScrew1-2", "InsertO_Ring1-2", "InsertClaw1-2" ],
-  inputs: [ {productId: "Rockerswitch"}, {productId: "Screw1-2"}, {productId: "O_Ring1-2"}, {productId: "Claw1-2"} ],
+Process "ScrewScrew1_2": {
+  name: "ScrewScrew1_2",
+  requires: [ "InsertSocket", "InsertScrew1_2", "InsertO_Ring1_2", "InsertClaw1_2" ],
+  inputs: [ {productId: "Rockerswitch"}, {productId: "Screw1_2"}, {productId: "O_Ring1_2"}, {productId: "Claw1_2"} ],
   outputs: [ {OP69: {productId: "Rockerswitch", costWeight: 1.0}}],
   resources: [ { resourceId: "ScrewingRobots", minCost: 50, maxCost: 100 } ]
 }
 
 Constraint "Constraint1": {
-  definition: "Off1-1, Rocker1-1 -> Off1-1 implies Rocker1-1" 
+  definition: "Off1_1, Rocker1_1 -> Off1_1 implies Rocker1_1" 
 }
 
 Constraint "Constraint2": {
-  definition: "Off1-2, Rocker1-2 -> Off1-2 implies Rocker1-2" 
+  definition: "Off1_2, Rocker1_2 -> Off1_2 implies Rocker1_2" 
 }
 
 Constraint "Constraint3": {
-  definition: "Changeover1, Rocker1-1 -> Changeover1 implies Rocker1-1"
+  definition: "Changeover1, Rocker1_1 -> Changeover1 implies Rocker1_1"
 }
 
 Constraint "Constraint3": {
-  definition: "Changeover2, Rocker1-1, Rocker1-2 -> Changeover2 implies Rocker1-1 and Changeover2 implies Rocker1-2"
+  definition: "Changeover2, Rocker1_1, Rocker1_2 -> Changeover2 implies Rocker1_1 and Changeover2 implies Rocker1_2"
 }

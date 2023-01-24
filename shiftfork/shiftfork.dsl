@@ -96,8 +96,14 @@ Product "Lock3": {
   partialProduct: "true"
 }
 
+Product "Barrel": {
+  name: "Barrel",
+  isAbstract: true
+}
+
 Product "Barrel1_1": {
   name: "Barrel 1_1",
+  implements: [ "Barrel" ],
   length:50,
   requires: ["Pipe"],
   partialProduct: "true"
@@ -105,6 +111,7 @@ Product "Barrel1_1": {
 
 Product "Barrel1_2": {
   name: "Barrel 1_2",
+  implements: [ "Barrel" ],
   length:50,
   requires: ["Pipe"],
   partialProduct: "true"
@@ -123,7 +130,7 @@ Product "Ring1": {
 }
 
 Product "O_Ring": {
-  name: "O-Ring",
+  name: "O_Ring",
   requires: ["Ring1", "Jack1"],
   partialProduct: "true"
 }
@@ -140,22 +147,22 @@ Product "ForkProduct": {
   children: [ "Barrel1_1", "Screw", "Jack1", "Ring1", "O_Ring", "Fork3", "Fork4", "Fork5", "Pipe", "Lock"],
   requires: [ "Barrel1_1", "Screw", "Jack1", "Ring1", "O_Ring", "Fork3", "Fork4", "Fork5", "Pipe", "Lock"],
 }
-Product "Fork-13": {
+Product "Fork_13": {
   name: "Fork 13",
   implements: ["ForkProduct"],
   requires: ["Pipe8", "Lock3", "Barrel1_2"]
 }
-Product "Fork-2R": {
+Product "Fork_2R": {
   name: "Fork 2R",
   implements: ["ForkProduct"],
   requires: ["Pipe3", "Lock2"]
 }
-Product "Fork-46": {
+Product "Fork_46": {
   name: "Fork 46",
   implements: ["ForkProduct"],
   requires: ["Pipe3", "Lock1"]
 }
-Product "Fork-57": {
+Product "Fork_57": {
   name: "Fork 57",
   implements: ["ForkProduct"],
   requires: ["Pipe2", "Lock1", "Barrel1_2"]
@@ -166,13 +173,13 @@ Resource "Linefeeds": {
   isAbstract: true
 }
 
-Resource "LF-3": {
-  name: "LF-3",
+Resource "LF_3": {
+  name: "LF_3",
   implements: [ "Linefeeds" ] 
 }
 
-Resource "LF-4": {
-  name: "LF-4",
+Resource "LF_4": {
+  name: "LF_4",
   implements: [ "Linefeeds" ] 
 }
 

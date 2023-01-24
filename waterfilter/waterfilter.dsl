@@ -266,51 +266,51 @@ Product "MountWithTanks": {
   partialProduct: "true"
 }
 
-Product "MountWithTanks-TypeA": {
-  name: "MountWithTanks-TypeA",
+Product "MountWithTanks_TypeA": {
+  name: "MountWithTanks_TypeA",
   implements: [ "MountWithTanks" ],
   requires: [ "MountedTanks1", "CompletedFiltertankSWithBone" ],
-  excludes: [ "MountWithTanks-TypeB", "MountWithTanks-TypeC", "MountWithTanks-TypeD", "MountWithTanks-TypeE", "MountWithTanks-TypeF" ],
+  excludes: [ "MountWithTanks_TypeB", "MountWithTanks_TypeC", "MountWithTanks_TypeD", "MountWithTanks_TypeE", "MountWithTanks_TypeF" ],
   partialProduct: "true"
 }
 
-Product "MountWithTanks-TypeB": {
-  name: "MountWithTanks-TypeB",
+Product "MountWithTanks_TypeB": {
+  name: "MountWithTanks_TypeB",
   implements: [ "MountWithTanks" ],
   requires: [ "MountedTanks1", "CompletedFiltertankSWithActive" ],
-  excludes: [ "MountWithTanks-TypeA", "MountWithTanks-TypeC", "MountWithTanks-TypeD", "MountWithTanks-TypeE", "MountWithTanks-TypeF" ],
+  excludes: [ "MountWithTanks_TypeA", "MountWithTanks_TypeC", "MountWithTanks_TypeD", "MountWithTanks_TypeE", "MountWithTanks_TypeF" ],
   partialProduct: "true"
 }
 
-Product "MountWithTanks-TypeC": {
-  name: "MountWithTanks-TypeC",
+Product "MountWithTanks_TypeC": {
+  name: "MountWithTanks_TypeC",
   implements: [ "MountWithTanks" ],
   requires: [ "MountedTanks2", "CompletedFiltertankSWithBone" ],
-  excludes: [ "MountWithTanks-TypeB", "MountWithTanks-TypeA", "MountWithTanks-TypeD", "MountWithTanks-TypeE", "MountWithTanks-TypeF" ],
+  excludes: [ "MountWithTanks_TypeB", "MountWithTanks_TypeA", "MountWithTanks_TypeD", "MountWithTanks_TypeE", "MountWithTanks_TypeF" ],
   partialProduct: "true"
 }
 
-Product "MountWithTanks-TypeD": {
-  name: "MountWithTanks-TypeD",
+Product "MountWithTanks_TypeD": {
+  name: "MountWithTanks_TypeD",
   implements: [ "MountWithTanks" ],
   requires: [ "MountedTanks2", "CompletedFiltertankSWithActive" ],
-  excludes: [ "MountWithTanks-TypeB", "MountWithTanks-TypeC", "MountWithTanks-TypeA", "MountWithTanks-TypeE", "MountWithTanks-TypeF" ],
+  excludes: [ "MountWithTanks_TypeB", "MountWithTanks_TypeC", "MountWithTanks_TypeA", "MountWithTanks_TypeE", "MountWithTanks_TypeF" ],
   partialProduct: "true"
 }
 
-Product "MountWithTanks-TypeE": {
-  name: "MountWithTanks-TypeE",
+Product "MountWithTanks_TypeE": {
+  name: "MountWithTanks_TypeE",
   implements: [ "MountWithTanks" ],
   requires: [ "MountedTanks3", "CompletedFiltertankXLWithBone" ],
-  excludes: [ "MountWithTanks-TypeB", "MountWithTanks-TypeC", "MountWithTanks-TypeD", "MountWithTanks-TypeA", "MountWithTanks-TypeF" ],
+  excludes: [ "MountWithTanks_TypeB", "MountWithTanks_TypeC", "MountWithTanks_TypeD", "MountWithTanks_TypeA", "MountWithTanks_TypeF" ],
   partialProduct: "true"
 }
 
-Product "MountWithTanks-TypeF": {
-  name: "MountWithTanks-TypeF",
+Product "MountWithTanks_TypeF": {
+  name: "MountWithTanks_TypeF",
   implements: [ "MountWithTanks" ],
   requires: [ "MountedTanks3", "CompletedFiltertankXLWithActive" ],
-  excludes: [ "MountWithTanks-TypeB", "MountWithTanks-TypeC", "MountWithTanks-TypeD", "MountWithTanks-TypeE", "MountWithTanks-TypeA" ],
+  excludes: [ "MountWithTanks_TypeB", "MountWithTanks_TypeC", "MountWithTanks_TypeD", "MountWithTanks_TypeE", "MountWithTanks_TypeA" ],
   partialProduct: "true"
 }
 
@@ -321,250 +321,343 @@ Product "CompletedTank": {
   requires: [ "MountWithTanks", "Tube1", "Tube2" ],
 }
 
-Product "CompletedTank-1": {
-  name: "CompletedTank-1",
+Product "CompletedTank_1": {
+  name: "CompletedTank_1",
   implements: [ "CompletedTank" ],
-  requires: [ "MountWithTanks-TypeA" ],
-  excludes: [ "CompletedTank-2", "CompletedTank-3", "CompletedTank-4", "CompletedTank-5", "CompletedTank-6", "CompletedTank-7", "CompletedTank-8" ]
+  requires: [ "MountWithTanks_TypeA" ],
+  excludes: [ "CompletedTank_2", "CompletedTank_3", "CompletedTank_4", "CompletedTank_5", "CompletedTank_6", "CompletedTank_7", "CompletedTank_8" ]
 }
 
-Product "CompletedTank-2": {
-  name: "CompletedTank-2",
+Product "CompletedTank_2": {
+  name: "CompletedTank_2",
   implements: [ "CompletedTank" ],
-  requires: [ "MountWithTanks-TypeB" ],
-  excludes: [ "CompletedTank-1", "CompletedTank-3", "CompletedTank-4", "CompletedTank-5", "CompletedTank-6", "CompletedTank-7", "CompletedTank-8" ]
+  requires: [ "MountWithTanks_TypeB" ],
+  excludes: [ "CompletedTank_1", "CompletedTank_3", "CompletedTank_4", "CompletedTank_5", "CompletedTank_6", "CompletedTank_7", "CompletedTank_8" ]
 }
 
-Product "CompletedTank-3": {
-  name: "CompletedTank-3",
+Product "CompletedTank_3": {
+  name: "CompletedTank_3",
   implements: [ "CompletedTank" ],
-  requires: [ "MountWithTanks-TypeC", "Nanofilter" ],
-  excludes: [ "CompletedTank-2", "CompletedTank-1", "CompletedTank-4", "CompletedTank-5", "CompletedTank-6", "CompletedTank-7", "CompletedTank-8" ]
+  requires: [ "MountWithTanks_TypeC", "Nanofilter" ],
+  excludes: [ "CompletedTank_2", "CompletedTank_1", "CompletedTank_4", "CompletedTank_5", "CompletedTank_6", "CompletedTank_7", "CompletedTank_8" ]
 }
 
-Product "CompletedTank-4": {
-  name: "CompletedTank-4",
+Product "CompletedTank_4": {
+  name: "CompletedTank_4",
   implements: [ "CompletedTank" ],
-  requires: [ "MountWithTanks-TypeD", "Nanofilter" ],
-  excludes: [ "CompletedTank-2", "CompletedTank-3", "CompletedTank-1", "CompletedTank-5", "CompletedTank-6", "CompletedTank-7", "CompletedTank-8" ]
+  requires: [ "MountWithTanks_TypeD", "Nanofilter" ],
+  excludes: [ "CompletedTank_2", "CompletedTank_3", "CompletedTank_1", "CompletedTank_5", "CompletedTank_6", "CompletedTank_7", "CompletedTank_8" ]
 }
 
-Product "CompletedTank-5": {
-  name: "CompletedTank-5",
+Product "CompletedTank_5": {
+  name: "CompletedTank_5",
   implements: [ "CompletedTank" ],
-  requires: [ "MountWithTanks-TypeE", "Tube3" ],
-  excludes: [ "CompletedTank-2", "CompletedTank-3", "CompletedTank-4", "CompletedTank-1", "CompletedTank-6", "CompletedTank-7", "CompletedTank-8" ]
+  requires: [ "MountWithTanks_TypeE", "Tube3" ],
+  excludes: [ "CompletedTank_2", "CompletedTank_3", "CompletedTank_4", "CompletedTank_1", "CompletedTank_6", "CompletedTank_7", "CompletedTank_8" ]
 }
 
-Product "CompletedTank-6": {
-  name: "CompletedTank-6",
+Product "CompletedTank_6": {
+  name: "CompletedTank_6",
   implements: [ "CompletedTank" ],
-  requires: [ "MountWithTanks-TypeF", "Tube3" ],
-  excludes: [ "CompletedTank-2", "CompletedTank-3", "CompletedTank-4", "CompletedTank-5", "CompletedTank-1", "CompletedTank-7", "CompletedTank-8" ]
+  requires: [ "MountWithTanks_TypeF", "Tube3" ],
+  excludes: [ "CompletedTank_2", "CompletedTank_3", "CompletedTank_4", "CompletedTank_5", "CompletedTank_1", "CompletedTank_7", "CompletedTank_8" ]
 }
 
-Product "CompletedTank-7": {
-  name: "CompletedTank-7",
+Product "CompletedTank_7": {
+  name: "CompletedTank_7",
   implements: [ "CompletedTank" ],
-  requires: [ "MountWithTanks-TypeE", "Tube3", "Nanofilter" ],
-  excludes: [ "CompletedTank-2", "CompletedTank-3", "CompletedTank-4", "CompletedTank-5", "CompletedTank-6", "CompletedTank-1", "CompletedTank-8" ]
+  requires: [ "MountWithTanks_TypeE", "Tube3", "Nanofilter" ],
+  excludes: [ "CompletedTank_2", "CompletedTank_3", "CompletedTank_4", "CompletedTank_5", "CompletedTank_6", "CompletedTank_1", "CompletedTank_8" ]
 }
 
-Product "CompletedTank-8": {
-  name: "CompletedTank-8",
+Product "CompletedTank_8": {
+  name: "CompletedTank_8",
   implements: [ "CompletedTank" ],
-  requires: [ "MountWithTanks-TypeF", "Tube3", "Nanofilter" ],
-  excludes: [ "CompletedTank-2", "CompletedTank-3", "CompletedTank-4", "CompletedTank-5", "CompletedTank-6", "CompletedTank-7", "CompletedTank-1" ]
+  requires: [ "MountWithTanks_TypeF", "Tube3", "Nanofilter" ],
+  excludes: [ "CompletedTank_2", "CompletedTank_3", "CompletedTank_4", "CompletedTank_5", "CompletedTank_6", "CompletedTank_7", "CompletedTank_1" ]
+}
+
+Resource "PressinTools": {
+  name: "PressinTools",
+  isAbstract: true
+}
+
+Resource "PIT_10": {
+  name: "PIT_10",
+  implements: [ "PressinTools" ]
+}
+
+Resource "PIT_45": {
+  name: "PIT_45",
+  implements: [ "PressinTools" ]
+}
+
+Resource "ScrewingTools": {
+  name: "ScrewingTools",
+  isAbstract: true
+}
+
+Resource "HandheldNutrunner": {
+  name: "HandheldNutrunner",
+  implements: [ "ScrewingTools" ]
+}
+
+Resource "HandheldNutrunner_DFL651FZ": {
+  name: "HandheldNutrunner_DFL651FZ",
+  implements: [ "HandheldNutrunner" ]
+}
+
+Resource "HandheldNutrunner_DFL063FZ": {
+  name: "HandheldNutrunner_DFL063FZ",
+  implements: [ "HandheldNutrunner" ]
+}
+
+Resource "OpenendNutrunner": {
+  name: "OpenendNutrunner",
+  implements: [ "ScrewingTools" ]
+}
+
+Resource "Lifts": {
+  name: "Lifts",
+  isAbstract: true
+}
+
+Resource "ChainHoist": {
+  name: "ChainHoist",
+  implements: [ "Lifts" ]
+}
+
+Resource "Batchfeeds": {
+  name: "Batchfeeds",
+  isAbstract: true
+}
+
+Resource "Wetfeeds": {
+  name: "Wetfeeds",
+  implements: [ "Batchfeeds" ] 
+}
+
+Resource "DryBatchfeeds": {
+  name: "DryBatchfeeds",
+  implements: [ "Batchfeeds" ] 
 }
 
 Process "AssembleFreshwaterTank": {
   name: "Assemble FreshwaterTank",
   isAbstract: true,
   inputs: [ {productId: "FreshwaterTank"}, {productId: "Valve"} ],
-  outputs: [ {OP1: {productId: "CompletedTank", costWeight: 1.0}}]
+  outputs: [ {OP1: {productId: "CompletedTank", costWeight: 1.0}}],
+  resources: [ { resourceId: "ScrewingTools", minCost: 50, maxCost: 100 } ]
 }
 
 Process "AssembleFreshwaterTankS": {
   name: "Assemble FreshwaterTankS",
   implements: [ "AssembleFreshwaterTank" ],
   inputs: [ {productId: "FreshwaterTankS"}, {productId: "Valve1"} ],
-  outputs: [ {OP2: {productId: "CompletedFreshwaterTankS", costWeight: 1.0}}]
+  outputs: [ {OP2: {productId: "CompletedFreshwaterTankS", costWeight: 1.0}}],
+  resources: [ { resourceId: "ScrewingTools", minCost: 50, maxCost: 100 } ]
 }
 
 Process "AssembleFreshwaterTankXL": {
   name: "Assemble FreshwaterTankXL",
   implements: [ "AssembleFreshwaterTank" ],
   inputs: [ {productId: "FreshwaterTankXL"}, {productId: "Valve1"} ],
-  outputs: [ {OP3: {productId: "CompletedFreshwaterTankXL", costWeight: 1.0}}]
+  outputs: [ {OP3: {productId: "CompletedFreshwaterTankXL", costWeight: 1.0}}],
+  resources: [ { resourceId: "OpenendNutrunner", minCost: 50, maxCost: 100 }, { resourceId: "ChainHoist", minCost: 50, maxCost: 100 } ]
 }
 
 Process "AssembleNanofilter": {
   name: "Assemble Nanofilter",
   inputs: [ {productId: "NanofilterHull"}, {productId: "NanofilterMaterial"}, {productId: "Membrane"} ],
-  outputs: [ {OP4: {productId: "Nanofilter", costWeight: 1.0}}]
+  outputs: [ {OP4: {productId: "Nanofilter", costWeight: 1.0}}],
+  resources: [ { resourceId: "PIT_10", minCost: 50, maxCost: 100 } ]
 }
 
 Process "AssembleFiltertankS": {
   name: "Assemble FiltertankS",
   inputs: [ {productId: "FiltertankS"}, {productId: "Sand"}],
-  outputs: [ {OP5: {productId: "FiltertankS", costWeight: 1.0}}]
+  outputs: [ {OP5: {productId: "FiltertankS", costWeight: 1.0}}],
+  resources: [ { resourceId: "Batchfeeds", minCost: 50, maxCost: 100 } ]
 }
 
 Process "AssembleFiltertankXL": {
   name: "Assemble FiltertankXL",
   inputs: [ {productId: "FiltertankXL"}, {productId: "Sand"}],
-  outputs: [ {OP6: {productId: "FiltertankXL", costWeight: 1.0}}]
+  outputs: [ {OP6: {productId: "FiltertankXL", costWeight: 1.0}}],
+  resources: [ { resourceId: "Batchfeeds", minCost: 50, maxCost: 100 }, { resourceId: "ChainHoist", minCost: 50, maxCost: 100 } ]
 }
 
 Process "AssembleFiltertankSWithActive": {
   name: "AssembleFiltertankSWithActive",
   requires: [ "AssembleFiltertankS" ],
   inputs: [ {productId: "FiltertankS"}, {productId: "CharcoalActive"}],
-  outputs: [ {OP7: {productId: "CompletedFiltertankSWithActive", costWeight: 1.0}}]
+  outputs: [ {OP7: {productId: "CompletedFiltertankSWithActive", costWeight: 1.0}}],
+  resources: [ { resourceId: "DryBatchfeeds", minCost: 50, maxCost: 100 } ]
 }
 
 Process "AssembleFiltertankXLWithActive": {
   name: "AssembleFiltertankXLWithActive",
   requires: [ "AssembleFiltertankXL" ],
   inputs: [ {productId: "FiltertankXL"}, {productId: "CharcoalActive"}],
-  outputs: [ {OP8: {productId: "CompletedFiltertankXLWithActive", costWeight: 1.0}}]
+  outputs: [ {OP8: {productId: "CompletedFiltertankXLWithActive", costWeight: 1.0}}],
+  resources: [ { resourceId: "DryBatchfeeds", minCost: 50, maxCost: 100 }, { resourceId: "ChainHoist", minCost: 50, maxCost: 100 } ]
 }
 
 Process "AssembleFiltertankSWithBone": {
   name: "AssembleFiltertankSWithBone",
   requires: [ "AssembleFiltertankS" ],
   inputs: [ {productId: "FiltertankS"}, {productId: "CharcoalBone"}],
-  outputs: [ {OP9: {productId: "CompletedFiltertankSWithBone", costWeight: 1.0}}]
+  outputs: [ {OP9: {productId: "CompletedFiltertankSWithBone", costWeight: 1.0}}],
+  resources: [ { resourceId: "DryBatchfeeds", minCost: 50, maxCost: 100 } ]
 }
 
 Process "AssembleFiltertankXLWithBone": {
   name: "AssembleFiltertankXLWithBone",
   requires: [ "AssembleFiltertankXL" ],
   inputs: [ {productId: "FiltertankXL"}, {productId: "CharcoalBone"}],
-  outputs: [ {OP10: {productId: "CompletedFiltertankXLWithBone", costWeight: 1.0}}]
+  outputs: [ {OP10: {productId: "CompletedFiltertankXLWithBone", costWeight: 1.0}}],
+  resources: [ { resourceId: "DryBatchfeeds", minCost: 50, maxCost: 100 }, { resourceId: "ChainHoist", minCost: 50, maxCost: 100 } ]
 }
 
 Process "AssembleWastewaterTank": {
    name: "Assemble WastewaterTank",
     inputs: [ {productId: "WastewaterTankXL"}, {productId: "Valve2"}],
-   outputs: [ {OP11: {productId: "CompletedWastewaterTank", costWeight: 1.0}}]
+   outputs: [ {OP11: {productId: "CompletedWastewaterTank", costWeight: 1.0}}],
+  resources: [ { resourceId: "OpenendNutrunner", minCost: 50, maxCost: 100 }, { resourceId: "ChainHoist", minCost: 50, maxCost: 100 } ]
 }
 
 Process "AssembleMountedTank1": {
   name: "AssembleMountedTank1",
   requires: [ "AssembleFreshwaterTankS" ],
   inputs: [ {productId: "CompletedFreshwaterTankS"}, {productId: "IronFrame"}],
-  outputs: [ {OP12: {productId: "MountedTanks1", costWeight: 1.0}}]
+  outputs: [ {OP12: {productId: "MountedTanks1", costWeight: 1.0}}],
+  resources: [ { resourceId: "HandheldNutrunner", minCost: 50, maxCost: 100 } ]
 }
 
 Process "AssembleMountedTank2": {
   name: "AssembleMountedTank2",
   requires: [ "AssembleFreshwaterTankXL" ],
   inputs: [ {productId: "CompletedFreshwaterTankXL"}, {productId: "Rack1"}],
-  outputs: [ {OP13: {productId: "MountedTanks2", costWeight: 1.0}}]
+  outputs: [ {OP13: {productId: "MountedTanks2", costWeight: 1.0}}],
+  resources: [ { resourceId: "HandheldNutrunner_DFL651FZ", minCost: 50, maxCost: 100 } ]
 }
 
 Process "AssembleMountedTank3": {
   name: "AssembleMountedTank3",
   requires: [ "AssembleFreshwaterTankS", "AssembleWastewaterTank" ],
   inputs: [ {productId: "CompletedFreshwaterTankS"}, {productId: "Rack2"}, {productId: "CompletedWastewaterTank"}],
-  outputs: [ {OP14: {productId: "MountedTanks3", costWeight: 1.0}}]
+  outputs: [ {OP14: {productId: "MountedTanks3", costWeight: 1.0}}],
+  resources: [ { resourceId: "HandheldNutrunner", minCost: 50, maxCost: 100 } ]
 }
 
 Process "AssembleMountWithTanksA": {
   name: "Assemble MountWithTanksA",
   requires: [ "AssembleMountedTank1", "AssembleFiltertankSWithBone" ],
   inputs: [ {productId: "MountedTanks1"}, {productId: "CompletedFiltertankSWithBone"} ],
-  outputs: [ {OP15: {productId: "MountWithTanks-TypeA", costWeight:  1.0}}]
+  outputs: [ {OP15: {productId: "MountWithTanks_TypeA", costWeight:  1.0}}],
+  resources: [ { resourceId: "HandheldNutrunner", minCost: 50, maxCost: 100 } ]
 }
 
 Process "AssembleMountWithTanksB": {
   name: "Assemble MountWithTanksB",
   requires: [ "AssembleMountedTank1", "AssembleFiltertankSWithActive" ],
   inputs: [ {productId: "MountedTanks1"}, {productId: "CompletedFiltertankSWithActive"} ],
-  outputs: [ {OP16: {productId: "MountWithTanks-TypeB", costWeight:  1.0}}]
+  outputs: [ {OP16: {productId: "MountWithTanks_TypeB", costWeight:  1.0}}],
+  resources: [ { resourceId: "HandheldNutrunner", minCost: 50, maxCost: 100 } ]
 }
 
 Process "AssembleMountWithTanksC": {
   name: "Assemble MountWithTansC",
   requires: [ "AssembleMountedTank2", "AssembleFiltertankSWithBone" ],
   inputs: [ {productId: "MountedTanks2"}, {productId: "CompletedFiltertankSWithBone"} ],
-  outputs: [ {OP17: {productId: "MountWithTanks-TypeC", costWeight:  1.0}}]
+  outputs: [ {OP17: {productId: "MountWithTanks_TypeC", costWeight:  1.0}}],
+  resources: [ { resourceId: "HandheldNutrunner", minCost: 50, maxCost: 100 } ]
 }
 
 Process "AssembleMountWithTanksD": {
   name: "Assemble MountWithTansD",
   requires: [ "AssembleMountedTank2", "AssembleFiltertankSWithActive"],
   inputs: [ {productId: "MountedTanks2"}, {productId: "CompletedFiltertankSWithActive"} ],
-  outputs: [ {OP18: {productId: "MountWithTanks-TypeD", costWeight:  1.0}}]
+  outputs: [ {OP18: {productId: "MountWithTanks_TypeD", costWeight:  1.0}}],
+  resources: [ { resourceId: "HandheldNutrunner", minCost: 50, maxCost: 100 } ]
 }
 
 Process "AssembleMountWithTanksE": {
   name: "Assemble MountWithTansE",
   requires: [ "AssembleMountedTank3", "AssembleFiltertankXLWithBone"],
   inputs: [ {productId: "MountedTanks3"}, {productId: "CompletedFiltertankXLWithBone"} ],
-  outputs: [ {OP19: {productId: "MountWithTanks-TypeE", costWeight:  1.0}}]
+  outputs: [ {OP19: {productId: "MountWithTanks_TypeE", costWeight:  1.0}}],
+  resources: [ { resourceId: "HandheldNutrunner_DFL651FZ", minCost: 50, maxCost: 100 } ]
 }
 
 Process "AssembleMountWithTanksF": {
   name: "Assemble MountWithTansF",
   requires: [ "AssembleMountedTank3", "AssembleFiltertankXLWithBone"],
   inputs: [ {productId: "MountedTanks3"}, {productId: "CompletedFiltertankXLWithActive"} ],
-  outputs: [ {OP20: {productId: "MountWithTanks-TypeF", costWeight:  1.0}}]
+  outputs: [ {OP20: {productId: "MountWithTanks_TypeF", costWeight:  1.0}}],
+  resources: [ { resourceId: "HandheldNutrunner_DFL651FZ", minCost: 50, maxCost: 100 } ]
 }
 
 Process "AssembleCompleteTank1": {
   name: "AssembleCompleteTank1",
   requires: [ "AssembleMountWithTanksF"],
-  inputs: [ {productId: "Tube1"}, {productId: "Tube2"}, {productId: "MountWithTanks-TypeA"}],
-  outputs: [ {OP21: {productId: "CompletedTank-1", costWeight: 1.0}}]
+  inputs: [ {productId: "Tube1"}, {productId: "Tube2"}, {productId: "MountWithTanks_TypeA"}],
+  outputs: [ {OP21: {productId: "CompletedTank_1", costWeight: 1.0}}],
+  resources: [ { resourceId: "PIT_45", minCost: 50, maxCost: 100 } ]
 }
 
 Process "AssembleCompleteTank2": {
   name: "AssembleCompleteTank2",
   requires: [ "AssembleMountWithTanksB"],
-  inputs: [ {productId: "Tube1"}, {productId: "Tube2"}, {productId: "MountWithTanks-TypeB"}],
-  outputs: [ {OP22: {productId: "CompletedTank-2", costWeight: 1.0}}]
+  inputs: [ {productId: "Tube1"}, {productId: "Tube2"}, {productId: "MountWithTanks_TypeB"}],
+  outputs: [ {OP22: {productId: "CompletedTank_2", costWeight: 1.0}}],
+  resources: [ { resourceId: "PIT_45", minCost: 50, maxCost: 100 } ]
 }
 
 Process "AssembleCompleteTank3": {
   name: "AssembleCompleteTank3",
   requires: [ "AssembleMountWithTanksC"],
-  inputs: [ {productId: "Tube1"}, {productId: "Tube2"}, {productId: "MountWithTanks-TypeC"}, {productId: "Nanofilter"}],
-  outputs: [ {OP23: {productId: "CompletedTank-3", costWeight: 1.0}}]
+  inputs: [ {productId: "Tube1"}, {productId: "Tube2"}, {productId: "MountWithTanks_TypeC"}, {productId: "Nanofilter"}],
+  outputs: [ {OP23: {productId: "CompletedTank_3", costWeight: 1.0}}],
+  resources: [ { resourceId: "PIT_45", minCost: 50, maxCost: 100 } ]
 }
 
 Process "AssembleCompleteTank4": {
   name: "AssembleCompleteTank4",
   requires: [ "AssembleMountWithTanksD"],
-  inputs: [ {productId: "Tube1"}, {productId: "Tube2"}, {productId: "MountWithTanks-TypeD"}, {productId: "Nanofilter"}],
-  outputs: [ {OP24: {productId: "CompletedTank-4", costWeight: 1.0}}]
+  inputs: [ {productId: "Tube1"}, {productId: "Tube2"}, {productId: "MountWithTanks_TypeD"}, {productId: "Nanofilter"}],
+  outputs: [ {OP24: {productId: "CompletedTank_4", costWeight: 1.0}}],
+  resources: [ { resourceId: "PIT_45", minCost: 50, maxCost: 100 } ]
 }
 
 Process "AssembleCompleteTank5": {
   name: "AssembleCompleteTank5",
   requires: [ "AssembleMountWithTanksE"],
-  inputs: [ {productId: "Tube1"}, {productId: "Tube2"}, {productId: "Tube3"}, {productId: "MountWithTanks-TypeE"}],
-  outputs: [ {OP25: {productId: "CompletedTank-5", costWeight: 1.0}}]
+  inputs: [ {productId: "Tube1"}, {productId: "Tube2"}, {productId: "Tube3"}, {productId: "MountWithTanks_TypeE"}],
+  outputs: [ {OP25: {productId: "CompletedTank_5", costWeight: 1.0}}],
+  resources: [ { resourceId: "PIT_45", minCost: 50, maxCost: 100 } ]
 }
 
 Process "AssembleCompleteTank6": {
   name: "AssembleCompleteTank6",
   requires: [ "AssembleMountWithTanksF"],
-  inputs: [ {productId: "Tube1"}, {productId: "Tube2"}, {productId: "Tube3"}, {productId: "MountWithTanks-TypeF"}],
-  outputs: [ {OP26: {productId: "CompletedTank-6", costWeight: 1.0}}]
+  inputs: [ {productId: "Tube1"}, {productId: "Tube2"}, {productId: "Tube3"}, {productId: "MountWithTanks_TypeF"}],
+  outputs: [ {OP26: {productId: "CompletedTank_6", costWeight: 1.0}}],
+  resources: [ { resourceId: "PIT_45", minCost: 50, maxCost: 100 } ]
 }
 
 Process "AssembleCompleteTank7": {
   name: "AssembleCompleteTank7",
   requires: [ "AssembleMountWithTanksE"],
-  inputs: [ {productId: "Tube1"}, {productId: "Tube2"}, {productId: "Tube3"}, {productId: "MountWithTanks-TypeE"}, {productId: "Nanofilter"}],
-  outputs: [ {OP27: {productId: "CompletedTank-7", costWeight: 1.0}}]
+  inputs: [ {productId: "Tube1"}, {productId: "Tube2"}, {productId: "Tube3"}, {productId: "MountWithTanks_TypeE"}, {productId: "Nanofilter"}],
+  outputs: [ {OP27: {productId: "CompletedTank_7", costWeight: 1.0}}],
+  resources: [ { resourceId: "PIT_45", minCost: 50, maxCost: 100 } ]
 }
 
 Process "AssembleCompleteTank8": {
   name: "AssembleCompleteTank8",
   requires: [ "AssembleMountWithTanksF"],
-  inputs: [ {productId: "Tube1"}, {productId: "Tube2"}, {productId: "Tube3"}, {productId: "MountWithTanks-TypeF"}, {productId: "Nanofilter"}],
-  outputs: [ {OP28: {productId: "CompletedTank-8", costWeight: 1.0}}]
+  inputs: [ {productId: "Tube1"}, {productId: "Tube2"}, {productId: "Tube3"}, {productId: "MountWithTanks_TypeF"}, {productId: "Nanofilter"}],
+  outputs: [ {OP28: {productId: "CompletedTank_8", costWeight: 1.0}}],
+  resources: [ { resourceId: "PIT_45", minCost: 50, maxCost: 100 } ]
 }
