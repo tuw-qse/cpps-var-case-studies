@@ -93,15 +93,9 @@ Resource "Robots": {
   isAbstract: true
 }
 
-Resource "KUKA_KR_Agilus_I": {
+Resource "KUKA_KR_Agilus": {
   name: "KUKA_KR_Agilus",
-  deltaFile: "DKukaAgilusI",
-  implements: [ "Robots" ]
-}
-
-Resource "KUKA_KR_Agilus_II": {
-  name: "KUKA_KR_Agilus",
-  deltaFile: "DKukaAgilusII",
+  deltaFile: "DKukaAgilus",
   implements: [ "Robots" ]
 }
 
