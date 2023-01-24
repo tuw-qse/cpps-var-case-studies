@@ -11,18 +11,6 @@ Attribute "partialProduct": {
   type: "String"
 }
 
-Attribute "instanceNumMin": {
-  description: "Specifies if the given product is a partial one",
-  defaultValue: "0",
-  type: "Integer"
-}
-
-Attribute "instanceNumMax": {
-  description: "Specifies if the given product is a partial one",
-  defaultValue: "99",
-  type: "Integer"
-}
-
 Product "Fork": {
   name: "Fork",
   isAbstract: true,
@@ -193,14 +181,26 @@ Resource "WeldingRobots": {
   isAbstract: true
 }
 
+Resource "LaserWeldingRobots": {
+  name: "LaserWeldingRobots",
+  isAbstract: true,
+  implements: [ "WeldingRobots" ]
+}
+
 Resource "LaserWeldingRobot_01":{
   name: "LaserWeldingRobot_01",
+  implements: [ "LaserWeldingRobots" ]
+}
+
+Resource "UltrasonicWeldingRobots": {
+  name: "UltrasonicWeldingRobots",
+  isAbstract: true,
   implements: [ "WeldingRobots" ]
 }
 
 Resource "UltrasonicWeldingRobot_16":{
   name: "UltrasonicWeldingRobot_16",
-  implements: [ "WeldingRobots" ]
+  implements: [ "UltrasonicWeldingRobots" ]
 }
 
 Resource "PressinRobots": {
@@ -287,7 +287,7 @@ Process "PressBarrel1_1": {
   requires: [ "InsertBarrel1_1", "InsertPipe" ],
   inputs: [ {productId: "Barrel1_1"}, {productId: "Pipe"} ],
   outputs: [ {OP6: {productId: "ForkProduct", costWeight: 1.0}} ],
-  resources: [ { resourceId: "PR_04", minCost: 50, maxCost: 100 } ]
+  resources: [ { resourceId: "MediumPartsPressinRobots", minCost: 50, maxCost: 100 } ]
 }
 
 Process "WeldBarrel1_1": {
@@ -295,7 +295,7 @@ Process "WeldBarrel1_1": {
   requires: [ "PressBarrel1_1", "InsertPipe" ],
   inputs: [ {productId: "Barrel1_1"}, {productId: "Pipe"} ],
   outputs: [ {OP6: {productId: "ForkProduct", costWeight: 1.0}} ],
-  resources: [ { resourceId: "UltrasonicWeldingRobot_16", minCost: 50, maxCost: 100 } ]
+  resources: [ { resourceId: "UltrasonicWeldingRobots", minCost: 50, maxCost: 100 } ]
 }
 
 Process "InsertBarrel1_2": {
@@ -310,7 +310,7 @@ Process "PressBarrel1_2": {
   requires: [ "InsertBarrel1_2", "InsertPipe" ],
   inputs: [ {productId: "Barrel1_2"}, {productId: "Pipe"} ],
   outputs: [ {OP6: {productId: "ForkProduct", costWeight: 1.0}} ],
-  resources: [ { resourceId: "PR_04", minCost: 50, maxCost: 100 } ]
+  resources: [ { resourceId: "MediumPartsPressinRobots", minCost: 50, maxCost: 100 } ]
 }
 
 Process "WeldBarrel1_2": {
@@ -318,7 +318,7 @@ Process "WeldBarrel1_2": {
   requires: [ "PressBarrel1_2", "InsertPipe" ],
   inputs: [ {productId: "Barrel1_2"}, {productId: "Pipe"} ],
   outputs: [ {OP6: {productId: "ForkProduct", costWeight: 1.0}} ],
-  resources: [ { resourceId: "UltrasonicWeldingRobot_16", minCost: 50, maxCost: 100 } ]
+  resources: [ { resourceId: "UltrasonicWeldingRobots", minCost: 50, maxCost: 100 } ]
 }
 
 Process "InsertJack1": {
@@ -333,7 +333,7 @@ Process "PressJack1": {
   requires: [ "InsertJack1", "InsertPipe" ],
   inputs: [ {productId: "Jack1"}, {productId: "Pipe"} ],
   outputs: [ {OP8: {productId: "ForkProduct", costWeight: 1.0}} ],
-  resources: [ { resourceId: "PR_12", minCost: 50, maxCost: 100 } ]
+  resources: [ { resourceId: "MediumPartsPressinRobots", minCost: 50, maxCost: 100 } ]
 }
 
 Process "WeldJack1": {
@@ -341,7 +341,7 @@ Process "WeldJack1": {
   requires: [ "PressJack1", "InsertPipe" ],
   inputs: [ {productId: "Jack1"}, {productId: "Pipe"} ],
   outputs: [ {OP8: {productId: "ForkProduct", costWeight: 1.0}} ],
-  resources: [ { resourceId: "LaserWeldingRobot_01", minCost: 50, maxCost: 100 } ]
+  resources: [ { resourceId: "LaserWeldingRobots", minCost: 50, maxCost: 100 } ]
 }
 
 Process "InsertRing1": {
@@ -356,7 +356,7 @@ Process "PressRing1": {
   requires: [ "InsertRing1", "PressJack1", "InsertPipe" ],
   inputs: [ {productId: "Ring1"}, {productId: "Jack1"}, {productId: "Pipe"} ],
   outputs: [ {OP10: {productId: "ForkProduct", costWeight: 1.0}}],
-  resources: [ { resourceId: "PR_05", minCost: 50, maxCost: 100 } ]
+  resources: [ { resourceId: "SmallPartsPressinRobots", minCost: 50, maxCost: 100 } ]
 }
 
 Process "InsertORing": {
@@ -371,7 +371,7 @@ Process "PressORing": {
   requires: [ "InsertORing", "PressJack1", "PressRing1", "InsertPipe" ],
   inputs: [ {productId: "O_Ring"}, {productId: "Pipe"}, {productId: "Jack1"}, {productId: "Ring1"} ],
   outputs: [ {OP12: {productId: "ForkProduct", costWeight: 1.0}}],
-  resources: [ { resourceId: "PR_05", minCost: 50, maxCost: 100 } ]
+  resources: [ { resourceId: "SmallPartsPressinRobots", minCost: 50, maxCost: 100 } ]
 }
 
 Process "InsertScrew": {
@@ -386,7 +386,7 @@ Process "ScrewScrew": {
   requires: [ "InsertScrew", "PressJack1", "PressRing1" ],
   inputs: [ {productId: "Screw"}, {productId: "Pipe"}, {productId: "Jack1"}, {productId: "Ring1"} ],
   outputs: [ {OP14: {productId: "ForkProduct", costWeight: 1.0}}],
-  resources: [ { resourceId: "SC_70", minCost: 50, maxCost: 100 } ]
+  resources: [ { resourceId: "ScrewingRobots", minCost: 50, maxCost: 100 } ]
 }
 
 Process "InsertFork5": {
@@ -401,7 +401,7 @@ Process "WeldFork5": {
   requires: [ "InsertFork5", "InsertPipe" ],
   inputs: [ {productId: "Fork5"}, {productId: "Pipe"} ],
   outputs: [ {OP16: {productId: "ForkProduct", costWeight: 1.0}}],
-  resources: [ { resourceId: "LaserWeldingRobot_01", minCost: 50, maxCost: 100 } ]
+  resources: [ { resourceId: "LaserWeldingRobots", minCost: 50, maxCost: 100 } ]
 }
 
 Process "InsertFork3": {
@@ -416,7 +416,7 @@ Process "WeldFork3": {
   requires: [ "InsertFork3", "WeldFork5" ],
   inputs: [ {productId: "Fork3"}, {productId: "Pipe"}, {productId: "Fork5"} ],
   outputs: [ {OP18: {productId: "ForkProduct", costWeight: 1.0}}],
-  resources: [ { resourceId: "LaserWeldingRobot_01", minCost: 50, maxCost: 100 } ]
+  resources: [ { resourceId: "LaserWeldingRobots", minCost: 50, maxCost: 100 } ]
 }
 
 Process "InsertFork4": {
@@ -431,7 +431,7 @@ Process "WeldFork4": {
   requires: [ "InsertFork4", "WeldFork5" ],
   inputs: [ {productId: "Fork4"}, {productId: "Pipe"}, {productId: "Fork5"} ],
   outputs: [ {OP20: {productId: "ForkProduct", costWeight: 1.0}}],
-  resources: [ { resourceId: "LaserWeldingRobot_01", minCost: 50, maxCost: 100 } ]
+  resources: [ { resourceId: "LaserWeldingRobots", minCost: 50, maxCost: 100 } ]
 }
 
 Process "InsertLock": {
@@ -472,7 +472,7 @@ Process "WeldLock": {
   requires: [ "InsertLock", "WeldFork3", "WeldFork4" ],
   inputs: [ {productId: "Lock"}, {productId: "Pipe"}, {productId: "Fork4"}, {productId: "Fork3"} ],
   outputs: [ {OP25: {productId: "ForkProduct", costWeight: 1.0}}],
-  resources: [ { resourceId: "LaserWeldingRobot_01", minCost: 50, maxCost: 100 } ]
+  resources: [ { resourceId: "LaserWeldingRobots", minCost: 50, maxCost: 100 } ]
 }
 
 Process "WeldLock1": {
@@ -481,7 +481,7 @@ Process "WeldLock1": {
   requires: [ "InsertLock1", "WeldFork3", "WeldFork4" ],
   inputs: [ {productId: "Lock1"}, {productId: "Pipe"}, {productId: "Fork4"}, {productId: "Fork3"} ],
   outputs: [ {OP26: {productId: "ForkProduct", costWeight: 1.0}}],
-  resources: [ { resourceId: "LaserWeldingRobot_01", minCost: 50, maxCost: 100 } ]
+  resources: [ { resourceId: "LaserWeldingRobots", minCost: 50, maxCost: 100 } ]
 }
 
 Process "WeldLock2": {
@@ -490,7 +490,7 @@ Process "WeldLock2": {
   requires: [ "InsertLock2", "WeldFork3", "WeldFork4" ],
   inputs: [ {productId: "Lock2"}, {productId: "Pipe"}, {productId: "Fork4"}, {productId: "Fork3"} ],
   outputs: [ {OP27: {productId: "ForkProduct", costWeight: 1.0}}],
-  resources: [ { resourceId: "LaserWeldingRobot_01", minCost: 50, maxCost: 100 } ]
+  resources: [ { resourceId: "LaserWeldingRobots", minCost: 50, maxCost: 100 } ]
 }
 
 Process "WeldLock3": {
@@ -499,7 +499,7 @@ Process "WeldLock3": {
   requires: [ "InsertLock3", "WeldFork3", "WeldFork4" ],
   inputs: [ {productId: "Lock3"}, {productId: "Pipe"}, {productId: "Fork4"}, {productId: "Fork3"} ],
   outputs: [ {OP28: {productId: "ForkProduct", costWeight: 1.0}}],
-  resources: [ { resourceId: "LaserWeldingRobot_01", minCost: 50, maxCost: 100 } ]
+  resources: [ { resourceId: "LaserWeldingRobots", minCost: 50, maxCost: 100 } ]
 }
 
 Constraint "Constraint1": {
