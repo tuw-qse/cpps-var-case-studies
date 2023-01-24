@@ -210,12 +210,14 @@ Resource "PressinRobots": {
 
 Resource "SmallPartsPressinRobots": {
   name: "SmallPartsPressinRobots",
-  isAbstract: true
+  isAbstract: true,
+  implements: [ "PressinRobots" ]
 }
 
 Resource "MediumPartsPressinRobots": {
   name: "MediumPartsPressinRobots",
-  isAbstract: true
+  isAbstract: true,
+  implements: [ "PressinRobots" ]
 }
 
 Resource "PR_04": {
