@@ -98,7 +98,8 @@ Product "Lock3": {
 
 Product "Barrel": {
   name: "Barrel",
-  isAbstract: true
+  isAbstract: true,
+  partialProduct: "true"
 }
 
 Product "Barrel1_1": {
