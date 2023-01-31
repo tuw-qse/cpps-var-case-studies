@@ -523,3 +523,9 @@ Constraint "Constraint2": {
 Constraint "Constraint3": {
   definition: "Lock3, Pipe8 -> Lock3 implies Pipe8" 
 }
+
+Constraint "Constraint4": {
+  definition: "Pipe2, Pipe8, Barrel1_2  -> Pipe2 or Pipe8 implies Barrel1_2" 
+}
+
+
