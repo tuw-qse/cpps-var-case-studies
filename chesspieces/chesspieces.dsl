@@ -283,7 +283,7 @@ Process "CarveReamings_one": {
     requires: [ "CutAluminumBar" ],
     inputs: [ {productId: "Base"}],
     excludes: [ "CarveReamings_two" ],
-    outputs: [ {OP2: {productId: "Base", costWeight: 1.0}} ],
+    outputs: [ {OP2: {productId: "Base_onestrip", costWeight: 1.0}} ],
     resources: [ { resourceId: "TurningMachine_45", minCost: 50, maxCost: 100 } ]
 }
 
@@ -293,7 +293,7 @@ Process "CarveReamings_two": {
     requires: [ "CutAluminumBar" ],
     inputs: [ {productId: "Base"} ],
     excludes: [ "CarveReamings_one" ],
-    outputs: [ {OP2: {productId: "Base", costWeight: 1.0}} ],
+    outputs: [ {OP2: {productId: "Base_twostrip", costWeight: 1.0}} ],
     resources: [ { resourceId: "TurningMachine_45", minCost: 50, maxCost: 100 } ]
 }
 
@@ -383,7 +383,7 @@ Process "InsertRod": {
 Process "InsertBase": {
     name: "InsertBase",
     inputs: [ {productId: "Base"} ],
-    requires: [ "TurnBase" ],
+    requires: [ "TurnBase", "CarveReamings" ],
     outputs: [ {OP2: {productId: "Base", costWeight: 1.0}} ],
     resources: [ { resourceId: "Gripper", minCost: 50, maxCost: 100 } ]
 }
