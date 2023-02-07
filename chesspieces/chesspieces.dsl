@@ -317,6 +317,7 @@ Process "PrintPawnBody": {
     name: "PrintPawnBody",
     implements: [ "PrintBody" ],
     requires: [ "InsertPLA" ],
+	excludes: [ "PrintRookBody", "PrintBishopBody", "PrintKnightBody", "PrintQueenBody", "PrintKingBody" ],
     inputs: [ {productId: "PLA"} ],
     outputs: [ {OP3: {productId: "Pawn_body", costWeight: 1.0}} ],
     resources: [ { resourceId: "3DPrinter", minCost: 50, maxCost: 100 } ]
@@ -326,6 +327,7 @@ Process "PrintRookBody": {
     name: "PrintRookBody",
     implements: [ "PrintBody" ],
     requires: [ "InsertPLA" ],
+	excludes: [ "PrintPawnBody", "PrintBishopBody", "PrintKnightBody", "PrintQueenBody", "PrintKingBody" ],
     inputs: [ {productId: "PLA"} ],
     outputs: [ {OP3: {productId: "Rook_body", costWeight: 1.0}} ],
     resources: [ { resourceId: "3DPrinter", minCost: 50, maxCost: 100 } ]
@@ -335,6 +337,7 @@ Process "PrintBishopBody": {
     name: "PrintBishopBody",
     implements: [ "PrintBody" ],
     requires: [ "InsertPLA" ],
+	excludes: [ "PrintPawnBody", "PrintRookBody", "PrintKnightBody", "PrintQueenBody", "PrintKingBody" ],
     inputs: [ {productId: "PLA"} ],
     outputs: [ {OP3: {productId: "Bishop_body", costWeight: 1.0}} ],
     resources: [ { resourceId: "3DPrinter", minCost: 50, maxCost: 100 } ]
@@ -344,6 +347,7 @@ Process "PrintKnightBody": {
     name: "PrintKnightBody",
     implements: [ "PrintBody" ],
     requires: [ "InsertPLA" ],
+	excludes: [ "PrintPawnBody", "PrintRookBody", "PrintBishopBody", "PrintQueenBody", "PrintKingBody" ],
     inputs: [ {productId: "PLA"} ],
     outputs: [ {OP3: {productId: "Knight_body", costWeight: 1.0}} ],
     resources: [ { resourceId: "3DPrinter", minCost: 50, maxCost: 100 } ]
@@ -353,6 +357,7 @@ Process "PrintQueenBody": {
     name: "PrintQueenBody",
     implements: [ "PrintBody" ],
     requires: [ "InsertPLA" ],
+	excludes: [ "PrintPawnBody", "PrintRookBody", "PrintBishopBody", "PrintKnightBody", "PrintKingBody" ],
     inputs: [ {productId: "PLA"} ],
     outputs: [ {OP3: {productId: "Queen_body", costWeight: 1.0}} ],
     resources: [ { resourceId: "3DPrinter", minCost: 50, maxCost: 100 } ]
@@ -362,6 +367,7 @@ Process "PrintKingBody": {
     name: "PrintKingBody",
     implements: [ "PrintBody" ],
     requires: [ "InsertPLA" ],
+	excludes: [ "PrintPawnBody", "PrintRookBody", "PrintBishopBody", "PrintKnightBody", "PrintQueenBody" ],
     inputs: [ {productId: "PLA"} ],
     outputs: [ {OP3: {productId: "King_body", costWeight: 1.0}} ],
     resources: [ { resourceId: "3DPrinter", minCost: 50, maxCost: 100 } ]
