@@ -248,24 +248,24 @@ Resource "AssemblyStation": {
 Process "LoadAluminumBar": {
     name: "LoadAluminumBar",
     inputs: [ {productId: "AluminumBar"} ],
-    outputs: [ {OP1: {productId: "AluminumBar"}} ],
-    resources: [ { resourceId: "Barloader" } ]
+    outputs: [ {OP1: {productId: "AluminumBar", costWeight: 1.0}} ],
+    resources: [ { resourceId: "Barloader", minCost: 50, maxCost: 100 } ]
 }
 
 Process "CutAluminumBar": {
     name: "CutAluminumBar",
     inputs: [ {productId: "AluminumBar"} ],
     requires: [ "LoadAluminumBar" ],
-    outputs: [ {OP2: {productId: "Base"}} ],
-    resources: [ { resourceId: "TurningMachine_45" } ]
+    outputs: [ {OP2: {productId: "Base", costWeight: 1.0}} ],
+    resources: [ { resourceId: "TurningMachine_45", minCost: 50, maxCost: 100 } ]
 }
 
 Process "TurnBase": {
     name: "TurnBase",
     requires: [ "CutAluminumBar" ],
     inputs: [ {productId: "Base"} ],
-    outputs: [ {OP3: {productId: "Base"}} ],
-    resources: [ { resourceId: "TurningMachine_45" } ]
+    outputs: [ {OP3: {productId: "Base", costWeight: 1.0}} ],
+    resources: [ { resourceId: "TurningMachine_45", minCost: 50, maxCost: 100 } ]
 }
 
 Process "CarveReamings": {
@@ -273,8 +273,8 @@ Process "CarveReamings": {
     isAbstract: true,
     requires: [ "CutAluminumBar" ],
     inputs: [ {productId: "Base"} ],
-    outputs: [ {OP4: {productId: "Base"}} ],
-    resources: [ { resourceId: "TurningMachine_45" } ]
+    outputs: [ {OP4: {productId: "Base", costWeight: 1.0}} ],
+    resources: [ { resourceId: "TurningMachine_45", minCost: 50, maxCost: 100 } ]
 }
 
 Process "CarveReamings_one": {
@@ -283,8 +283,8 @@ Process "CarveReamings_one": {
     requires: [ "CutAluminumBar" ],
     inputs: [ {productId: "Base"}],
     excludes: [ "CarveReamings_two" ],
-    outputs: [ {OP5: {productId: "Base_onestrip"}} ],
-    resources: [ { resourceId: "TurningMachine_45" } ]
+    outputs: [ {OP5: {productId: "Base_onestrip", costWeight: 1.0}} ],
+    resources: [ { resourceId: "TurningMachine_45", minCost: 50, maxCost: 100 } ]
 }
 
 Process "CarveReamings_two": {
@@ -293,15 +293,15 @@ Process "CarveReamings_two": {
     requires: [ "CutAluminumBar" ],
     inputs: [ {productId: "Base"} ],
     excludes: [ "CarveReamings_one" ],
-    outputs: [ {OP6: {productId: "Base_twostrip"}} ],
-    resources: [ { resourceId: "TurningMachine_45" } ]
+    outputs: [ {OP6: {productId: "Base_twostrip", costWeight: 1.0}} ],
+    resources: [ { resourceId: "TurningMachine_45", minCost: 50, maxCost: 100 } ]
 }
 
 Process "InsertPLA": {
     name: "InsertPLA",
     inputs: [ {productId: "PLA"} ],
-    outputs: [ {OP7: {productId: "PLA"}} ],
-    resources: [ { resourceId: "3DPrinter" } ]
+    outputs: [ {OP7: {productId: "PLA", costWeight: 1.0}} ],
+    resources: [ { resourceId: "3DPrinter", minCost: 50, maxCost: 100 } ]
 }
 
 Process "PrintBody": {
@@ -309,8 +309,8 @@ Process "PrintBody": {
     isAbstract: true,
     requires: [ "InsertPLA" ],
     inputs: [ {productId: "PLA"} ],
-    outputs: [ {OP8: {productId: "Body"}} ],
-    resources: [ { resourceId: "3DPrinter" } ]
+    outputs: [ {OP8: {productId: "Body", costWeight: 1.0}} ],
+    resources: [ { resourceId: "3DPrinter", minCost: 50, maxCost: 100 } ]
 }
 
 Process "PrintPawnBody": {
@@ -319,8 +319,8 @@ Process "PrintPawnBody": {
     requires: [ "InsertPLA" ],
 	excludes: [ "PrintRookBody", "PrintBishopBody", "PrintKnightBody", "PrintQueenBody", "PrintKingBody" ],
     inputs: [ {productId: "PLA"} ],
-    outputs: [ {OP9: {productId: "Pawn_body"}} ],
-    resources: [ { resourceId: "3DPrinter" } ]
+    outputs: [ {OP9: {productId: "Pawn_body", costWeight: 1.0}} ],
+    resources: [ { resourceId: "3DPrinter", minCost: 50, maxCost: 100 } ]
 }
 
 Process "PrintRookBody": {
@@ -329,8 +329,8 @@ Process "PrintRookBody": {
     requires: [ "InsertPLA" ],
 	excludes: [ "PrintPawnBody", "PrintBishopBody", "PrintKnightBody", "PrintQueenBody", "PrintKingBody" ],
     inputs: [ {productId: "PLA"} ],
-    outputs: [ {OP10: {productId: "Rook_body"}} ],
-    resources: [ { resourceId: "3DPrinter" } ]
+    outputs: [ {OP10: {productId: "Rook_body", costWeight: 1.0}} ],
+    resources: [ { resourceId: "3DPrinter", minCost: 50, maxCost: 100 } ]
 }
 
 Process "PrintBishopBody": {
@@ -339,8 +339,8 @@ Process "PrintBishopBody": {
     requires: [ "InsertPLA" ],
 	excludes: [ "PrintPawnBody", "PrintRookBody", "PrintKnightBody", "PrintQueenBody", "PrintKingBody" ],
     inputs: [ {productId: "PLA"} ],
-    outputs: [ {OP11: {productId: "Bishop_body"}} ],
-    resources: [ { resourceId: "3DPrinter" } ]
+    outputs: [ {OP11: {productId: "Bishop_body", costWeight: 1.0}} ],
+    resources: [ { resourceId: "3DPrinter", minCost: 50, maxCost: 100 } ]
 }
 
 Process "PrintKnightBody": {
@@ -349,8 +349,8 @@ Process "PrintKnightBody": {
     requires: [ "InsertPLA" ],
 	excludes: [ "PrintPawnBody", "PrintRookBody", "PrintBishopBody", "PrintQueenBody", "PrintKingBody" ],
     inputs: [ {productId: "PLA"} ],
-    outputs: [ {OP12: {productId: "Knight_body"}} ],
-    resources: [ { resourceId: "3DPrinter" } ]
+    outputs: [ {OP12: {productId: "Knight_body", costWeight: 1.0}} ],
+    resources: [ { resourceId: "3DPrinter", minCost: 50, maxCost: 100 } ]
 }
 
 Process "PrintQueenBody": {
@@ -359,8 +359,8 @@ Process "PrintQueenBody": {
     requires: [ "InsertPLA" ],
 	excludes: [ "PrintPawnBody", "PrintRookBody", "PrintBishopBody", "PrintKnightBody", "PrintKingBody" ],
     inputs: [ {productId: "PLA"} ],
-    outputs: [ {OP13: {productId: "Queen_body"}} ],
-    resources: [ { resourceId: "3DPrinter" } ]
+    outputs: [ {OP13: {productId: "Queen_body", costWeight: 1.0}} ],
+    resources: [ { resourceId: "3DPrinter", minCost: 50, maxCost: 100 } ]
 }
 
 Process "PrintKingBody": {
@@ -369,47 +369,47 @@ Process "PrintKingBody": {
     requires: [ "InsertPLA" ],
 	excludes: [ "PrintPawnBody", "PrintRookBody", "PrintBishopBody", "PrintKnightBody", "PrintQueenBody" ],
     inputs: [ {productId: "PLA"} ],
-    outputs: [ {OP14: {productId: "King_body"}} ],
-    resources: [ { resourceId: "3DPrinter" } ]
+    outputs: [ {OP14: {productId: "King_body", costWeight: 1.0}} ],
+    resources: [ { resourceId: "3DPrinter", minCost: 50, maxCost: 100 } ]
 }
 
 Process "InsertRod": {
     name: "InsertRod",
     inputs: [ {productId: "Rod"} ],
-    outputs: [ {OP15: {productId: "Rod"}} ],
-    resources: [ { resourceId: "Gripper" } ]
+    outputs: [ {OP15: {productId: "Rod", costWeight: 1.0}} ],
+    resources: [ { resourceId: "Gripper", minCost: 50, maxCost: 100 } ]
 }
 
 Process "InsertBase": {
     name: "InsertBase",
     inputs: [ {productId: "Base"} ],
     requires: [ "TurnBase", "CarveReamings" ],
-    outputs: [ {OP16: {productId: "Base"}} ],
-    resources: [ { resourceId: "Gripper" } ]
+    outputs: [ {OP16: {productId: "Base", costWeight: 1.0}} ],
+    resources: [ { resourceId: "Gripper", minCost: 50, maxCost: 100 } ]
 }
 
 Process "InsertBody": {
     name: "InsertBody",
     inputs: [ {productId: "Body"} ],
     requires: [ "PrintBody" ],
-    outputs: [ {OP17: {productId: "Body"}} ],
-    resources: [ { resourceId: "Gripper" } ]
+    outputs: [ {OP17: {productId: "Body", costWeight: 1.0}} ],
+    resources: [ { resourceId: "Gripper", minCost: 50, maxCost: 100 } ]
 }
 
 Process "ScrewBody": {
     name: "ScrewBody",
     inputs: [ {productId: "Body"}, {productId: "Rod"}],
     requires: [ "InsertBody", "InsertRod"],
-    outputs: [ {OP18: {productId: "Chesspiece"}} ],
-    resources: [ { resourceId: "AssemblyStation" } ]
+    outputs: [ {OP18: {productId: "Chesspiece", costWeight: 1.0}} ],
+    resources: [ { resourceId: "AssemblyStation", minCost: 50, maxCost: 100 } ]
 }
 
 Process "ScrewBase": {
     name: "ScrewBase",
     inputs: [ {productId: "Base"}, {productId: "Rod"}],
     requires: [ "InsertBase", "InsertRod"],
-    outputs: [ {OP19: {productId: "Chesspiece"}} ],
-    resources: [ { resourceId: "AssemblyStation" } ]
+    outputs: [ {OP19: {productId: "Chesspiece", costWeight: 1.0}} ],
+    resources: [ { resourceId: "AssemblyStation", minCost: 50, maxCost: 100 } ]
 }
 
 Constraint "C1": {
