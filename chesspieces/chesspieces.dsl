@@ -248,7 +248,7 @@ Resource "AssemblyStation": {
 Process "LoadAluminumBar": {
     name: "LoadAluminumBar",
     inputs: [ {productId: "AluminumBar"} ],
-    outputs: [ {OP2: {productId: "AluminumBar"}} ],
+    outputs: [ {OP1: {productId: "AluminumBar"}} ],
     resources: [ { resourceId: "Barloader" } ]
 }
 
@@ -273,7 +273,7 @@ Process "CarveReamings": {
     isAbstract: true,
     requires: [ "CutAluminumBar" ],
     inputs: [ {productId: "Base"} ],
-    outputs: [ {OP2: {productId: "Base"}} ],
+    outputs: [ {OP4: {productId: "Base"}} ],
     resources: [ { resourceId: "TurningMachine_45" } ]
 }
 
@@ -283,7 +283,7 @@ Process "CarveReamings_one": {
     requires: [ "CutAluminumBar" ],
     inputs: [ {productId: "Base"}],
     excludes: [ "CarveReamings_two" ],
-    outputs: [ {OP2: {productId: "Base_onestrip"}} ],
+    outputs: [ {OP5: {productId: "Base_onestrip"}} ],
     resources: [ { resourceId: "TurningMachine_45" } ]
 }
 
@@ -293,14 +293,14 @@ Process "CarveReamings_two": {
     requires: [ "CutAluminumBar" ],
     inputs: [ {productId: "Base"} ],
     excludes: [ "CarveReamings_one" ],
-    outputs: [ {OP2: {productId: "Base_twostrip"}} ],
+    outputs: [ {OP6: {productId: "Base_twostrip"}} ],
     resources: [ { resourceId: "TurningMachine_45" } ]
 }
 
 Process "InsertPLA": {
     name: "InsertPLA",
     inputs: [ {productId: "PLA"} ],
-    outputs: [ {OP3: {productId: "PLA"}} ],
+    outputs: [ {OP7: {productId: "PLA"}} ],
     resources: [ { resourceId: "3DPrinter" } ]
 }
 
@@ -309,7 +309,7 @@ Process "PrintBody": {
     isAbstract: true,
     requires: [ "InsertPLA" ],
     inputs: [ {productId: "PLA"} ],
-    outputs: [ {OP3: {productId: "Body"}} ],
+    outputs: [ {OP8: {productId: "Body"}} ],
     resources: [ { resourceId: "3DPrinter" } ]
 }
 
@@ -319,7 +319,7 @@ Process "PrintPawnBody": {
     requires: [ "InsertPLA" ],
 	excludes: [ "PrintRookBody", "PrintBishopBody", "PrintKnightBody", "PrintQueenBody", "PrintKingBody" ],
     inputs: [ {productId: "PLA"} ],
-    outputs: [ {OP3: {productId: "Pawn_body"}} ],
+    outputs: [ {OP9: {productId: "Pawn_body"}} ],
     resources: [ { resourceId: "3DPrinter" } ]
 }
 
@@ -329,7 +329,7 @@ Process "PrintRookBody": {
     requires: [ "InsertPLA" ],
 	excludes: [ "PrintPawnBody", "PrintBishopBody", "PrintKnightBody", "PrintQueenBody", "PrintKingBody" ],
     inputs: [ {productId: "PLA"} ],
-    outputs: [ {OP3: {productId: "Rook_body"}} ],
+    outputs: [ {OP10: {productId: "Rook_body"}} ],
     resources: [ { resourceId: "3DPrinter" } ]
 }
 
@@ -339,7 +339,7 @@ Process "PrintBishopBody": {
     requires: [ "InsertPLA" ],
 	excludes: [ "PrintPawnBody", "PrintRookBody", "PrintKnightBody", "PrintQueenBody", "PrintKingBody" ],
     inputs: [ {productId: "PLA"} ],
-    outputs: [ {OP3: {productId: "Bishop_body"}} ],
+    outputs: [ {OP11: {productId: "Bishop_body"}} ],
     resources: [ { resourceId: "3DPrinter" } ]
 }
 
@@ -349,7 +349,7 @@ Process "PrintKnightBody": {
     requires: [ "InsertPLA" ],
 	excludes: [ "PrintPawnBody", "PrintRookBody", "PrintBishopBody", "PrintQueenBody", "PrintKingBody" ],
     inputs: [ {productId: "PLA"} ],
-    outputs: [ {OP3: {productId: "Knight_body"}} ],
+    outputs: [ {OP12: {productId: "Knight_body"}} ],
     resources: [ { resourceId: "3DPrinter" } ]
 }
 
@@ -359,7 +359,7 @@ Process "PrintQueenBody": {
     requires: [ "InsertPLA" ],
 	excludes: [ "PrintPawnBody", "PrintRookBody", "PrintBishopBody", "PrintKnightBody", "PrintKingBody" ],
     inputs: [ {productId: "PLA"} ],
-    outputs: [ {OP3: {productId: "Queen_body"}} ],
+    outputs: [ {OP13: {productId: "Queen_body"}} ],
     resources: [ { resourceId: "3DPrinter" } ]
 }
 
@@ -369,14 +369,14 @@ Process "PrintKingBody": {
     requires: [ "InsertPLA" ],
 	excludes: [ "PrintPawnBody", "PrintRookBody", "PrintBishopBody", "PrintKnightBody", "PrintQueenBody" ],
     inputs: [ {productId: "PLA"} ],
-    outputs: [ {OP3: {productId: "King_body"}} ],
+    outputs: [ {OP14: {productId: "King_body"}} ],
     resources: [ { resourceId: "3DPrinter" } ]
 }
 
 Process "InsertRod": {
     name: "InsertRod",
     inputs: [ {productId: "Rod"} ],
-    outputs: [ {OP2: {productId: "Rod"}} ],
+    outputs: [ {OP15: {productId: "Rod"}} ],
     resources: [ { resourceId: "Gripper" } ]
 }
 
@@ -384,7 +384,7 @@ Process "InsertBase": {
     name: "InsertBase",
     inputs: [ {productId: "Base"} ],
     requires: [ "TurnBase", "CarveReamings" ],
-    outputs: [ {OP2: {productId: "Base"}} ],
+    outputs: [ {OP16: {productId: "Base"}} ],
     resources: [ { resourceId: "Gripper" } ]
 }
 
@@ -392,7 +392,7 @@ Process "InsertBody": {
     name: "InsertBody",
     inputs: [ {productId: "Body"} ],
     requires: [ "PrintBody" ],
-    outputs: [ {OP2: {productId: "Body"}} ],
+    outputs: [ {OP17: {productId: "Body"}} ],
     resources: [ { resourceId: "Gripper" } ]
 }
 
@@ -400,7 +400,7 @@ Process "ScrewBody": {
     name: "ScrewBody",
     inputs: [ {productId: "Body"}, {productId: "Rod"}],
     requires: [ "InsertBody", "InsertRod"],
-    outputs: [ {OP2: {productId: "Chesspiece"}} ],
+    outputs: [ {OP18: {productId: "Chesspiece"}} ],
     resources: [ { resourceId: "AssemblyStation" } ]
 }
 
@@ -408,7 +408,7 @@ Process "ScrewBase": {
     name: "ScrewBase",
     inputs: [ {productId: "Base"}, {productId: "Rod"}],
     requires: [ "InsertBase", "InsertRod"],
-    outputs: [ {OP2: {productId: "Chesspiece"}} ],
+    outputs: [ {OP19: {productId: "Chesspiece"}} ],
     resources: [ { resourceId: "AssemblyStation" } ]
 }
 
