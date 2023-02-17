@@ -11,6 +11,12 @@ Attribute "partialProduct": {
   type: "String"
 }
 
+Attribute "deltaFile": {
+  description: "Specifies the delta file for the V4rdiac configuration",
+  defaultValue: "",
+  type: "String"
+}
+
 Product "Fork": {
   name: "Fork",
   isAbstract: true,
@@ -176,11 +182,13 @@ Resource "Linefeeds": {
 
 Resource "LF_3": {
   name: "LF_3",
+  deltaFile: "DLF_3(desiredCardinality)",
   implements: [ "Linefeeds" ] 
 }
 
 Resource "LF_4": {
   name: "LF_4",
+  deltaFile: "DLF_4(desiredCardinality)",
   implements: [ "Linefeeds" ] 
 }
 
@@ -197,6 +205,7 @@ Resource "LaserWeldingRobots": {
 
 Resource "LaserWeldingRobot_01":{
   name: "LaserWeldingRobot_01",
+  deltaFile: "DLaserWeldingRobot01(desiredCardinality)",
   implements: [ "LaserWeldingRobots" ]
 }
 
@@ -208,39 +217,43 @@ Resource "UltrasonicWeldingRobots": {
 
 Resource "UltrasonicWeldingRobot_16":{
   name: "UltrasonicWeldingRobot_16",
+  deltaFile: "DUltrasonicWeldingRobot16(desiredCardinality)",
   implements: [ "UltrasonicWeldingRobots" ]
 }
 
-Resource "PressinRobots": {
+Resource "PressingRobots": {
   name: "PressingRobots",
   isAbstract: true
 }
 
-Resource "SmallPartsPressinRobots": {
-  name: "SmallPartsPressinRobots",
+Resource "SmallPartsPressingRobots": {
+  name: "SmallPartsPressingRobots",
   isAbstract: true,
-  implements: [ "PressinRobots" ]
+  implements: [ "PressingRobots" ]
 }
 
-Resource "MediumPartsPressinRobots": {
-  name: "MediumPartsPressinRobots",
+Resource "MediumPartsPressingRobots": {
+  name: "MediumPartsPressingRobots",
   isAbstract: true,
-  implements: [ "PressinRobots" ]
+  implements: [ "PressingRobots" ]
 }
 
 Resource "PR_04": {
   name: "PR_04",
-  implements: [ "MediumPartsPressinRobots" ]
+  deltaFile: "DPR_04(desiredCardinality)",
+  implements: [ "MediumPartsPressingRobots" ]
 }
 
 Resource "PR_05": {
   name: "PR_05",
-  implements: [ "SmallPartsPressinRobots" ]
+  deltaFile: "DPR_05(desiredCardinality)",
+  implements: [ "SmallPartsPressingRobots" ]
 }
 
 Resource "PR_12": {
   name: "PR_12",
-  implements: [ "MediumPartsPressinRobots" ]
+  deltaFile: "DPR_12(desiredCardinality)",
+  implements: [ "MediumPartsPressingRobots" ]
 }
 
 Resource "ScrewingRobots": {
@@ -250,6 +263,7 @@ Resource "ScrewingRobots": {
 
 Resource "SC_70": {
   name: "SC_70",
+  deltaFile: "DSC_70(desiredCardinality)",
   implements: [ "ScrewingRobots" ]
 }
 
@@ -266,6 +280,7 @@ Process "InsertPipe2": {
   implements: ["InsertPipe"],
   inputs: [ {productId: "Pipe2"} ],
   outputs: [ {OP2: {productId: "Pipe2", costWeight: 1.0}} ],
+  deltaFile: "!DPipe2",
   resources: [ { resourceId: "Linefeeds", minCost: 50, maxCost: 100 } ]
 }
 
@@ -274,6 +289,7 @@ Process "InsertPipe3": {
   implements: ["InsertPipe"],
   inputs: [ {productId: "Pipe3"} ],
   outputs: [ {OP3: {productId: "Pipe3", costWeight: 1.0}} ],
+  deltaFile: "!DPipe3",
   resources: [ { resourceId: "Linefeeds", minCost: 50, maxCost: 100 } ]
 }
 
@@ -282,6 +298,7 @@ Process "InsertPipe8": {
   implements: ["InsertPipe"],
   inputs: [ {productId: "Pipe8"} ],
   outputs: [ {OP4: {productId: "Pipe8", costWeight: 1.0}} ],
+  deltaFile: "!DPipe8",
   resources: [ { resourceId: "Linefeeds", minCost: 50, maxCost: 100 } ]
 }
 
@@ -297,7 +314,7 @@ Process "PressBarrel1_1": {
   requires: [ "InsertBarrel1_1", "InsertPipe" ],
   inputs: [ {productId: "Barrel1_1"}, {productId: "Pipe"} ],
   outputs: [ {OP6: {productId: "ForkProduct", costWeight: 1.0}} ],
-  resources: [ { resourceId: "MediumPartsPressinRobots", minCost: 50, maxCost: 100 } ]
+  resources: [ { resourceId: "MediumPartsPressingRobots", minCost: 50, maxCost: 100 } ]
 }
 
 Process "WeldBarrel1_1": {
@@ -312,6 +329,7 @@ Process "InsertBarrel1_2": {
   name: "InsertBarrel1_2",
   inputs: [ {productId: "Barrel1_2"} ],
   outputs: [ {OP5: {productId: "Barrel1_2", costWeight: 1.0}} ],
+  deltaFile: "!DBarrel12",
   resources: [ { resourceId: "Linefeeds", minCost: 50, maxCost: 100 } ]
 }
 
@@ -320,7 +338,7 @@ Process "PressBarrel1_2": {
   requires: [ "InsertBarrel1_2", "InsertPipe" ],
   inputs: [ {productId: "Barrel1_2"}, {productId: "Pipe"} ],
   outputs: [ {OP6: {productId: "ForkProduct", costWeight: 1.0}} ],
-  resources: [ { resourceId: "MediumPartsPressinRobots", minCost: 50, maxCost: 100 } ]
+  resources: [ { resourceId: "MediumPartsPressingRobots", minCost: 50, maxCost: 100 } ]
 }
 
 Process "WeldBarrel1_2": {
@@ -343,7 +361,7 @@ Process "PressJack1": {
   requires: [ "InsertJack1", "InsertPipe" ],
   inputs: [ {productId: "Jack1"}, {productId: "Pipe"} ],
   outputs: [ {OP8: {productId: "ForkProduct", costWeight: 1.0}} ],
-  resources: [ { resourceId: "MediumPartsPressinRobots", minCost: 50, maxCost: 100 } ]
+  resources: [ { resourceId: "MediumPartsPressingRobots", minCost: 50, maxCost: 100 } ]
 }
 
 Process "WeldJack1": {
@@ -366,7 +384,7 @@ Process "PressRing1": {
   requires: [ "InsertRing1", "PressJack1", "InsertPipe" ],
   inputs: [ {productId: "Ring1"}, {productId: "Jack1"}, {productId: "Pipe"} ],
   outputs: [ {OP10: {productId: "ForkProduct", costWeight: 1.0}}],
-  resources: [ { resourceId: "SmallPartsPressinRobots", minCost: 50, maxCost: 100 } ]
+  resources: [ { resourceId: "SmallPartsPressingRobots", minCost: 50, maxCost: 100 } ]
 }
 
 Process "InsertORing": {
@@ -381,7 +399,7 @@ Process "PressORing": {
   requires: [ "InsertORing", "PressJack1", "PressRing1", "InsertPipe" ],
   inputs: [ {productId: "O_Ring"}, {productId: "Pipe"}, {productId: "Jack1"}, {productId: "Ring1"} ],
   outputs: [ {OP12: {productId: "ForkProduct", costWeight: 1.0}}],
-  resources: [ { resourceId: "SmallPartsPressinRobots", minCost: 50, maxCost: 100 } ]
+  resources: [ { resourceId: "SmallPartsPressingRobots", minCost: 50, maxCost: 100 } ]
 }
 
 Process "InsertScrew": {
@@ -456,6 +474,7 @@ Process "InsertLock1": {
   name: "InsertLock1",
   implements: [ "InsertLock" ],
   inputs: [ {productId: "Lock1"} ],
+  deltaFile: "!DLock1",
   outputs: [ {OP22: {productId: "Lock1", costWeight: 1.0}}],
   resources: [ { resourceId: "Linefeeds", minCost: 50, maxCost: 100 } ]
 }
@@ -464,6 +483,7 @@ Process "InsertLock2": {
   name: "InsertLock2",
   implements: [ "InsertLock" ],
   inputs: [ {productId: "Lock2"} ],
+  deltaFile: "!DLock2",
   outputs: [ {OP23: {productId: "Lock2", costWeight: 1.0}}],
   resources: [ { resourceId: "Linefeeds", minCost: 50, maxCost: 100 } ]
 }
@@ -472,6 +492,7 @@ Process "InsertLock3": {
   name: "InsertLock3",
   implements: [ "InsertLock" ],
   inputs: [ {productId: "Lock3"} ],
+  deltaFile: "!DLock3",
   outputs: [ {OP24: {productId: "Lock3", costWeight: 1.0}}],
   resources: [ { resourceId: "Linefeeds", minCost: 50, maxCost: 100 } ]
 }
