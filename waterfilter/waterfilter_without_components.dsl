@@ -325,61 +325,74 @@ Process "AssembleNanofilter": {
 
 Process "AssembleFiltertankS": {
   name: "Assemble FiltertankS",
+  isAbstract: true,
   inputs: [ {productId: "FiltertankS"}, {productId: "Sand"}],
   outputs: [ {OP5: {productId: "FiltertankS", costWeight: 1.0}}],
   resources: [ { resourceId: "Batchfeeds", minCost: 50, maxCost: 100 } ]
 }
 
+Process "AssembleFiltertankSWithActive": {
+  name: "AssembleFiltertankSWithActive",
+  implements: [ "AssembleFiltertankS" ],
+  excludes: ["AssembleFiltertankSWithBone"],
+  inputs: [ {productId: "FiltertankS"}, {productId: "CharcoalActive"}],
+  resources: [ { resourceId: "DryBatchfeeds", minCost: 50, maxCost: 100 } ]
+}
+
+Process "AssembleFiltertankSWithBone": {
+  name: "AssembleFiltertankSWithBone",
+  implements: [ "AssembleFiltertankS" ],
+  excludes: ["AssembleFiltertankSWithActive"],
+  inputs: [ {productId: "FiltertankS"}, {productId: "CharcoalBone"}],
+  resources: [ { resourceId: "DryBatchfeeds", minCost: 50, maxCost: 100 } ]
+}
+
 Process "AssembleFiltertankXL": {
   name: "Assemble FiltertankXL",
+  isAbstract: true,
   inputs: [ {productId: "FiltertankXL"}, {productId: "Sand"}],
   outputs: [ {OP6: {productId: "FiltertankXL", costWeight: 1.0}}],
   resources: [ { resourceId: "Batchfeeds", minCost: 50, maxCost: 100 }, { resourceId: "ChainHoist", minCost: 50, maxCost: 100 } ]
 }
 
-Process "AssembleFiltertankSWithActive": {
-  name: "AssembleFiltertankSWithActive",
-  requires: [ "AssembleFiltertankS" ],
-  inputs: [ {productId: "FiltertankS"}, {productId: "CharcoalActive"}],
-  resources: [ { resourceId: "DryBatchfeeds", minCost: 50, maxCost: 100 } ]
-}
-
 Process "AssembleFiltertankXLWithActive": {
   name: "AssembleFiltertankXLWithActive",
-  requires: [ "AssembleFiltertankXL" ],
+  implements: [ "AssembleFiltertankXL" ],
+  excludes: ["AssembleFiltertankXLWithBone"],
   inputs: [ {productId: "FiltertankXL"}, {productId: "CharcoalActive"}],
   resources: [ { resourceId: "DryBatchfeeds", minCost: 50, maxCost: 100 }, { resourceId: "ChainHoist", minCost: 50, maxCost: 100 } ]
 }
 
-Process "AssembleFiltertankSWithBone": {
-  name: "AssembleFiltertankSWithBone",
-  requires: [ "AssembleFiltertankS" ],
-  inputs: [ {productId: "FiltertankS"}, {productId: "CharcoalBone"}],
-  resources: [ { resourceId: "DryBatchfeeds", minCost: 50, maxCost: 100 } ]
-}
-
 Process "AssembleFiltertankXLWithBone": {
   name: "AssembleFiltertankXLWithBone",
-  requires: [ "AssembleFiltertankXL" ],
+  implements: [ "AssembleFiltertankXL" ],
+  excludes: ["AssembleFiltertankXLWithActive"],
   inputs: [ {productId: "FiltertankXL"}, {productId: "CharcoalBone"}],
   resources: [ { resourceId: "DryBatchfeeds", minCost: 50, maxCost: 100 }, { resourceId: "ChainHoist", minCost: 50, maxCost: 100 } ]
 }
 
 Process "AssembleWastewaterTank": {
-   name: "Assemble WastewaterTank",
-    inputs: [ {productId: "WastewaterTankXL"}, {productId: "Valve2"}],
+  name: "Assemble WastewaterTank",
+  inputs: [ {productId: "WastewaterTankXL"}, {productId: "Valve2"}],
   resources: [ { resourceId: "OpenendNutrunner", minCost: 50, maxCost: 100 }, { resourceId: "ChainHoist", minCost: 50, maxCost: 100 } ]
+}
+
+Process "AssembleMountedTank": {
+  name: "Assemble MountedTank",
+  isAbstract: true,
+  resources: [ { resourceId: "HandheldNutrunner", minCost: 50, maxCost: 100 } ]
 }
 
 Process "AssembleMountedTank1": {
   name: "AssembleMountedTank1",
+  implements: ["AssembleMountedTank"],
   requires: [ "AssembleFreshwaterTankS" ],
-  inputs: [ {productId: "FreshwaterTankS"}, {productId: "FreshwaterTank"}, {productId: "Valve1"} , {productId: "IronFrame"}],
-  resources: [ { resourceId: "HandheldNutrunner", minCost: 50, maxCost: 100 } ]
+  inputs: [ {productId: "FreshwaterTankS"}, {productId: "FreshwaterTank"}, {productId: "Valve1"} , {productId: "IronFrame"}]
 }
 
 Process "AssembleMountedTank2": {
   name: "AssembleMountedTank2",
+  implements: ["AssembleMountedTank"],
   requires: [ "AssembleFreshwaterTankXL" ],
   inputs: [ {productId: "FreshwaterTankXL"}, {productId: "FreshwaterTank"}, {productId: "Valve1"}, {productId: "Rack1"}],
   resources: [ { resourceId: "HandheldNutrunner_DFL651FZ", minCost: 50, maxCost: 100 } ]
@@ -387,9 +400,9 @@ Process "AssembleMountedTank2": {
 
 Process "AssembleMountedTank3": {
   name: "AssembleMountedTank3",
+  implements: ["AssembleMountedTank"],
   requires: [ "AssembleFreshwaterTankS", "AssembleWastewaterTank" ],
-  inputs: [ {productId: "FreshwaterTankS"}, {productId: "FreshwaterTank"}, {productId: "Valve1"}, {productId: "Rack2"}, {productId: "WastewaterTankXL"}, {productId: "Valve2"}],
-  resources: [ { resourceId: "HandheldNutrunner", minCost: 50, maxCost: 100 } ]
+  inputs: [ {productId: "FreshwaterTankS"}, {productId: "FreshwaterTank"}, {productId: "Valve1"}, {productId: "Rack2"}, {productId: "WastewaterTankXL"}, {productId: "Valve2"}]
 }
 
 Process "AssembleMountWithTanksA": {
