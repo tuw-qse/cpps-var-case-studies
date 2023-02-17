@@ -323,12 +323,20 @@ Process "AssembleNanofilter": {
   resources: [ { resourceId: "PIT_10", minCost: 50, maxCost: 100 } ]
 }
 
+Process "AssembleFiltertank": {
+  name: "Assemble Filtertank",
+  isAbstract: true,
+  inputs: [ {productId: "Sand"}],
+  resources: [ { resourceId: "Batchfeeds", minCost: 50, maxCost: 100 } ]
+}
+
 Process "AssembleFiltertankS": {
   name: "Assemble FiltertankS",
+  implements: ["AssembleFiltertank"],
+  excludes: ["AssembleFiltertankXL"],
   isAbstract: true,
   inputs: [ {productId: "FiltertankS"}, {productId: "Sand"}],
-  outputs: [ {OP2: {productId: "FiltertankS", costWeight: 1.0}}],
-  resources: [ { resourceId: "Batchfeeds", minCost: 50, maxCost: 100 } ]
+  outputs: [ {OP2: {productId: "FiltertankS", costWeight: 1.0}}]
 }
 
 Process "AssembleFiltertankSWithActive": {
@@ -349,10 +357,12 @@ Process "AssembleFiltertankSWithBone": {
 
 Process "AssembleFiltertankXL": {
   name: "Assemble FiltertankXL",
+  implements: ["AssembleFiltertank"],
+  excludes: ["AssembleFiltertankS"],
   isAbstract: true,
   inputs: [ {productId: "FiltertankXL"}, {productId: "Sand"}],
   outputs: [ {OP3: {productId: "FiltertankXL", costWeight: 1.0}}],
-  resources: [ { resourceId: "Batchfeeds", minCost: 50, maxCost: 100 }, { resourceId: "ChainHoist", minCost: 50, maxCost: 100 } ]
+  resources: [ { resourceId: "ChainHoist", minCost: 50, maxCost: 100 } ]
 }
 
 Process "AssembleFiltertankXLWithActive": {
