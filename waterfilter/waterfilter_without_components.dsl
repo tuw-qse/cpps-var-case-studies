@@ -490,7 +490,6 @@ Process "FillFilterTankXLModuleCB": {
 
 Process "AssembleWastewaterTankXLModule": {
   name: "AssembleWastewaterTankXLModule",
-  requires: [ "AssembleWastewaterTankXLModule" ],
   inputs: [ {productId: "WastewaterTankXL"}, {productId: "Valve2"}],
   outputs: [ {OP10: {productId: "WastewaterTankXLModule"}}],
   resources: [ { resourceId: "HandheldNutrunner"}, { resourceId: "ChainHoist"} ]
