@@ -470,10 +470,10 @@ Process "FillFilterTankXLModuleCharcoal": {
 
 Process "FillFilterTankXLModuleCA": {
   name: "Fill FilterTankXLModule with CharcoalActive",
-  implements: [ "FillFilterTankXLModuleCB" ],
-  excludes: ["AssembleFilterTankXLWithBone"],
+  implements: [ "FillFilterTankXLModuleCharcoal" ],
+  excludes: ["FillFilterTankXLModuleCB"],
   requires: [ "AssembleFreshwaterTankXLModule" ],
-  inputs: [ {productId: "FilterTankXL"}, {productId: "CharcoalActive"}],
+  inputs: [ {productId: "FilterTankXLModule"}, {productId: "CharcoalActive"}],
   outputs: [ {OP8: {productId: "CAFilterTankXLModule"}}],
   resources: [ { resourceId: "DryBatchfeeds"}, { resourceId: "ChainHoist"} ]
 }
