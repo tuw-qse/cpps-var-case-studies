@@ -133,13 +133,13 @@ Product "FreshwaterTankModule": {
 Product "FreshwaterTankSModule": {
   name: "FreshwaterTankSModule",
   implements: [ "FreshwaterTankModule" ],
-  requires: [ "FreshwatertankS", "Valve1" ],
-  excludes: [ "FreshwatertankXLModule" ],
+  requires: [ "FreshwaterTankS", "Valve1" ],
+  excludes: [ "FreshwaterTankXLModule" ],
   partialProduct: "true"
 }
 
-Product "FreshwatertankXLModule": {
-  name: "FreshwatertankXLModule",
+Product "FreshwaterTankXLModule": {
+  name: "FreshwaterTankXLModule",
   implements: [ "FreshwaterTankModule" ],
   requires: [ "FreshwatertankXL", "Valve1" ],
   excludes: [ "FreshwaterTankSModule" ],
@@ -291,28 +291,28 @@ Product "CompletedTank_4": {
 Product "CompletedTank_5": {
   name: "CompletedTank_5",
   implements: [ "CompletedTank" ],
-  requires: [ "Rack2", "FreshwatertankXLModule", "WastewaterTankXLModule", "CBFilterTankXLModule", "Tube3" ],
+  requires: [ "Rack2", "FreshwaterTankXLModule", "WastewaterTankXLModule", "CBFilterTankXLModule", "Tube3" ],
   excludes: [ "CompletedTank_2", "CompletedTank_3", "CompletedTank_4", "CompletedTank_1", "CompletedTank_6", "CompletedTank_7", "CompletedTank_8" ]
 }
 
 Product "CompletedTank_6": {
   name: "CompletedTank_6",
   implements: [ "CompletedTank" ],
-  requires: [ "Rack2", "FreshwatertankXLModule", "WastewaterTankXLModule", "CAFilterTankXLModule", "Tube3" ],
+  requires: [ "Rack2", "FreshwaterTankXLModule", "WastewaterTankXLModule", "CAFilterTankXLModule", "Tube3" ],
   excludes: [ "CompletedTank_2", "CompletedTank_3", "CompletedTank_4", "CompletedTank_5", "CompletedTank_1", "CompletedTank_7", "CompletedTank_8" ]
 }
 
 Product "CompletedTank_7": {
   name: "CompletedTank_7",
   implements: [ "CompletedTank" ],
-  requires: [ "Rack2", "FreshwatertankXLModule", "WastewaterTankXLModule", "CBFilterTankXLModule", "Tube3", "Nanofilter" ],
+  requires: [ "Rack2", "FreshwaterTankXLModule", "WastewaterTankXLModule", "CBFilterTankXLModule", "Tube3", "Nanofilter" ],
   excludes: [ "CompletedTank_2", "CompletedTank_3", "CompletedTank_4", "CompletedTank_5", "CompletedTank_6", "CompletedTank_1", "CompletedTank_8" ]
 }
 
 Product "CompletedTank_8": {
   name: "CompletedTank_8",
   implements: [ "CompletedTank" ],
-  requires: [ "Rack2", "FreshwatertankXLModule", "WastewaterTankXLModule", "CAFilterTankXLModule", "Tube3", "Nanofilter" ],
+  requires: [ "Rack2", "FreshwaterTankXLModule", "WastewaterTankXLModule", "CAFilterTankXLModule", "Tube3", "Nanofilter" ],
   excludes: [ "CompletedTank_2", "CompletedTank_3", "CompletedTank_4", "CompletedTank_5", "CompletedTank_6", "CompletedTank_7", "CompletedTank_1" ]
 }
 
@@ -398,11 +398,11 @@ Process "AssembleFreshwaterTankSModule": {
 }
 
 Process "AssembleFreshwaterTankXLModule": {
-  name: "Assemble FreshwatertankXLModule",
+  name: "Assemble FreshwaterTankXLModule",
   implements: [ "AssembleFreshwaterTankModule" ],
   excludes: [ "AssembleFreshwaterTankSModule" ],
   inputs: [ {productId: "FreshwaterTankXL"}, {productId: "Valve1"} ],
-  outputs: [ {OP2: {productId: "FreshwatertankXLModule"}}],
+  outputs: [ {OP2: {productId: "FreshwaterTankXLModule"}}],
   resources: [ { resourceId: "OpenendNutrunner"}, { resourceId: "ChainHoist"} ]
 }
 
@@ -518,7 +518,7 @@ Process "AssembleMountedFreshwaterTankXLRack2": {
   implements: ["AssembleMountedFreshwaterTank"],
   requires: [ "AssembleFreshwaterTankXLModule" ],
   excludes: [ "AssembleMountedFreshwaterTankSIronFrame", "AssembleMountedFreshwaterTankSRack1" ],
-  inputs: [ {productId: "FreshwatertankXLModule"}, {productId: "Rack2"}],
+  inputs: [ {productId: "FreshwaterTankXLModule"}, {productId: "Rack2"}],
   outputs: [ {OP14: {productId: "CompletedTank"}}],
   resources: [ { resourceId: "HandheldNutrunner_DFL651FZ"} ]
 }
@@ -665,7 +665,7 @@ Process "AssembleCompleteTank_5": {
   implements: ["AssembleCompleteTank"],
   requires: [ "AssembleMountedFreshwaterTankXLRack2", "AssembleMountedCBFilterTankXLModuleRack2", "AssembleMountedWastewaterTankXLRack2"],
   excludes: [ "AssembleCompleteTank_2", "AssembleCompleteTank_3", "AssembleCompleteTank_4", "AssembleCompleteTank_1", "AssembleCompleteTank_6", "AssembleCompleteTank_7", "AssembleCompleteTank_8" ],
-  inputs: [ {productId: "Rack2"}, {productId: "FreshwatertankXLModule"}, {productId: "CBFilterTankXLModule"}, {productId: "Valve1"}, {productId: "WastewaterTankXLModule"}, {productId: "Valve2"}, { productId: "Tube3" }  ],
+  inputs: [ {productId: "Rack2"}, {productId: "FreshwaterTankXLModule"}, {productId: "CBFilterTankXLModule"}, {productId: "Valve1"}, {productId: "WastewaterTankXLModule"}, {productId: "Valve2"}, { productId: "Tube3" }  ],
   outputs: [ {OP31: { productId: "CompletedTank_5" }} ],
   resources: [ { resourceId: "HandheldNutrunner_DFL651FZ"} ]
 }
@@ -675,7 +675,7 @@ Process "AssembleCompleteTank_6": {
   implements: ["AssembleCompleteTank"],
   requires: [ "AssembleMountedFreshwaterTankXLRack2", "AssembleMountedCAFilterTankXLModuleRack2", "AssembleMountedWastewaterTankXLRack2", "AssembleMountedNanofilterRack2"],
   excludes: [ "AssembleCompleteTank_2", "AssembleCompleteTank_3", "AssembleCompleteTank_4", "AssembleCompleteTank_5", "AssembleCompleteTank_1", "AssembleCompleteTank_7", "AssembleCompleteTank_8" ],
-  inputs: [ {productId: "Rack2"}, {productId: "FreshwatertankXLModule"}, {productId: "CAFilterTankXLModule"}, {productId: "Valve1"}, {productId: "WastewaterTankXLModule"}, {productId: "Valve2"}, {productId: "Nanofilter"}, { productId: "Tube3" } ],
+  inputs: [ {productId: "Rack2"}, {productId: "FreshwaterTankXLModule"}, {productId: "CAFilterTankXLModule"}, {productId: "Valve1"}, {productId: "WastewaterTankXLModule"}, {productId: "Valve2"}, {productId: "Nanofilter"}, { productId: "Tube3" } ],
   outputs: [ {OP32: { productId: "CompletedTank_6" }} ],
   resources: [ { resourceId: "HandheldNutrunner_DFL651FZ"} ]
 }
@@ -685,7 +685,7 @@ Process "AssembleCompleteTank_7": {
   implements: ["AssembleCompleteTank"],
   requires: [ "AssembleMountedFreshwaterTankXLRack2", "AssembleMountedCBFilterTankXLModuleRack2", "AssembleMountedWastewaterTankXLRack2"],
   excludes: [ "AssembleCompleteTank_2", "AssembleCompleteTank_3", "AssembleCompleteTank_4", "AssembleCompleteTank_5", "AssembleCompleteTank_6", "AssembleCompleteTank_1", "AssembleCompleteTank_8" ],
-  inputs: [ {productId: "Rack2"}, {productId: "FreshwatertankXLModule"}, {productId: "CBFilterTankXLModule"}, {productId: "Valve1"}, {productId: "WastewaterTankXLModule"}, {productId: "Valve2"}, { productId: "Tube3" } ],
+  inputs: [ {productId: "Rack2"}, {productId: "FreshwaterTankXLModule"}, {productId: "CBFilterTankXLModule"}, {productId: "Valve1"}, {productId: "WastewaterTankXLModule"}, {productId: "Valve2"}, { productId: "Tube3" } ],
   outputs: [ {OP33: { productId: "CompletedTank_7" }} ],
   resources: [ { resourceId: "HandheldNutrunner_DFL651FZ"} ]
 }
@@ -695,7 +695,56 @@ Process "AssembleCompleteTank_8": {
   implements: ["AssembleCompleteTank"],
   requires: [ "AssembleMountedFreshwaterTankXLRack2", "AssembleMountedCAFilterTankXLModuleRack2", "AssembleMountedWastewaterTankXLRack2", "AssembleMountedNanofilterRack2"],
   excludes: [ "AssembleCompleteTank_2", "AssembleCompleteTank_3", "AssembleCompleteTank_4", "AssembleCompleteTank_5", "AssembleCompleteTank_6", "AssembleCompleteTank_7", "AssembleCompleteTank_1" ],
-  inputs: [ {productId: "Rack2"}, {productId: "FreshwatertankXLModule"}, {productId: "CAFilterTankXLModule"}, {productId: "Valve1"}, {productId: "WastewaterTankXLModule"}, {productId: "Valve2"}, {productId: "Nanofilter"}, { productId: "Tube3" } ],
+  inputs: [ {productId: "Rack2"}, {productId: "FreshwaterTankXLModule"}, {productId: "CAFilterTankXLModule"}, {productId: "Valve1"}, {productId: "WastewaterTankXLModule"}, {productId: "Valve2"}, {productId: "Nanofilter"}, { productId: "Tube3" } ],
   outputs: [ {OP34: { productId: "CompletedTank_8" }} ],
   resources: [ { resourceId: "HandheldNutrunner_DFL651FZ"} ]
 }
+
+Constraint "C1": {
+  definition: "FreshwaterTankXL, FilterTankXL, WastewaterTankXL -> FreshwaterTankXL implies (FilterTankXL and WastewaterTankXL)"
+}
+
+Constraint "C2": {
+  definition: "FreshwaterTankXL, FilterTankXL, WastewaterTankXL -> WastewaterTankXL implies (FilterTankXL and FreshwaterTankXL)"
+}
+
+Constraint "C3": {
+  definition: "FreshwaterTankXL, FilterTankXL, WastewaterTankXL -> FilterTankXL implies (FreshwaterTankXL and WastewaterTankXL)"
+}
+
+Constraint "C4": {
+  definition: "FreshwaterTankXLModule, FilterTankXLModule, WastewaterTankXLModule -> FreshwaterTankXLModule implies (FilterTankXLModule and WastewaterTankXLModule)"
+}
+
+Constraint "C5": {
+  definition: "FreshwaterTankXLModule, FilterTankXLModule, WastewaterTankXLModule -> WastewaterTankXLModule implies (FilterTankXLModule and FreshwaterTankXLModule)"
+}
+
+Constraint "C6": {
+  definition: "FreshwaterTankXLModule, FilterTankXLModule, WastewaterTankXLModule -> FilterTankXLModule implies (FreshwaterTankXLModule and WastewaterTankXLModule)"
+}
+
+Constraint "C7": {
+  definition: "Nanofilter, IronFrame -> Nanofilter implies not IronFrame"
+}
+
+Constraint "C8": {
+  definition: "FreshwaterTankXLModule, Rack2 -> FreshwaterTankXLModule implies Rack2"
+}
+
+Constraint "C9": {
+  definition: "FreshwaterTankS, IronFrame, Rack1 -> FreshwaterTankS implies (IronFrame or Rack1)"
+}
+
+Constraint "C10": {
+  definition: "FreshwaterTankXLModule, Tube3 -> FreshwaterTankXLModule implies Tube3"
+}
+
+Constraint "C11": {
+  definition: "FreshwaterTankSModule, Tube3 -> FreshwaterTankSModule implies not Tube3"
+}
+
+Constraint "C11": {
+  definition: "FreshwaterTankSModule, Valve2 -> FreshwaterTankSModule implies not Valve2"
+}
+
