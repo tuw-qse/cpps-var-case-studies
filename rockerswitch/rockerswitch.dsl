@@ -4,6 +4,12 @@ Attribute "partialProduct": {
   type: "String"
 }
 
+Attribute "deltaFile": {
+  description: "Specifies the delta file for the V4rdiac configuration",
+  defaultValue: "",
+  type: "String"
+}
+
 Product "Socket": {
   name: "Socket",
   partialProduct: "true"
@@ -314,17 +320,20 @@ Resource "Linefeeds": {
 
 Resource "LF_3": {
   name: "LF_3",
-  implements: [ "Linefeeds" ] 
+  implements: [ "Linefeeds" ],
+  deltaFile: "DLF_3(desiredCardinality)"
 }
 
 Resource "LF_4": {
   name: "LF_4",
-  implements: [ "Linefeeds" ] 
+  implements: [ "Linefeeds" ],
+  deltaFile: "DLF_4(desiredCardinality)" 
 }
 
 Resource "LF_6": {
   name: "LF_6",
-  implements: [ "Linefeeds" ] 
+  implements: [ "Linefeeds" ],
+  deltaFile: "DLF_6(desiredCardinality)" 
 }
 
 Resource "PressingRobots": {
@@ -346,22 +355,26 @@ Resource "MediumPartsPressingRobots": {
 
 Resource "PR_02": {
   name: "PR_02",
-  implements: [ "SmallPartsPressingRobots" ]
+  implements: [ "SmallPartsPressingRobots" ],
+  deltaFile: "DPR_02(desiredCardinality)"
 }
 
 Resource "PR_04": {
   name: "PR_04",
-  implements: [ "MediumPartsPressingRobots" ]
+  implements: [ "MediumPartsPressingRobots" ],
+  deltaFile: "DPR_04(desiredCardinality)"
 }
 
 Resource "PR_05": {
   name: "PR_05",
-  implements: [ "SmallPartsPressingRobots" ]
+  implements: [ "SmallPartsPressingRobots" ],
+  deltaFile: "DPR_05(desiredCardinality)"
 }
 
 Resource "PR_12": {
   name: "PR_12",
-  implements: [ "MediumPartsPressingRobots" ]
+  implements: [ "MediumPartsPressingRobots" ],
+  deltaFile: "DPR_12(desiredCardinality)"
 }
 
 Resource "ScrewingRobots": {
@@ -371,7 +384,8 @@ Resource "ScrewingRobots": {
 
 Resource "SC_70": {
   name: "SC_70",
-  implements: [ "ScrewingRobots" ]
+  implements: [ "ScrewingRobots" ],
+  deltaFile: "DSC_70(desiredCardinality)"
 }
 
 Process "InsertSocket": {
@@ -394,6 +408,7 @@ Process "InsertPole1_1": {
   implements: [ "InsertPole" ],
   inputs: [ {productId: "Pole1_1"} ],
   outputs: [ {OP3: {productId: "Pole1_1", costWeight: 1.0}}],
+  deltaFile: "!DPole1_1",
   resources: [ { resourceId: "Linefeeds", minCost: 50, maxCost: 100 } ]
 }
 
@@ -402,6 +417,7 @@ Process "InsertPole1_2": {
   implements: [ "InsertPole" ],
   inputs: [ {productId: "Pole1_2"} ],
   outputs: [ {OP4: {productId: "Pole1_2", costWeight: 1.0}}],
+  deltaFile: "!DPole1_2",
   resources: [ { resourceId: "Linefeeds", minCost: 50, maxCost: 100 } ]
 }
 
@@ -410,6 +426,7 @@ Process "InsertPole2_1": {
   implements: [ "InsertPole" ],
   inputs: [ {productId: "Pole2_1"} ],
   outputs: [ {OP5: {productId: "Pole2_1", costWeight: 1.0}}],
+  deltaFile: "!DPole2_1",
   resources: [ { resourceId: "Linefeeds", minCost: 50, maxCost: 100 } ]
 }
 
@@ -418,6 +435,7 @@ Process "InsertPole2_2": {
   implements: [ "InsertPole" ],
   inputs: [ {productId: "Pole2_2"} ],
   outputs: [ {OP6: {productId: "Pole2_2", costWeight: 1.0}}],
+  deltaFile: "!DPole2_2",
   resources: [ { resourceId: "Linefeeds", minCost: 50, maxCost: 100 } ]
 }
 
@@ -434,6 +452,7 @@ Process "InsertNeutral1_1": {
   implements: [ "InsertNeutral" ],
   inputs: [ {productId: "Neutral1_1"} ],
   outputs: [ {OP8: {productId: "Neutral1_1", costWeight: 1.0}}],
+  deltaFile: "!DNetural1_1",
   resources: [ { resourceId: "Linefeeds", minCost: 50, maxCost: 100 } ]
 }
 
@@ -442,6 +461,7 @@ Process "InsertNeutral1_2": {
   implements: [ "InsertNeutral" ],
   inputs: [ {productId: "Neutral1_2"} ],
   outputs: [ {OP9: {productId: "Neutral1_2", costWeight: 1.0}}],
+  deltaFile: "!DNetural1_2",
   resources: [ { resourceId: "Linefeeds", minCost: 50, maxCost: 100 } ]
 }
 
@@ -458,6 +478,7 @@ Process "InsertChangeover1": {
   implements: [ "InsertChangeover" ],
   inputs: [ {productId: "Changeover1"} ],
   outputs: [ {OP11: {productId: "Changeover1", costWeight: 1.0}}],
+  deltaFile: "!DChangeover1",
   resources: [ { resourceId: "Linefeeds", minCost: 50, maxCost: 100 } ]
 }
 
@@ -466,6 +487,7 @@ Process "InsertChangeover2": {
   implements: [ "InsertChangeover" ],
   inputs: [ {productId: "Changeover2"} ],
   outputs: [ {OP12: {productId: "Changeover2", costWeight: 1.0}}],
+  deltaFile: "!DChangeover2",
   resources: [ { resourceId: "Linefeeds", minCost: 50, maxCost: 100 } ]
 }
 
@@ -482,6 +504,7 @@ Process "InsertRocker1_1": {
   implements: ["InsertRocker"],
   inputs: [ {productId: "Rocker1_1"} ],
   outputs: [ {OP14: {productId: "Rocker1_1", costWeight: 1.0}}],
+  deltaFile: "!DRocker1_1",
   resources: [ { resourceId: "Linefeeds", minCost: 50, maxCost: 100 } ]
 }
 
@@ -490,6 +513,7 @@ Process "InsertRocker1_2": {
   implements: [ "InsertRocker" ],
   inputs: [ {productId: "Rocker1_2"} ],
   outputs: [ {OP15: {productId: "Rocker1_2", costWeight: 1.0}}],
+  deltaFile: "!DRocker1_2",
   resources: [ { resourceId: "Linefeeds", minCost: 50, maxCost: 100 } ]
 }
 
@@ -498,6 +522,7 @@ Process "InsertRocker2_1": {
   implements: [ "InsertRocker" ],
   inputs: [ {productId: "Rocker2_1"} ],
   outputs: [ {OP16: {productId: "Rocker2_1", costWeight: 1.0}}],
+  deltaFile: "!DRocker2_1",
   resources: [ { resourceId: "Linefeeds", minCost: 50, maxCost: 100 } ]
 }
 
@@ -506,6 +531,7 @@ Process "InsertRocker2_2": {
   implements: [ "InsertRocker" ],
   inputs: [ {productId: "Rocker2_2"} ],
   outputs: [ {OP17: {productId: "Rocker2_2", costWeight: 1.0}}],
+  deltaFile: "!DRocker2_2",
   resources: [ { resourceId: "Linefeeds", minCost: 50, maxCost: 100 } ]
 }
 
@@ -522,6 +548,7 @@ Process "InsertOff1_1": {
   implements: [ "InsertOff" ],
   inputs: [ {productId: "Off1_1"} ],
   outputs: [ {OP20: {productId: "Off1_1", costWeight: 1.0}}],
+  deltaFile: "!DOff1_1",
   resources: [ { resourceId: "Linefeeds", minCost: 50, maxCost: 100 } ]
 }
 
@@ -530,6 +557,7 @@ Process "InsertOff1_2": {
   implements: [ "InsertOff" ],
   inputs: [ {productId: "Off1_2"} ],
   outputs: [ {OP21: {productId: "Off1_2", costWeight: 1.0}}],
+  deltaFile: "!DOff1_2",
   resources: [ { resourceId: "Linefeeds", minCost: 50, maxCost: 100 } ]
 }
 
@@ -538,6 +566,7 @@ Process "InsertOff1_3": {
   implements: [ "InsertOff" ],
   inputs: [ {productId: "Off1_3"} ],
   outputs: [ {OP22: {productId: "Off1_3", costWeight: 1.0}}],
+  deltaFile: "!DOff1_3",
   resources: [ { resourceId: "Linefeeds", minCost: 50, maxCost: 100 } ]
 }
 
@@ -546,6 +575,7 @@ Process "InsertOff1_4": {
   implements: [ "InsertOff" ],
   inputs: [ {productId: "Off1_4"} ],
   outputs: [ {OP23: {productId: "Off1_4", costWeight: 1.0}}],
+  deltaFile: "!DOff1_4",
   resources: [ { resourceId: "Linefeeds", minCost: 50, maxCost: 100 } ]
 }
 
@@ -553,6 +583,7 @@ Process "InsertCrossover": {
   name: "InsertCrossover",
   inputs: [ {productId: "Crossover"} ],
   outputs: [ {OP24: {productId: "Crossover", costWeight: 1.0}}],
+  deltaFile: "!DCrossover",
   resources: [ { resourceId: "Linefeeds", minCost: 50, maxCost: 100 } ]
 }
 
@@ -560,6 +591,7 @@ Process "InsertSeries": {
   name: "InsertSeries",
   inputs: [ {productId: "Series"} ],
   outputs: [ {OP25: {productId: "Series", costWeight: 1.0}}],
+  deltaFile: "!DSeries",
   resources: [ { resourceId: "Linefeeds", minCost: 50, maxCost: 100 } ]
 }
 
