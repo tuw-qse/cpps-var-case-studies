@@ -420,21 +420,13 @@ Process "AssembleNanofilter": {
   resources: [ { resourceId: "PIT_10"} ]
 }
 
-Process "FillFilterTankModuleCharcoal": {
-  name: "Fill FilterTankModule with Charcoal",
-  isAbstract: true,
-  requires: [ "FillFilterTankSand" ],
-  inputs: [ {productId: "FilterTank"}],
-  resources: [ { resourceId: "Batchfeeds"} ]
-}
-
 Process "FillFilterTankSModuleCharcoal": {
   name: "Fill FilterTankSModule with Charcoal",
   isAbstract: true,
-  implements: ["FillFilterTankModuleCharcoal"],
   excludes: ["FillFilterTankXLModuleCharcoal"],
   inputs: [ {productId: "FilterTankS"}],
-  outputs: [ {OP5: {productId: "FilterTankSModule"}}]
+  outputs: [ {OP5: {productId: "FilterTankSModule"}}],
+  resources: [ { resourceId: "Batchfeeds"} ]
 }
 
 Process "FillFilterTankSModuleCA": {
@@ -457,11 +449,10 @@ Process "FillFilterTankSModuleCB": {
 Process "FillFilterTankXLModuleCharcoal": {
   name: "Fill FilterTankXLModule with CharcoalActive",
   isAbstract: true,
-  implements: ["FillFilterTankModuleCharcoal"],
   excludes: ["FillFilterTankSModuleCharcoal"],
   inputs: [ {productId: "FilterTankXL"}, {productId: "Sand"}],
   outputs: [ {OP7: {productId: "FilterTankXLModule"}}],
-  resources: [ { resourceId: "ChainHoist"} ]
+  resources: [ { resourceId: "ChainHoist"}, { resourceId: "Batchfeeds"}  ]
 }
 
 Process "FillFilterTankXLModuleCA": {
