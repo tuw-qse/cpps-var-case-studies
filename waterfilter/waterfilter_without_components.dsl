@@ -735,7 +735,14 @@ Constraint "C11": {
   definition: "FreshwaterTankSModule, Tube3 -> FreshwaterTankSModule implies not Tube3"
 }
 
-Constraint "C11": {
+Constraint "C12": {
   definition: "FreshwaterTankSModule, Valve2 -> FreshwaterTankSModule implies not Valve2"
 }
 
+Constraint "C13": {
+  definition: "FillFilterTankSModuleCharcoal, FillFilterTankXLModuleCharcoal -> FillFilterTankSModuleCharcoal implies not FillFilterTankXLModuleCharcoal"
+}
+
+Constraint "C14": {
+  definition: "FillFilterTankSModuleCharcoal, FillFilterTankXLModuleCharcoal -> FillFilterTankXLModuleCharcoal implies not FillFilterTankSModuleCharcoal"
+}
