@@ -1,0 +1,12 @@
+features
+        truck_product {extended__ true, abstract true}
+                mandatory
+                        Chassis {deltaFile ""}
+                        Cabin {deltaFile ""}
+                        Body {deltaFile "", abstract true}
+                                alternative
+                                        Tank {deltaFile ""}
+                                        StakeBed {deltaFile ""}
+                                        Dumper {deltaFile ""}
+                                        OpenTop {deltaFile ""}
+

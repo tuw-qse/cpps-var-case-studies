@@ -1,0 +1,47 @@
+features
+        chesspieces_new_product {extended__ true, abstract true}
+                mandatory
+                        Base {abstract true}
+                                alternative
+                                        Base_twostrip
+                                        Base_onestrip
+                        Rod {abstract true}
+                                alternative
+                                        Rod_long
+                                        Rod_short
+                        Body {abstract true}
+                                alternative
+                                        Body_minor {abstract true}
+                                                alternative
+                                                        Pawn_body
+                                                        Knight_body
+                                                        Bishop_body
+                                                        Rook_body
+                                        Body_major {abstract true}
+                                                alternative
+                                                        Queen_body
+                                                        King_body
+                        PLA
+                        AluminumBar
+
+constraints
+        Pawn_body => !Queen_body
+        Pawn_body => !King_body
+        Rook_body => !Queen_body
+        Rook_body => !King_body
+        Knight_body => !Queen_body
+        Knight_body => !King_body
+        King_body => !Knight_body
+        King_body => !Bishop_body
+        King_body => !Pawn_body
+        King_body => !Rook_body
+        Bishop_body => !Queen_body
+        Bishop_body => !King_body
+        Queen_body => !Knight_body
+        Queen_body => !Bishop_body
+        Queen_body => !Pawn_body
+        Queen_body => !Rook_body
+        Body_minor => Base_onestrip
+        Body_major => Base_twostrip
+        Body_minor => Rod_short
+        Body_major => Rod_long

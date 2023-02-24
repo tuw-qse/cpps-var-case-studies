@@ -11,12 +11,6 @@ Attribute "partialProduct": {
   type: "String"
 }
 
-Attribute "deltaFile": {
-  description: "Specifies the delta file for the V4rdiac configuration",
-  defaultValue: "",
-  type: "String"
-}
-
 Product "Fork": {
   name: "Fork",
   isAbstract: true,
@@ -182,14 +176,12 @@ Resource "Linefeeds": {
 
 Resource "LF_3": {
   name: "LF_3",
-  implements: [ "Linefeeds" ],
-  deltaFile: "DLF_3(desiredCardinality)" 
+  implements: [ "Linefeeds" ] 
 }
 
 Resource "LF_4": {
   name: "LF_4",
-  implements: [ "Linefeeds" ],
-  deltaFile: "DLF_4(desiredCardinality)"
+  implements: [ "Linefeeds" ] 
 }
 
 Resource "WeldingRobots": {
@@ -205,8 +197,7 @@ Resource "LaserWeldingRobots": {
 
 Resource "LaserWeldingRobot_01":{
   name: "LaserWeldingRobot_01",
-  implements: [ "LaserWeldingRobots" ],
-  deltaFile: "DLaserWeldingRobot01(desiredCardinality)"
+  implements: [ "LaserWeldingRobots" ]
 }
 
 Resource "UltrasonicWeldingRobots": {
@@ -217,8 +208,7 @@ Resource "UltrasonicWeldingRobots": {
 
 Resource "UltrasonicWeldingRobot_16":{
   name: "UltrasonicWeldingRobot_16",
-  implements: [ "UltrasonicWeldingRobots" ],
-  deltaFile: "DUltrasonicWeldingRobot16(desiredCardinality)"
+  implements: [ "UltrasonicWeldingRobots" ]
 }
 
 Resource "PressinRobots": {
@@ -240,20 +230,17 @@ Resource "MediumPartsPressinRobots": {
 
 Resource "PR_04": {
   name: "PR_04",
-  implements: [ "MediumPartsPressinRobots" ],
-  deltaFile: "DPR_04(desiredCardinality)"
+  implements: [ "MediumPartsPressinRobots" ]
 }
 
 Resource "PR_05": {
   name: "PR_05",
-  implements: [ "SmallPartsPressinRobots" ],
-  deltaFile: "DPR_05(desiredCardinality)"
+  implements: [ "SmallPartsPressinRobots" ]
 }
 
 Resource "PR_12": {
   name: "PR_12",
-  implements: [ "MediumPartsPressinRobots" ],
-  deltaFile: "DPR_12(desiredCardinality)"
+  implements: [ "MediumPartsPressinRobots" ]
 }
 
 Resource "ScrewingRobots": {
@@ -263,8 +250,7 @@ Resource "ScrewingRobots": {
 
 Resource "SC_70": {
   name: "SC_70",
-  implements: [ "ScrewingRobots" ],
-  deltaFile: "DSC_70(desiredCardinality)"
+  implements: [ "ScrewingRobots" ]
 }
 
 Process "InsertPipe": {
@@ -280,7 +266,6 @@ Process "InsertPipe2": {
   implements: ["InsertPipe"],
   inputs: [ {productId: "Pipe2"} ],
   outputs: [ {OP2: {productId: "Pipe2", costWeight: 1.0}} ],
-  deltaFile: "!InsertPipe2",
   resources: [ { resourceId: "Linefeeds", minCost: 50, maxCost: 100 } ]
 }
 
@@ -289,7 +274,6 @@ Process "InsertPipe3": {
   implements: ["InsertPipe"],
   inputs: [ {productId: "Pipe3"} ],
   outputs: [ {OP3: {productId: "Pipe3", costWeight: 1.0}} ],
-  deltaFile: "!InsertPipe3",
   resources: [ { resourceId: "Linefeeds", minCost: 50, maxCost: 100 } ]
 }
 
@@ -298,7 +282,6 @@ Process "InsertPipe8": {
   implements: ["InsertPipe"],
   inputs: [ {productId: "Pipe8"} ],
   outputs: [ {OP4: {productId: "Pipe8", costWeight: 1.0}} ],
-  deltaFile: "!InsertPipe8",
   resources: [ { resourceId: "Linefeeds", minCost: 50, maxCost: 100 } ]
 }
 
@@ -320,7 +303,6 @@ Process "InsertBarrel1_1": {
 Process "InsertBarrel1_2": {
   name: "InsertBarrel1_2",
   implements: [ "InsertBarrel" ],
-  deltaFile: "!InsertBarrel1_2",
   inputs: [ {productId: "Barrel1_2"} ],
   outputs: [ {OP7: {productId: "Barrel1_2", costWeight: 1.0}} ]
 }
@@ -497,7 +479,7 @@ Process "InsertLock1": {
   implements: [ "InsertLock" ],
   inputs: [ {productId: "Lock1"} ],
   outputs: [ {OP22: {productId: "Lock1", costWeight: 1.0}}],
-  deltaFile: "!InsertLock1", 
+  excludes: [ "InsertLock2", "InsertLock3"], 
   resources: [ { resourceId: "Linefeeds", minCost: 50, maxCost: 100 } ]
 }
 
@@ -506,7 +488,7 @@ Process "InsertLock2": {
   implements: [ "InsertLock" ],
   inputs: [ {productId: "Lock2"} ],
   outputs: [ {OP23: {productId: "Lock2", costWeight: 1.0}}],
-  deltaFile: "!InsertLock2", 
+  excludes: [ "InsertLock1", "InsertLock3"], 
   resources: [ { resourceId: "Linefeeds", minCost: 50, maxCost: 100 } ]
 }
 
@@ -515,7 +497,7 @@ Process "InsertLock3": {
   implements: [ "InsertLock" ],
   inputs: [ {productId: "Lock3"} ],
   outputs: [ {OP24: {productId: "Lock3", costWeight: 1.0}}],
-  deltaFile: "!InsertLock3",
+  excludes: [ "InsertLock1", "InsertLock2"], 
   resources: [ { resourceId: "Linefeeds", minCost: 50, maxCost: 100 } ]
 }
 

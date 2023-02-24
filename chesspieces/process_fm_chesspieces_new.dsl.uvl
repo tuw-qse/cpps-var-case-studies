@@ -1,0 +1,32 @@
+features
+        chesspieces_new_process {extended__ true, abstract true}
+                optional
+                        ScrewBody
+                        InsertRod
+                        InsertBase
+                        ScrewBase
+                        InsertBody
+                        TurnBase
+                mandatory
+                        PrintBody {abstract true}
+                                alternative
+                                        PrintQueenBody
+                                        PrintKnightBody
+                                        PrintKingBody
+                                        PrintRookBody
+                                        PrintBishopBody
+                                        PrintPawnBody
+                        CarveReamings {abstract true}
+                                alternative
+                                        CarveReamings_two
+                                        CarveReamings_one
+                        InsertPLA
+                        CutAluminumBar
+                        LoadAluminumBar
+
+constraints
+        ScrewBody => InsertBody
+        ScrewBody => InsertRod
+        InsertBase => TurnBase
+        ScrewBase => InsertBase
+        ScrewBase => InsertRod

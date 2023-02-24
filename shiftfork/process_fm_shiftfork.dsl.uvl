@@ -1,0 +1,70 @@
+features
+        shiftfork_process {extended__ true, abstract true}
+                optional
+                        WeldFork5
+                        InsertJack1
+                        PressJack1
+                        InsertScrew
+                        InsertRing1
+                        PressORing
+                        WeldJack1
+                        ScrewScrew
+                        InsertORing
+                        InsertFork4
+                        InsertFork3
+                        InsertFork5
+                        PressRing1
+                mandatory
+                        InsertLock {abstract true}
+                                alternative
+                                        InsertLock2
+                                        InsertLock1
+                                        InsertLock3
+                        InsertPipe {abstract true}
+                                optional
+                                        InsertPipe2
+                                        InsertPipe3
+                                        InsertPipe8
+                        PressBarrel {abstract true}
+                                optional
+                                        PressBarrel1_1
+                                        PressBarrel1_2
+                        WeldBarrel {abstract true}
+                                optional
+                                        WeldBarrel1_2
+                                        WeldBarrel1_1
+                        InsertBarrel {abstract true}
+                                optional
+                                        InsertBarrel1_2
+                                        InsertBarrel1_1
+                        WeldLock {abstract true}
+                                alternative
+                                        WeldLock3
+                                        WeldLock1
+                                        WeldLock2
+                        WeldFork3
+                        WeldFork4
+
+constraints
+        WeldFork4 => InsertFork4
+        WeldFork4 => WeldFork5
+        WeldFork5 => InsertFork5
+        WeldFork3 => InsertFork3
+        WeldFork3 => WeldFork5
+        WeldLock1 => InsertLock1
+        WeldLock2 => InsertLock2
+        PressJack1 => InsertJack1
+        WeldLock3 => InsertLock3
+        PressBarrel1_1 => InsertBarrel1_1
+        PressBarrel1_2 => InsertBarrel1_2
+        PressORing => InsertORing
+        PressORing => PressJack1
+        PressORing => PressRing1
+        WeldJack1 => PressJack1
+        ScrewScrew => InsertScrew
+        ScrewScrew => PressJack1
+        ScrewScrew => PressRing1
+        WeldBarrel1_2 => PressBarrel1_2
+        WeldBarrel1_1 => PressBarrel1_1
+        PressRing1 => InsertRing1
+        PressRing1 => PressJack1
