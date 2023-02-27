@@ -1,6 +1,6 @@
 features
         truck_resource {extended__ true, abstract true}
-                mandatory
+                optional
                         Robots {deltaFile "", abstract true}
                                 or
                                         KUKA_IIWA {deltaFile "DKukaIIWA", InstanceNum "1..100"}

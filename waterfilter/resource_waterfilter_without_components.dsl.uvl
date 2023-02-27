@@ -1,6 +1,6 @@
 features
         waterfilter_without_components_resource {extended__ true, abstract true}
-                mandatory
+                optional
                         PressinTools {deltaFile "", abstract true}
                                 or
                                         PIT_45 {deltaFile "DPIT_45(desiredCardinality)", InstanceNum "1..100"}

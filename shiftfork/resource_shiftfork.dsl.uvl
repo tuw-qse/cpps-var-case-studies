@@ -1,6 +1,6 @@
 features
         shiftfork_resource {extended__ true, abstract true}
-                mandatory
+                optional
                         Linefeeds {abstract true}
                                 or
                                         LF_4 {InstanceNum "1..100"}
