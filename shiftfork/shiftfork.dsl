@@ -565,4 +565,6 @@ Constraint "Constraint7": {
   definition: "InsertLock1, InsertLock2, InsertLock3 -> InsertLock3 implies ( not InsertLock1 and not InsertLock2)"
 }
 
-
+Constraint "Constraint8": {
+  definition: "Pipe3, Barrel1_2 -> Pipe3 implies not Barrel1_2"
+}
