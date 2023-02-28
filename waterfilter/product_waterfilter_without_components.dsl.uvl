@@ -22,8 +22,8 @@ features
                 mandatory
                         Mount {deltaFile "", abstract true}
                                 alternative
-                                        Rack2 {deltaFile ""}
                                         IronFrame {deltaFile ""}
+                                        Rack2 {deltaFile ""}
                                         Rack1 {deltaFile ""}
                         FreshwaterTankModule {deltaFile "", abstract true}
                                 alternative
@@ -31,14 +31,14 @@ features
                                         FreshwaterTankXLModule {deltaFile ""}
                         FilterTankModule {deltaFile "", abstract true}
                                 alternative
-                                        FilterTankSModule {deltaFile "", abstract true}
-                                                alternative
-                                                        CBFilterTankSModule {deltaFile ""}
-                                                        CAFilterTankSModule {deltaFile ""}
                                         FilterTankXLModule {deltaFile "", abstract true}
                                                 alternative
-                                                        CAFilterTankXLModule {deltaFile ""}
                                                         CBFilterTankXLModule {deltaFile ""}
+                                                        CAFilterTankXLModule {deltaFile ""}
+                                        FilterTankSModule {deltaFile "", abstract true}
+                                                alternative
+                                                        CAFilterTankSModule {deltaFile ""}
+                                                        CBFilterTankSModule {deltaFile ""}
                         Tube {deltaFile "", abstract true}
                                 optional
                                         Tube3 {deltaFile ""}

@@ -18,8 +18,8 @@ features
                         Pipe {abstract true}
                                 alternative
                                         Pipe3
-                                        Pipe2
                                         Pipe8
+                                        Pipe2
                         Lock {abstract true}
                                 alternative
                                         Lock3

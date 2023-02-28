@@ -23,8 +23,8 @@ features
                         InsertPipe {abstract true}
                                 alternative
                                         InsertPipe8
-                                        InsertPipe3
                                         InsertPipe2
+                                        InsertPipe3
                         PressBarrel {abstract true}
                                 optional
                                         PressBarrel1_1
@@ -39,9 +39,9 @@ features
                                         InsertBarrel1_1
                         WeldLock {abstract true}
                                 alternative
-                                        WeldLock2
-                                        WeldLock1
                                         WeldLock3
+                                        WeldLock1
+                                        WeldLock2
                         WeldFork3
                         WeldFork4
 

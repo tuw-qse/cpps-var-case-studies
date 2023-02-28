@@ -7,16 +7,16 @@ features
                         AssembleMountedWastewaterTankXLRack2 {deltaFile "!DWTXLRack2"}
                         FillFilterTankSModuleCharcoal {deltaFile "", abstract true}
                                 alternative
-                                        FillFilterTankSModuleCA {deltaFile "!DFillFilterTankSModuleCA"}
                                         FillFilterTankSModuleCB {deltaFile "!DFillFilterTankSModuleCB"}
+                                        FillFilterTankSModuleCA {deltaFile "!DFillFilterTankSModuleCA"}
                         FillFilterTankXLModuleCharcoal {deltaFile "", abstract true}
                                 alternative
-                                        FillFilterTankXLModuleCB {deltaFile "!DFillFilterTankXLModuleCB"}
                                         FillFilterTankXLModuleCA {deltaFile "!DFillFilterTankXLModuleCA"}
+                                        FillFilterTankXLModuleCB {deltaFile "!DFillFilterTankXLModuleCB"}
                         AssembleMountedNanofilter {deltaFile "", abstract true}
                                 alternative
-                                        AssembleMountedNanofilterRack1 {deltaFile "!DANanofilterRack1"}
                                         AssembleMountedNanofilterRack2 {deltaFile "!DANanofilterRack2"}
+                                        AssembleMountedNanofilterRack1 {deltaFile "!DANanofilterRack1"}
                 mandatory
                         AssembleFreshwaterTankModule {deltaFile "", abstract true}
                                 alternative
@@ -24,27 +24,27 @@ features
                                         AssembleFreshwaterTankXLModule {deltaFile "!DAssembleFreshwaterTankXLModule"}
                         AssembleMountedFreshwaterTank {deltaFile "", abstract true}
                                 alternative
-                                        AssembleMountedFreshwaterTankXLRack2 {deltaFile "!DFTXLRack2"}
-                                        AssembleMountedFreshwaterTankSRack1 {deltaFile "!DFTSRack1"}
                                         AssembleMountedFreshwaterTankSIronFrame {deltaFile "!DFTSIronFrame"}
+                                        AssembleMountedFreshwaterTankSRack1 {deltaFile "!DFTSRack1"}
+                                        AssembleMountedFreshwaterTankXLRack2 {deltaFile "!DFTXLRack2"}
                         AssembleMountedFilterTank {deltaFile "", abstract true}
                                 alternative
-                                        AssembleMountedCBFilterTankXLModuleRack2 {deltaFile "!DCBFTXLModuleRack2"}
-                                        AssembleMountedCBFilterTankSModuleRack1 {deltaFile "!DCBFTSModuleRack1"}
-                                        AssembleMountedCAFilterTankSModuleRack1 {deltaFile "!DCAFTSModuleRack1"}
                                         AssembleMountedCBFilterTankSModuleIronFrame {deltaFile "!DCBFTSIronFrame"}
-                                        AssembleMountedCAFilterTankXLModuleRack2 {deltaFile "!DCAFTXLModuleRack2"}
+                                        AssembleMountedCAFilterTankSModuleRack1 {deltaFile "!DCAFTSModuleRack1"}
+                                        AssembleMountedCBFilterTankXLModuleRack2 {deltaFile "!DCBFTXLModuleRack2"}
                                         AssembleMountedCAFilterTankSModuleIronFrame {deltaFile "!DCAFTSIronFrame"}
+                                        AssembleMountedCAFilterTankXLModuleRack2 {deltaFile "!DCAFTXLModuleRack2"}
+                                        AssembleMountedCBFilterTankSModuleRack1 {deltaFile "!DCBFTSModuleRack1"}
                         AssembleCompleteTank {deltaFile "", abstract true}
                                 alternative
-                                        AssembleCompleteTank_1 {deltaFile "!DTank1"}
-                                        AssembleCompleteTank_8 {deltaFile "!DTank8"}
-                                        AssembleCompleteTank_6 {deltaFile "!DTank6"}
-                                        AssembleCompleteTank_5 {deltaFile "!DTank5"}
                                         AssembleCompleteTank_2 {deltaFile "!DTank2"}
-                                        AssembleCompleteTank_7 {deltaFile "!DTank7"}
-                                        AssembleCompleteTank_4 {deltaFile "!DTank4"}
+                                        AssembleCompleteTank_6 {deltaFile "!DTank6"}
                                         AssembleCompleteTank_3 {deltaFile "!DTank3"}
+                                        AssembleCompleteTank_5 {deltaFile "!DTank5"}
+                                        AssembleCompleteTank_1 {deltaFile "!DTank1"}
+                                        AssembleCompleteTank_4 {deltaFile "!DTank4"}
+                                        AssembleCompleteTank_8 {deltaFile "!DTank8"}
+                                        AssembleCompleteTank_7 {deltaFile "!DTank7"}
 
 constraints
         AssembleMountedFreshwaterTankSRack1 => AssembleFreshwaterTankSModule

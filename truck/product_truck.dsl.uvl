@@ -6,7 +6,7 @@ features
                         Body {deltaFile "", abstract true}
                                 alternative
                                         Tank {deltaFile ""}
-                                        StakeBed {deltaFile ""}
-                                        Dumper {deltaFile ""}
                                         OpenTop {deltaFile ""}
+                                        Dumper {deltaFile ""}
+                                        StakeBed {deltaFile ""}
 

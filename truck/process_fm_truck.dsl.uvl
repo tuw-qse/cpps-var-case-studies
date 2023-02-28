@@ -6,15 +6,15 @@ features
                 mandatory
                         InstallBody {deltaFile "", abstract true}
                                 alternative
+                                        InstallStakeBed {deltaFile "DInstallStakeBed"}
                                         InstallDumper {deltaFile "DInstallDumper"}
                                         InstallTank {deltaFile "DInstallTank"}
-                                        InstallStakeBed {deltaFile "DInstallStakeBed"}
                                         InstallOpenTop {deltaFile "DInstallOpenTop"}
                         InsertBody {deltaFile "", abstract true}
                                 alternative
                                         InsertDumper {deltaFile "DInsertDumper"}
-                                        InsertOpenTop {deltaFile "DInsertOpenTop"}
                                         InsertStakeBed {deltaFile "DInsertStakeBed"}
+                                        InsertOpenTop {deltaFile "DInsertOpenTop"}
                                         InsertTank {deltaFile "DInsertTank"}
                         InsertChassis {deltaFile ""}
 

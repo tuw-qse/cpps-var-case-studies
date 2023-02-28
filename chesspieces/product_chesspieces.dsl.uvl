@@ -3,8 +3,8 @@ features
                 mandatory
                         Base {abstract true}
                                 alternative
-                                        Base_twostrip
                                         Base_onestrip
+                                        Base_twostrip
                         Rod {abstract true}
                                 alternative
                                         Rod_long
@@ -14,9 +14,9 @@ features
                                         Body_minor {abstract true}
                                                 alternative
                                                         Pawn_body
-                                                        Knight_body
                                                         Bishop_body
                                                         Rook_body
+                                                        Knight_body
                                         Body_major {abstract true}
                                                 alternative
                                                         Queen_body

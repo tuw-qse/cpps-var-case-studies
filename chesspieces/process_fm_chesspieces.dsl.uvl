@@ -10,12 +10,12 @@ features
                 mandatory
                         PrintBody {abstract true}
                                 alternative
-                                        PrintQueenBody
+                                        PrintPawnBody
                                         PrintKnightBody
-                                        PrintKingBody
+                                        PrintQueenBody
                                         PrintRookBody
                                         PrintBishopBody
-                                        PrintPawnBody
+                                        PrintKingBody
                         CarveReamings {abstract true}
                                 alternative
                                         CarveReamings_two
