@@ -17,17 +17,18 @@ features
                                         Fork5
                         Pipe {abstract true}
                                 alternative
-                                        Pipe8
                                         Pipe3
                                         Pipe2
+                                        Pipe8
                         Lock {abstract true}
                                 alternative
-                                        Lock1
-                                        Lock2
                                         Lock3
+                                        Lock2
+                                        Lock1
 
 constraints
         Lock1 => Pipe2 | Pipe3
         Lock2 => Pipe3
         Lock3 => Pipe8
         Pipe2 | Pipe8 => Barrel1_2
+        Pipe3 => !Barrel1_2
