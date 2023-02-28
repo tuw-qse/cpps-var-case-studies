@@ -264,6 +264,7 @@ Process "InsertPipe": {
 Process "InsertPipe2": {
   name: "InsertPipe2",
   implements: ["InsertPipe"],
+  excludes: [ "InsertPipe3", "InsertPipe8" ],
   inputs: [ {productId: "Pipe2"} ],
   outputs: [ {OP2: {productId: "Pipe2", costWeight: 1.0}} ],
   resources: [ { resourceId: "Linefeeds", minCost: 50, maxCost: 100 } ]
@@ -272,6 +273,7 @@ Process "InsertPipe2": {
 Process "InsertPipe3": {
   name: "InsertPipe3",
   implements: ["InsertPipe"],
+  excludes: [ "InsertPipe2", "InsertPipe8" ],
   inputs: [ {productId: "Pipe3"} ],
   outputs: [ {OP3: {productId: "Pipe3", costWeight: 1.0}} ],
   resources: [ { resourceId: "Linefeeds", minCost: 50, maxCost: 100 } ]
@@ -280,6 +282,7 @@ Process "InsertPipe3": {
 Process "InsertPipe8": {
   name: "InsertPipe8",
   implements: ["InsertPipe"],
+  excludes: [ "InsertPipe2", "InsertPipe3" ],
   inputs: [ {productId: "Pipe8"} ],
   outputs: [ {OP4: {productId: "Pipe8", costWeight: 1.0}} ],
   resources: [ { resourceId: "Linefeeds", minCost: 50, maxCost: 100 } ]
