@@ -9,6 +9,7 @@ Within the directory you find a case study description, the PPR DSL file with th
 - [Shift Fork Case Study](/shiftfork/)
 - [Water Filter Case Study](/waterfilter/)
 - [Rocker Switch Case Study](/rockerswitch/)
+- [Chesspiece Case Study](/chesspieces/)
 
 ### Case Study reference
 
