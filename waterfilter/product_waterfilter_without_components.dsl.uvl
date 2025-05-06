@@ -1,56 +1,56 @@
 features
         waterfilter_without_components_product {extended__ true, abstract true}
                 optional
-                        WastewaterTankXLModule {deltaFile ""}
-                        Valve {deltaFile "", abstract true}
+                        WastewaterTankXLModule
+                        Valve {abstract true}
                                 optional
-                                        Valve2 {deltaFile ""}
-                                        Valve1 {deltaFile ""}
-                        Nanofilter {deltaFile ""}
+                                        Valve2
+                                        Valve1
+                        Nanofilter
                                 mandatory
-                                        NanofilterMaterial {deltaFile ""}
-                                        NanofilterHull {deltaFile ""}
-                        WastewaterTankXL {deltaFile ""}
-                        FreshwaterTank {deltaFile "", abstract true}
+                                        NanofilterMaterial
+                                        NanofilterHull
+                        WastewaterTankXL
+                        FreshwaterTank {abstract true}
                                 alternative
-                                        FreshwaterTankS {deltaFile ""}
-                                        FreshwaterTankXL {deltaFile ""}
-                        Charcoal {deltaFile "", abstract true}
+                                        FreshwaterTankS
+                                        FreshwaterTankXL
+                        Charcoal {abstract true}
                                 alternative
-                                        CharcoalBone {deltaFile ""}
-                                        CharcoalActive {deltaFile ""}
+                                        CharcoalBone
+                                        CharcoalActive
                 mandatory
-                        Mount {deltaFile "", abstract true}
+                        Mount {abstract true}
                                 alternative
-                                        IronFrame {deltaFile ""}
-                                        Rack2 {deltaFile ""}
-                                        Rack1 {deltaFile ""}
-                        FreshwaterTankModule {deltaFile "", abstract true}
+                                        IronFrame
+                                        Rack2
+                                        Rack1
+                        FreshwaterTankModule {abstract true}
                                 alternative
-                                        FreshwaterTankSModule {deltaFile ""}
-                                        FreshwaterTankXLModule {deltaFile ""}
-                        FilterTankModule {deltaFile "", abstract true}
+                                        FreshwaterTankSModule
+                                        FreshwaterTankXLModule
+                        FilterTankModule {abstract true}
                                 alternative
-                                        FilterTankXLModule {deltaFile "", abstract true}
+                                        FilterTankXLModule {abstract true}
                                                 alternative
-                                                        CBFilterTankXLModule {deltaFile ""}
-                                                        CAFilterTankXLModule {deltaFile ""}
-                                        FilterTankSModule {deltaFile "", abstract true}
+                                                        CBFilterTankXLModule
+                                                        CAFilterTankXLModule
+                                        FilterTankSModule {abstract true}
                                                 alternative
-                                                        CAFilterTankSModule {deltaFile ""}
-                                                        CBFilterTankSModule {deltaFile ""}
-                        Tube {deltaFile "", abstract true}
+                                                        CAFilterTankSModule
+                                                        CBFilterTankSModule
+                        Tube {abstract true}
                                 optional
-                                        Tube3 {deltaFile ""}
+                                        Tube3
                                 mandatory
-                                        Tube1 {deltaFile ""}
-                                        Tube2 {deltaFile ""}
-                        FibreMembrane {deltaFile ""}
-                        FilterTank {deltaFile "", abstract true}
+                                        Tube1
+                                        Tube2
+                        FibreMembrane
+                        FilterTank {abstract true}
                                 alternative
-                                        FilterTankS {deltaFile ""}
-                                        FilterTankXL {deltaFile ""}
-                        Sand {deltaFile ""}
+                                        FilterTankS
+                                        FilterTankXL
+                        Sand
 
 constraints
         FilterTankXLModule => FilterTankXL

@@ -1,22 +1,22 @@
 features
         truck_process {extended__ true, abstract true}
                 optional
-                        InsertCabin {deltaFile ""}
-                        InstallCabin {deltaFile ""}
+                        InsertCabin
+                        InstallCabin
                 mandatory
-                        InstallBody {deltaFile "", abstract true}
+                        InstallBody {abstract true}
                                 alternative
-                                        InstallStakeBed {deltaFile "DInstallStakeBed"}
-                                        InstallDumper {deltaFile "DInstallDumper"}
-                                        InstallTank {deltaFile "DInstallTank"}
-                                        InstallOpenTop {deltaFile "DInstallOpenTop"}
-                        InsertBody {deltaFile "", abstract true}
+                                        InstallStakeBed {deltaFile 'DInstallStakeBed'}
+                                        InstallDumper {deltaFile 'DInstallDumper'}
+                                        InstallTank {deltaFile 'DInstallTank'}
+                                        InstallOpenTop {deltaFile 'DInstallOpenTop'}
+                        InsertBody {abstract true}
                                 alternative
-                                        InsertDumper {deltaFile "DInsertDumper"}
-                                        InsertStakeBed {deltaFile "DInsertStakeBed"}
-                                        InsertOpenTop {deltaFile "DInsertOpenTop"}
-                                        InsertTank {deltaFile "DInsertTank"}
-                        InsertChassis {deltaFile ""}
+                                        InsertDumper {deltaFile 'DInsertDumper'}
+                                        InsertStakeBed {deltaFile 'DInsertStakeBed'}
+                                        InsertOpenTop {deltaFile 'DInsertOpenTop'}
+                                        InsertTank {deltaFile 'DInsertTank'}
+                        InsertChassis
 
 constraints
         InstallCabin => InsertCabin
